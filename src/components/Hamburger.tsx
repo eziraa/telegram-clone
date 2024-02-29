@@ -1,6 +1,6 @@
 const Hamburger = () => {
   return (
-    <div className="bg-slate-800 w-20 h-16 align-center ">
+    <div className="bg-slate-600 w-20 h-16 pt-4">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
