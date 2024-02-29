@@ -1,7 +1,7 @@
 import React from "react";
-import LeftSideBar from "./components/LeftSideBar";
+import Main from "./components/Main";
 const App = () => {
-  return <LeftSideBar />;
+  return <Main />;
 };
 
 export default App;
