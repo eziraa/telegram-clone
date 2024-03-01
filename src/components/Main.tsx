@@ -5,7 +5,7 @@ import image from "../assets/images/back-1.png";
 const Main = () => {
   return (
     <div
-      className="w-full h-full"
+      className="main"
       style={{
         backgroundImage: `url(${image})`,
       }}

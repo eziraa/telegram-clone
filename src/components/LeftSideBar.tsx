@@ -14,20 +14,17 @@ const list_of_folders = [
 ];
 const LeftSideBar = () => {
   return (
-    <nav className=" w-24 absolute left-0 top-0 ">
+    <nav className="left-nav ">
       <Hamburger />
       {list_of_folders.map((folder) => (
-        <div
-          key={folder}
-          className="bg-slate-600 w-20 h-16 grid place-content-center text-xs font-sans text-gray-400 font-semibold fs-"
-        >
+        <div key={folder} className="left-nav__link">
           <Folder />
-          <div className=" min-w-6 m-auto ">{folder}</div>
+          <div className="left-nav__text ">{folder}</div>
         </div>
       ))}
-      <div className="bg-slate-600 w-20 h-16 grid place-content-center text-xs font-sans text-gray-400 font-semibold fs-">
+      <div className="left-nav__link">
         <Edit />
-        <div className=" min-w-6 m-auto ">Edit</div>
+        <div className=" left-nav__text">Edit</div>
       </div>
     </nav>
   );

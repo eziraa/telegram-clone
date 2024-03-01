@@ -15,6 +15,7 @@ const Channel = () => {
       />
       <div className="channel__info ">
         <p className="channel__text"> {channel.title} </p>
+        <p className="channel__last-post">{channel.description}</p>
       </div>
     </div>
   ));
