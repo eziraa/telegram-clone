@@ -3,10 +3,10 @@
     background-color: $color-white;
     display: flex;
     flex-direction: row;
-    gap: .4rem;
+    gap: .8rem;
     margin-top: .4rem;
     padding: .2rem;
-
+    border-bottom: 2px solid $color-tertiary-dark;
     &__image {
         flex: 1;
         width: 40px;

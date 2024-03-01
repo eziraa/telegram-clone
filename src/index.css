@@ -11,25 +11,31 @@ body {
 
 .left-nav {
   background-color: #686464;
-  width: 6rem;
+  width: 8rem;
   height: 100vh;
   font-size: 1rem;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: auto; }
+  overflow: auto;
+  text-align: center; }
   .left-nav__text {
-    text-align: center; }
+    color: #828282; }
+  .left-nav__link {
+    width: 100%; }
+  .left-nav__link:hover {
+    background-color: blue; }
 
 .channel {
   width: 20vw;
   background-color: #FFFFFF;
   display: flex;
   flex-direction: row;
-  gap: .4rem;
+  gap: .8rem;
   margin-top: .4rem;
-  padding: .2rem; }
+  padding: .2rem;
+  border-bottom: 2px solid #f1e9e9; }
   .channel__image {
     flex: 1;
     width: 40px;
@@ -44,8 +50,22 @@ body {
     background-color: blueviolet; }
 
 .icon {
-  width: 40px;
-  height: 40px; }
+  width: 30px;
+  height: 30px;
+  margin: .5rem;
+  display: inline-block; }
+
+.search {
+  padding: .3rem;
+  width: 20vw; }
+  .search__field {
+    width: 100%;
+    padding: .2rem 2rem;
+    border-radius: 2rem;
+    font-size: 1.4rem;
+    height: 3.2rem;
+    border: none;
+    background-color: #f1e9e9; }
 
 .main {
   display: flex;
@@ -56,4 +76,5 @@ body {
   width: 21vw;
   pad: 1vw;
   height: 100vh;
-  overflow: auto; }
+  overflow: auto;
+  background-color: #FFFFFF; }
