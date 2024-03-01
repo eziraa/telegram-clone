@@ -19,7 +19,7 @@ body {
   overflow: auto; }
 
 .channel {
-  width: 30vw;
+  width: 20vw;
   background-color: #FFFFFF;
   display: flex;
   flex-direction: row;
@@ -49,6 +49,7 @@ body {
   height: 100vh; }
 
 .channel-container {
-  width: 30vw;
+  width: 21vw;
+  pad: 1vw;
   height: 100vh;
   overflow: auto; }
