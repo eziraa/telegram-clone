@@ -1,6 +1,6 @@
 const Hamburger = () => {
   return (
-    <div className="left-nav__icon">
+    <div className="icon">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
