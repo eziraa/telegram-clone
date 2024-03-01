@@ -7,7 +7,7 @@ const images = [image1, image2, image3, image4, image5];
 import channels from "./data/channels";
 const Channel = () => {
   return channels.map((channel, index) => (
-    <div key={channel.id} className="channel">
+    <div key={channel.id} className={`channel channel--${index}`}>
       <img
         src={images[index >= 5 ? index - 5 : index >= 10 ? index - 10 : index]}
         alt=""
