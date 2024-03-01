@@ -1,0 +1,14 @@
+.hamburger {
+    background-color: rgb(143, 131, 131);
+    width: 320px;
+
+}
+
+.hamburger-icon {
+    min-height: 1.5rem;
+    min-width: 1.5rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    margin: auto;
+
+}

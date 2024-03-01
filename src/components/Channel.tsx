@@ -1,4 +1,3 @@
-import React from "react";
 import image1 from "../assets/images/profiles/image1.jpg";
 import image2 from "../assets/images/profiles/image2.jpg";
 import image3 from "../assets/images/profiles/image3.jpg";
@@ -8,14 +7,14 @@ const images = [image1, image2, image3, image4, image5];
 import channels from "./data/channels";
 const Channel = () => {
   return channels.map((channel, index) => (
-    <div key={channel.id} className=" w-full border-spacing-1 ">
+    <div key={channel.id} className="channel">
       <img
         src={images[index >= 5 ? index - 5 : index >= 10 ? index - 10 : index]}
         alt=""
-        className=" h-12 w-12 rounded-full"
+        className="channel__image"
       />
-      <div className=" grid-flow-col ">
-        <p className=" bg-slate-300"> {channel.title} </p>
+      <div className="channel__info ">
+        <p className="channel__text"> {channel.title} </p>
       </div>
     </div>
   ));

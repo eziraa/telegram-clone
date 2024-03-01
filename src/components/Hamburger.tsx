@@ -1,13 +1,13 @@
 const Hamburger = () => {
   return (
-    <div className="bg-slate-600 w-20 h-16 pt-4">
+    <div className=" hamburger bg-slate-600 w-20 h-16 pt-4">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
         stroke-width="1.5"
         stroke="currentColor"
-        className="min-w-6 min-h-6  h-6  m-auto "
+        className=" hamburger__icon "
       >
         <path
           stroke-linecap="round"
