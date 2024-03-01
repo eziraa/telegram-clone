@@ -1,25 +1,37 @@
 .left-nav {
-    background-color: $color-primary-dark;
+    background-color: $color-secondary-dark;
     width: 8rem;
     height: 100vh;
     font-size: 1rem;
     position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     overflow: auto;
     text-align: center;
+    color: $color-tertiary-blue;
+
+
     &__text{
-        color: $color-secondary-dark;
+        font-family: sans-serif;
+        margin-top: -4px;
+        padding-bottom: 5px;
     }
 
     &__link{
         width: 100%;
+        padding: .3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        &--active{
+            background-color: $color-primary-dark;
+            color: $color-primary-blue;
 
+        }
     }
-    &__link:hover{
-        background-color: blue;
-    }
+
 
     
 }
