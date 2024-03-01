@@ -3,20 +3,25 @@
   padding: 0;
   box-sizing: border-box; }
 
+html {
+  font-size: 10px; }
+
 body {
-  font-size: 10px;
   background-color: aquamarine; }
 
 .left-nav {
   background-color: blueviolet;
   width: 6rem;
   height: 100vh;
+  font-size: 1rem;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: start;
   overflow: auto; }
+  .left-nav__text {
+    text-align: center; }
 
 .channel {
   width: 20vw;
@@ -32,7 +37,7 @@ body {
     height: 40px;
     border-radius: 20px; }
   .channel__info {
-    flex: 5;
+    flex: 6;
     display: flex;
     flex-direction: column;
     gap: .4rem; }
