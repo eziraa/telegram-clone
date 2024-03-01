@@ -1,6 +1,6 @@
-import Channel from "./components/Channel";
+import Main from "./components/Main";
 const App = () => {
-  return <Channel />;
+  return <Main />;
 };
 
 export default App;

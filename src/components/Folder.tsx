@@ -1,8 +1,6 @@
-import React from "react";
-
 export const Folder = () => {
   return (
-    <div className="  min-w-6 m-auto">
+    <div className="__icon">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
         <path
           fill="ghostwhite"

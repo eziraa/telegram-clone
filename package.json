@@ -8,6 +8,7 @@
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
+    "sass": "node-sass src/components/sass/main.scss  src/index.css -w",
     "tailwind": "npx tailwindcss -i ./src/input.css -o ./src/index.css --watch"
   },
   "dependencies": {
