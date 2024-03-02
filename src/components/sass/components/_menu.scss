@@ -1,0 +1,28 @@
+.menu{
+    width: 28vw;
+    height: 100vh;
+    position: absolute;
+    float: left;
+    background-color: $color-primary-white;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    animation: moveFromLeft .51s;
+    &--hidden{
+        display: none;
+    }
+}
+
+.overlay{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    background-color: rgba(62, 54, 54, 0.644);
+    &--hidden{
+        display: none;
+    }
+    
+}
