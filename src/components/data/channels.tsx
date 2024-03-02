@@ -1,7 +1,7 @@
 const channels = [
   {
     id: 1,
-    title: "Channel 1",
+    title: "Technology ",
     username: "channel1",
     description: "This is the first channel.",
     members: 500,
