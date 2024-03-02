@@ -4,9 +4,9 @@
     display: flex;
     flex-direction: row;
     gap: .8rem;
-    margin-top: .4rem;
-    padding: .2rem;
-    border-bottom: 2px solid $color-tertiary-dark;
+    padding: .4rem;
+
+    border-bottom: .1rem solid rgba($color-tertiary-dark, .15);
     &__image {
         flex: 1;
         width: 40px;
@@ -21,7 +21,39 @@
         gap: .4rem;
     }
 
-    &__text {
-        background-color: blueviolet;
+    &__header{
+        display: flex;
+        flex-direction: row;
+        gap : .5rem;
+        width: 100%;
+        justify-content: baseline;
+        align-items: baseline;
     }
+
+    &__text {
+        font-size: 1.3rem;
+        flex: 1;
+        font-weight: 600;
+    }
+
+    &__mute{
+        flex: 1;
+    }
+
+    &__created-at{
+        flex: 1;
+        text-align: end;
+    }
+
+    &__active{
+        background-color: $color-tertiary-dark;
+    }
+
+
+    &__last-post{
+        justify-content: end;
+    }
+
 }
+
+
