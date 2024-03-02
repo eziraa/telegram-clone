@@ -1,0 +1,16 @@
+.profile{
+    width: 100%;
+    background-color: darkcyan;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    font-size: 1.3rem;
+    color: $color-primary-white;
+
+    &__image{
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+    }
+}
