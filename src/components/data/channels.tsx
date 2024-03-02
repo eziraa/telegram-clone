@@ -29,7 +29,7 @@ const channels = [
   },
   {
     id: 2,
-    title: "Channel 2",
+    title: "Web development",
     username: "channel2",
     description: "This is the second channel.",
     members: 1000,
@@ -57,7 +57,7 @@ const channels = [
   },
   {
     id: 3,
-    title: "Channel 3",
+    title: "Let us Launch",
     username: "channel3",
     description: "This is the third channel.",
     members: 750,
@@ -85,7 +85,7 @@ const channels = [
   },
   {
     id: 4,
-    title: "Channel 4",
+    title: "Music Manager",
     username: "channel4",
     description: "This is the fourth channel.",
     members: 600,
@@ -113,7 +113,7 @@ const channels = [
   },
   {
     id: 5,
-    title: "Channel 5",
+    title: "Old Songs",
     username: "channel5",
     description: "This is the fifth channel.",
     members: 900,
@@ -141,7 +141,7 @@ const channels = [
   },
   {
     id: 6,
-    title: "Channel 6",
+    title: "Learn Python",
     username: "channel6",
     description: "This is the sixth channel.",
     members: 800,
@@ -169,7 +169,7 @@ const channels = [
   },
   {
     id: 7,
-    title: "Channel 7",
+    title: "Learn all",
     username: "channel7",
     description: "This is the seventh channel.",
     members: 700,
@@ -197,7 +197,7 @@ const channels = [
   },
   {
     id: 8,
-    title: "Channel 8",
+    title: "The Power",
     username: "channel8",
     description: "This is the eighth channel.",
     members: 550,
@@ -253,7 +253,7 @@ const channels = [
   },
   {
     id: 10,
-    title: "Channel 10",
+    title: "Live for Live",
     username: "channel10",
     description: "This is the tenth channel.",
     members: 950,
@@ -281,7 +281,7 @@ const channels = [
   },
   {
     id: 11,
-    title: "Channel 11",
+    title: "Psychological Services",
     username: "channel11",
     description: "This is the eleventh channel.",
     members: 600,
@@ -309,7 +309,7 @@ const channels = [
   },
   {
     id: 12,
-    title: "Channel 12",
+    title: "Be the one",
     username: "channel12",
     description: "This is the twelfth channel.",
     members: 700,
@@ -337,7 +337,7 @@ const channels = [
   },
   {
     id: 13,
-    title: "Channel 13",
+    title: "Power of mine",
     username: "channel13",
     description: "This is the thirteenth channel.",
     members: 800,
@@ -365,7 +365,7 @@ const channels = [
   },
   {
     id: 14,
-    title: "Channel 14",
+    title: "Tackle yourself",
     username: "channel14",
     description: "This is the fourteenth channel.",
     members: 850,
@@ -393,7 +393,7 @@ const channels = [
   },
   {
     id: 15,
-    title: "Channel 15",
+    title: "Lifetime",
     username: "channel15",
     description: "This is the fifteenth channel.",
     members: 1000,
