@@ -1,6 +1,7 @@
-import Main from "./components/Main";
+import Country from "./Country";
+import "./App.css";
 const App = () => {
-  return <Main />;
+  return <Country />;
 };
 
 export default App;
