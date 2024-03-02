@@ -14,8 +14,10 @@ const list_of_folders = [
   "Web L",
 ];
 
-
-const LeftSideBar = () => {
+interface Props {
+  toggleMenu: () => void;
+}
+const LeftSideBar = ({ toggleMenu }: Props) => {
   const [activeIndex, setActiveIndex] = useState(-8);
 
   const makeActive = (index: number) => {
@@ -27,6 +29,9 @@ const LeftSideBar = () => {
         className={`left-nav__link ${
           activeIndex == -1 && "left-nav__link--active"
         }`}
+        onClick={() => {
+          toggleMenu();
+        }}
       >
         <Hamburger />
       </div>
