@@ -8,3 +8,14 @@
     }
     
 }
+
+@keyframes moveFromRight {
+    0%{
+        transform: translateX(0rem);
+
+    }
+    
+    100%{
+        transform: translateX(-40rem);
+    }
+}
