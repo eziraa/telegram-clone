@@ -1,0 +1,10 @@
+@keyframes moveFromLeft {
+    0%{
+        transform: translateX(-25rem);
+    }
+
+    100%{
+        transform: translateX(0rem);
+    }
+    
+}
