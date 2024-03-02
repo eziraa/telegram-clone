@@ -1,6 +1,8 @@
 .menu{
-    width: 28vw;
+    width: 23vw;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
     position: absolute;
     float: left;
     background-color: $color-primary-white;
@@ -8,9 +10,11 @@
     left: 0;
     top: 0;
     animation: moveFromLeft .51s;
+
     &--hidden{
         display: none;
     }
+
 }
 
 .overlay{
@@ -20,7 +24,7 @@
     left: 0;
     right: 0;
     z-index: 5;
-    background-color: rgba(62, 54, 54, 0.644);
+    background-color: rgba(62, 54, 54, 0.74);
     &--hidden{
         display: none;
     }
