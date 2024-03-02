@@ -10,11 +10,9 @@
     left: 0;
     top: 0;
     animation: moveFromLeft .51s;
-
     &--hidden{
         display: none;
     }
-
 }
 
 .overlay{
