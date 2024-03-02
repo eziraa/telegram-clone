@@ -4,17 +4,21 @@ import { Profile } from "./Profile";
 import { AccountsContainer } from "./AccountsContainer";
 interface Props {
   displayMenu: boolean;
+  animated: boolean;
   toggleMenu: () => void;
 }
-
-export const Menu = ({ displayMenu, toggleMenu }: Props) => {
+export const Menu = ({ displayMenu, toggleMenu, animated }: Props) => {
   return (
     <Fragment>
       <div
         className={`overlay ${!displayMenu && "overlay--hidden"} `}
         onClick={toggleMenu}
       ></div>
-      <div className={`menu ${!displayMenu && "menu--hidden"}`}>
+      <div
+        className={`menu ${!displayMenu && "menu--hidden"} ${
+          animated && "menu--animated"
+        }`}
+      >
         <Profile />
         <AccountsContainer />
       </div>

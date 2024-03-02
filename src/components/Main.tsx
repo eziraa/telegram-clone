@@ -5,9 +5,11 @@ import { Menu } from "./Menu";
 import { useState } from "react";
 const Main = () => {
   const [displayMenu, setDisplayMenu] = useState(false);
+  const [animated, setAnimated] = useState(false);
 
   const toggleMenu = () => {
     setDisplayMenu(!displayMenu);
+    setAnimated(true);
   };
   return (
     <div
@@ -16,7 +18,11 @@ const Main = () => {
         backgroundImage: `url(${image})`,
       }}
     >
-      <Menu displayMenu={displayMenu} toggleMenu={toggleMenu}/>
+      <Menu
+        displayMenu={displayMenu}
+        toggleMenu={toggleMenu}
+        animated={animated}
+      />
       <LeftSideBar toggleMenu={toggleMenu} />
       <Container />
     </div>
