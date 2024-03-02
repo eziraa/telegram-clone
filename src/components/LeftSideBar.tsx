@@ -1,7 +1,7 @@
 import Hamburger from "./Hamburger";
 import { Folder } from "./Folder";
 import { Edit } from "./Edit";
-import { MouseEvent } from "react";
+import { useState } from "react";
 const list_of_folders = [
   "All Chats",
   "Channels",
@@ -14,21 +14,45 @@ const list_of_folders = [
   "Web L",
 ];
 
-const LeftSideBar = () => {
-  const makeActive = (e: MouseEvent) => {
-    const target = e.target as HTMLElement;
-    target.classList.add("left-nav__link--active");
+interface Props {
+  toggleMenu: () => void;
+}
+const LeftSideBar = ({ toggleMenu }: Props) => {
+  const [activeIndex, setActiveIndex] = useState(-8);
+
+  const makeActive = (index: number) => {
+    setActiveIndex(index);
   };
   return (
     <nav className="left-nav ">
-      <Hamburger />
-      {list_of_folders.map((folder) => (
-        <div key={folder} className="left-nav__link">
+      <div
+        className={`left-nav__link ${
+          activeIndex == -1 && "left-nav__link--active"
+        }`}
+        onClick={() => {
+          toggleMenu();
+        }}
+      >
+        <Hamburger />
+      </div>
+      {list_of_folders.map((folder, index) => (
+        <div
+          key={folder}
+          className={`left-nav__link ${
+            index === activeIndex && "left-nav__link--active"
+          }`}
+          onClick={() => makeActive(index)}
+        >
           <Folder />
           <div className="left-nav__text ">{folder}</div>
         </div>
       ))}
-      <div className="left-nav__link" onClick={(_e) => makeActive(_e)}>
+      <div
+        className={`left-nav__link ${
+          activeIndex == -2 && "left-nav__link--active"
+        }`}
+        onClick={() => makeActive(-2)}
+      >
         <Edit />
         <div
           className=" left-nav__text"
