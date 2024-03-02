@@ -1,5 +1,5 @@
 .channel {
-    width: 20vw;
+    width: 17vw;
     background-color: $color-white;
     display: flex;
     flex-direction: row;
@@ -32,7 +32,6 @@
 
     &__text {
         font-size: 1.3rem;
-        flex: 1;
         font-weight: 600;
     }
 
