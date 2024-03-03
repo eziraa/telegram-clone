@@ -13,6 +13,7 @@ const Channel = () => {
   const [activeIndex, setActiveIndex] = useState(-1);
 
   const makeActive = (index: number) => {
+    setChannel(channels);
     setActiveIndex(index);
   };
   return channelsList.map((channel, index) => (
