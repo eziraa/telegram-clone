@@ -4,7 +4,7 @@ export const Profile = () => {
     <div className="profile">
       <img src={image1} alt="" className="profile__image" />
       <p className="profile__user-name">Ezira</p>
-      <p className="profile__phone-number">+251 934 342 42</p>
+      <p className="profile__phone-number">+251 93464242</p>
     </div>
   );
 };

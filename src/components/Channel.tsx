@@ -24,7 +24,7 @@ const Channel = () => {
       }  channel--${index}`}
     >
       <img
-        src={images[index >= 5 ? index - 5 : index >= 10 ? index - 10 : index]}
+        src={images[index < 5 ? index : index < 10 ? index - 5 : index - 10]}
         alt=""
         className="channel__image"
       />

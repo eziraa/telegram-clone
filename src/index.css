@@ -37,16 +37,23 @@ body {
       color: #368ef2; }
 
 .account-container {
-  padding: 1rem;
-  display: flex;
+    display: flex;
   flex-direction: column;
-  gap: .6rem; }
+  gap: .6rem;
+  width: 100%;
+  border-bottom: 1.5px solid  #00000053; }
 
 @keyframes moveFromLeft {
   0% {
     transform: translateX(-25rem); }
   100% {
     transform: translateX(0rem); } }
+
+@keyframes moveFromRight {
+  0% {
+    transform: translateX(0rem); }
+  100% {
+    transform: translateX(-40rem); } }
 
 .channel {
   width: 17vw;
@@ -94,7 +101,7 @@ body {
 
 .search {
   padding: .3rem;
-  width: 20vw; }
+  width: 17vw; }
   .search__field {
     width: 100%;
     padding: .2rem 2rem;
@@ -117,10 +124,13 @@ body {
   background-color: #FFFFFF;
   z-index: 10;
   left: 0;
-  top: 0;
-  animation: moveFromLeft .51s; }
+  top: 0; }
+  .menu:not(.menu--hidden) {
+    animation: moveFromLeft .51s; }
   .menu--hidden {
-    display: none; }
+    transform: translateX(-50rem); }
+  .menu--animated {
+    animation: moveFromRight .51s; }
 
 .overlay {
   position: absolute;
@@ -150,12 +160,27 @@ body {
 .account {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  padding: .5rem, 1.2rem;
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 2;
-  margin-left: 2rem; }
+  padding-left: 2rem;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  padding-right: .5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem; }
+  .account:hover {
+    background-color: #e1e1e1; }
+  .account__user {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem; }
+    .account__user__image {
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%; }
   .account__notification-count {
     height: 2rem;
     width: 2rem;
