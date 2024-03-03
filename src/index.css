@@ -37,7 +37,7 @@ body {
       color: #368ef2; }
 
 .account-container {
-    display: flex;
+  display: flex;
   flex-direction: column;
   gap: .6rem;
   width: 100%;
@@ -131,6 +131,15 @@ body {
     transform: translateX(-50rem); }
   .menu--animated {
     animation: moveFromRight .51s; }
+  .menu__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 2rem; }
+    .menu__item:hover {
+      background-color: #a9a9a9; }
 
 .overlay {
   position: absolute;
