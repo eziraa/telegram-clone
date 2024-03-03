@@ -1,9 +1,11 @@
 import { FaFolder } from "react-icons/fa";
-
-export const Folder = () => {
+interface Props {
+  active: boolean;
+}
+export const Folder = ({ active }: Props) => {
   return (
     <div className="icon">
-      <FaFolder size={20} color={"#74728c"} />
+      <FaFolder size={20} className={`${active && "icon--active"}`} />
     </div>
   );
 };
