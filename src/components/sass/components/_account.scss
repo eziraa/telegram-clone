@@ -1,12 +1,32 @@
 .account{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    padding: .5rem, 1.2rem;
     font-size: 1.4rem;
     font-weight: 500;
     line-height: 2;
-    margin-left: 2rem;
+    padding-left: 2rem;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    padding-right: .5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    &:hover{
+        background-color: $color-secondary-white;
+    }
+    &__user{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+        &__image{
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+        }
+        
+    }
+
 
     &__notification-count{
         height: 2rem;
