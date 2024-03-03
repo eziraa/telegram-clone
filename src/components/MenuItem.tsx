@@ -7,11 +7,13 @@ import {
 } from "react-icons/io5";
 import { MdGroup, MdOutlineNightlight } from "react-icons/md";
 import { Fragment } from "react/jsx-runtime";
-
-export const MenuItem = () => {
+interface Props {
+  handleDisplay: (index: number) => void;
+}
+export const MenuItem = ({ handleDisplay }: Props) => {
   return (
     <Fragment>
-      <div className="menu__item">
+      <div className="menu__item" onClick={() => handleDisplay(0)}>
         <div className="menu__item__icon">
           <GoTelescope size={20} color={"#74728c"} />
         </div>
@@ -19,7 +21,7 @@ export const MenuItem = () => {
           <span className="menu__item__title">New channel </span>
         </div>
       </div>
-      <div className="menu__item">
+      <div className="menu__item" onClick={() => handleDisplay(1)}>
         <div className="menu__item__icon">
           <MdGroup size={20} color={"#74728c"} />
         </div>
@@ -27,7 +29,7 @@ export const MenuItem = () => {
           <span className="menu__item__title">Groups</span>
         </div>
       </div>
-      <div className="menu__item">
+      <div className="menu__item" onClick={() => handleDisplay(2)}>
         <div className="menu__item__icon">
           <FaRegUserCircle size={20} color={"#74728c"} />
         </div>
