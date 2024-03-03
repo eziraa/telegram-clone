@@ -1,0 +1,15 @@
+.btn{
+    padding: .5rem 1rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    background-color: $color-primary-white;
+    color: $color-primary-blue;
+    border: none;
+    padding: .7rem 1rem;
+    border-radius: .3rem;
+
+    &:hover{
+        background-color: rgba($color-tertiary-blue, .3);
+
+    }
+}
