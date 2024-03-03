@@ -17,6 +17,8 @@ const Main = () => {
       className="main"
       style={{
         backgroundImage: `url(${image})`,
+        backgroundPosition: "center",
+        backgroundSize: "cover",
       }}
     >
       <Menu
