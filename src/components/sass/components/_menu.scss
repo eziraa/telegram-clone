@@ -9,10 +9,17 @@
     z-index: 10;
     left: 0;
     top: 0;
-    animation: moveFromLeft .51s;
-    &--hidden{
-        display: none;
+    &:not(&--hidden){
+        animation: moveFromLeft .51s;
     }
+    &--hidden{
+        transform: translateX(-50rem);
+    }
+    
+    &--animated{
+        animation: moveFromRight .51s;
+    }
+
 }
 
 .overlay{
