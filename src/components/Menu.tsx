@@ -3,18 +3,42 @@ import { Fragment } from "react/jsx-runtime";
 import { Profile } from "./Profile";
 import { AccountsContainer } from "./AccountsContainer";
 import { MenuItem } from "./MenuItem";
+import { Overlay } from "./Overlay";
+import { useState } from "react";
+import { CreateGroup } from "./CreateGroup";
+import { CreateChannel } from "./CreateChannel";
+import { Contacts } from "./Contacts";
 interface Props {
   displayMenu: boolean;
   animated: boolean;
   toggleMenu: () => void;
 }
 export const Menu = ({ displayMenu, toggleMenu, animated }: Props) => {
+  const [displayItem, setDisplayItem] = useState(-1);
+
+  const handleDisplay = (index: number) => {
+    setDisplayItem(index);
+    toggleMenu();
+  };
+
+  const handleDisplayNone = () => {
+    setDisplayItem(-1);
+  };
   return (
     <Fragment>
-      <div
-        className={`overlay ${!displayMenu && "overlay--hidden"} `}
-        onClick={toggleMenu}
-      ></div>
+      <Overlay toggleMenu={toggleMenu} display={displayMenu} />
+      <CreateGroup
+        displayItemIndex={displayItem}
+        handleDisplayNone={handleDisplayNone}
+      />
+      <CreateChannel
+        displayItemIndex={displayItem}
+        handleDisplayNone={handleDisplayNone}
+      />
+      <Contacts
+        displayItemIndex={displayItem}
+        handleDisplayNone={handleDisplayNone}
+      />
       <div
         className={`menu ${!displayMenu && "menu--hidden"} ${
           animated && "menu--animated"
@@ -22,7 +46,7 @@ export const Menu = ({ displayMenu, toggleMenu, animated }: Props) => {
       >
         <Profile />
         <AccountsContainer />
-        <MenuItem />
+        <MenuItem handleDisplay={handleDisplay} />
       </div>
       ;
     </Fragment>
