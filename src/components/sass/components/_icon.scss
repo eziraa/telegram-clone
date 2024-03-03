@@ -2,5 +2,12 @@
     width: 30px;
     height: 30px;
     display: inline-block;
-    color: $color-tertiary-blue;
+    color: $color-tertiary-dark;
+
+    &--active{
+            background-color: $color-primary-dark;
+            color: $color-primary-blue;
+
+    }
+
 }
