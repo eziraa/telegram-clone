@@ -4,13 +4,16 @@
     font-size: 1.4rem;
     font-weight: 500;
     line-height: 2;
-    padding-left: 2rem;
     align-items: center;
     width: 100%;
     justify-content: space-between;
-    padding-right: .5rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+
+    padding: {
+        top: .5rem;
+        right: .5rem;
+        bottom: .5rem;
+        left: 2rem;
+    }
     &:hover{
         background-color: $color-secondary-white;
     }
