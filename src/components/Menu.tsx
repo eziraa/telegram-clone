@@ -2,6 +2,7 @@
 import { Fragment } from "react/jsx-runtime";
 import { Profile } from "./Profile";
 import { AccountsContainer } from "./AccountsContainer";
+import { MenuItem } from "./MenuItem";
 interface Props {
   displayMenu: boolean;
   animated: boolean;
@@ -21,6 +22,7 @@ export const Menu = ({ displayMenu, toggleMenu, animated }: Props) => {
       >
         <Profile />
         <AccountsContainer />
+        <MenuItem />
       </div>
       ;
     </Fragment>
