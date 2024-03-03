@@ -43,7 +43,7 @@ const LeftSideBar = ({ toggleMenu }: Props) => {
           }`}
           onClick={() => makeActive(index)}
         >
-          <Folder />
+          <Folder active={index === activeIndex} />
           <div className="left-nav__text ">{folder}</div>
         </div>
       ))}
