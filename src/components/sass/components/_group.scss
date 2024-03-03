@@ -11,6 +11,7 @@
     gap: 1rem;
     padding: 2rem;
     color: $color-primary-blue;
+    z-index: 20;
     .upper{
         display: flex;
         gap: 2rem;
@@ -37,6 +38,9 @@
         font-size: 1.6rem;
     }
 
+    &--hidden{
+        display: none;
+    }
     .input-field{
         display: flex;
         flex-direction: column;
