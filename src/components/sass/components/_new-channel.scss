@@ -1,0 +1,76 @@
+.new-channel{
+    width: 35rem;
+    position: absolute;
+    border-radius: 1rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $color-primary-white;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+    color: $color-primary-blue;
+    z-index: 20;
+
+    &__description{
+        padding: 1rem;
+        font-size: medium;
+
+        &-input{
+            font-size: medium;
+            border: none;
+            width: 100%;
+            border-bottom: 2px solid rgba($color-primary-dark, .15);
+        }
+
+    }
+    .upper{
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+        align-items: center;
+    }
+    &__image{
+        width: 6rem;
+        height: 6rem;
+        border-radius: 50%;
+        background-color: $color-primary-blue;
+        position: relative;
+
+        .icon{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+
+
+    &--hidden{
+        display: none;
+    }
+    .input-field{
+        display: flex;
+        flex-direction: column;
+    }
+    &__name-input{
+        padding: .5rem 1rem;
+        border: none;
+        font-size: medium;
+        border-bottom: 2px solid $color-primary-blue;
+    }
+    
+    &__name-label{
+        font-size: 1.6rem;
+    }
+    &--hidden{
+        display: none;
+    }
+
+    .lower{
+        display: flex;
+        justify-content: flex-end;
+    }
+}
