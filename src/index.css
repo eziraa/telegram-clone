@@ -97,7 +97,10 @@ body {
   width: 30px;
   height: 30px;
   display: inline-block;
-  color: #93b7e0; }
+  color: #74728c; }
+  .icon--active {
+    background-color: #272938;
+    color: #368ef2; }
 
 .search {
   padding: .3rem;
@@ -115,7 +118,7 @@ body {
   margin-top: 15px; }
 
 .menu {
-  width: 23vw;
+  width: 15vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -137,9 +140,11 @@ body {
     justify-content: flex-start;
     align-items: center;
     gap: 1rem;
-    padding: 1rem 2rem; }
+    padding: .5rem 2rem;
+    font-size: 1.4rem;
+    font-weight: 500; }
     .menu__item:hover {
-      background-color: #a9a9a9; }
+      background-color: #e1e1e1; }
 
 .overlay {
   position: absolute;
@@ -172,13 +177,13 @@ body {
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 2;
-  padding-left: 2rem;
   align-items: center;
   width: 100%;
   justify-content: space-between;
+  padding-top: .5rem;
   padding-right: .5rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem; }
+  padding-bottom: .5rem;
+  padding-left: 2rem; }
   .account:hover {
     background-color: #e1e1e1; }
   .account__user {
