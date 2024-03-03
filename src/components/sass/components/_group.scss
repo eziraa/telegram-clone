@@ -1,0 +1,62 @@
+.new-group{
+    width: 35rem;
+    position: absolute;
+    border-radius: 1rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $color-primary-white;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+    color: $color-primary-blue;
+    .upper{
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+        align-items: center;
+    }
+    &__image{
+        width: 6rem;
+        height: 6rem;
+        border-radius: 50%;
+        background-color: $color-primary-blue;
+        position: relative;
+
+        .icon{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &__name-label{
+        float: left;
+        font-size: 1.6rem;
+    }
+
+    .input-field{
+        display: flex;
+        flex-direction: column;
+    }
+    &__name-input{
+
+        &:focus{
+            border: none;
+        }
+        padding: .5rem 1rem;
+        border: none;
+
+        border-bottom: 2px solid $color-primary-blue;
+    }
+    &--hidden{
+        display: none;
+    }
+
+    .lower{
+        display: flex;
+        justify-content: flex-end;
+    }
+}
