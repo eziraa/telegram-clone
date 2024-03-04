@@ -17,10 +17,10 @@ export const CreateGroup = ({ displayItemIndex, handleDisplayNone }: Props) => {
             <FaCamera className="icon" color="white" />
           </div>
           <div className="input-field">
+            <input type="text" className="new-group__name-input" required />
             <label htmlFor="group-name" className="new-group__name-label">
               Group name
             </label>
-            <input type="text" className="new-group__name-input" />
           </div>
         </div>
         <div className="lower">
