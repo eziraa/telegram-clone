@@ -8,6 +8,7 @@ import { useState } from "react";
 import { CreateGroup } from "./CreateGroup";
 import { CreateChannel } from "./CreateChannel";
 import { Contacts } from "./Contacts";
+import { Calls } from "./Calls";
 interface Props {
   displayMenu: boolean;
   animated: boolean;
@@ -36,6 +37,10 @@ export const Menu = ({ displayMenu, toggleMenu, animated }: Props) => {
         handleDisplayNone={handleDisplayNone}
       />
       <Contacts
+        displayItemIndex={displayItem}
+        handleDisplayNone={handleDisplayNone}
+      />
+      <Calls
         displayItemIndex={displayItem}
         handleDisplayNone={handleDisplayNone}
       />
