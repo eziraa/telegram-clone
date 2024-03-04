@@ -1,6 +1,8 @@
 import { PiSortAscendingLight } from "react-icons/pi";
 import { Overlay } from "./Overlay";
 import { Fragment } from "react/jsx-runtime";
+import { IoSearchOutline } from "react-icons/io5";
+
 interface Props {
   displayItemIndex: number;
   handleDisplayNone: () => void;
@@ -44,13 +46,19 @@ export const Contacts = ({ displayItemIndex, handleDisplayNone }: Props) => {
           displayItemIndex !== 2 && "contact-container--hidden"
         }`}
       >
-        <div className="three-dots">
+        <div
+          className="three-dots"
+          style={{
+            top: "2%",
+          }}
+        >
           <PiSortAscendingLight size={20} />
         </div>
         <div className="contacts__header">
           <p className="contacts__header__text">Contacts</p>
         </div>
         <div className="search">
+          <IoSearchOutline size={15} />
           <input
             type="text"
             className="search-input"

@@ -2,12 +2,10 @@
     width: 35rem;
     height: 50rem;
     background-color: $color-primary-white;
-    border: 1rem;
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    gap: .3rem;
     z-index: 11;
     position: absolute;
     top: 50%;
@@ -17,33 +15,30 @@
         display: none;
     }
     .contacts__header{
-        flex: 1;
         display: flex;
-        padding: 1rem 2rem;
+        padding: 1rem 2rem ;
 
         &__text{
             font-size: 2rem;
             font-weight: 500;
             color: $color-primary-dark;
-
         }
     }
 
     .search{
         width: 100%;
-
+        border-bottom: 2px solid rgba($color-primary-dark, .2);
+        padding: 1rem 2rem;
         &-input{
-            font-size: 1.6rem;
+            font-size: 1.3rem;
             line-height: 1.6;
-            padding-left: 2rem;
+            padding-left: 1rem;
             border: none;
-            width: 100%;
-            border-bottom: 2px solid rgba($color-primary-dark, .2);
+            outline: none;
         }
     }
 
     .contacts__list{
-        flex: 7;
         padding: 1rem;
         display: flex;
         flex-direction: column;
