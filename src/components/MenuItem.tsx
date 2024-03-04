@@ -37,7 +37,7 @@ export const MenuItem = ({ handleDisplay }: Props) => {
           <span className="menu__item__title">Contacts</span>
         </div>
       </div>
-      <div className="menu__item">
+      <div className="menu__item" onClick={() => handleDisplay(3)}>
         <div className="menu__item__icon">
           <IoCallOutline size={20} color={"#74728c"} />
         </div>
