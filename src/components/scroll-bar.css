@@ -1,0 +1,47 @@
+.scroll-container {
+  width: 100%; /* Width of the container */
+  height: 100%; /* Height of the container */
+  overflow-y: scroll; /* Enable vertical scrollbar */
+  position: relative; /* Required for the absolute positioning of the scrollbar */
+}
+
+.content {
+  width: 100%; /* Width of the content */
+  height: 1000px; /* Height of the content, adjust as per your content */
+}
+
+/* Custom scrollbar */
+.scroll-container::-webkit-scrollbar {
+  width: 4px; /* Width of the scrollbar */
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Track color */
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background: #888; /* Thumb color */
+  border-radius: 4px; /* Rounded corners */
+}
+
+.scroll-container::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Thumb color on hover */
+}
+
+/* Positioning the scrollbar */
+.scrollbar {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.scrollbar-thumb {
+  background: #888;
+  width: 8px;
+  border-radius: 4px;
+}
+
+.scrollbar-thumb:hover {
+  background: #555;
+}

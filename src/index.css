@@ -340,7 +340,6 @@ body {
   width: 35rem;
   height: 50rem;
   background-color: #FFFFFF;
-  border: 1rem;
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
@@ -353,7 +352,6 @@ body {
   .contact-container--hidden {
     display: none; }
   .contact-container .contacts__header {
-    flex: 1;
     display: flex;
     padding: 1rem 2rem; }
     .contact-container .contacts__header__text {
@@ -361,16 +359,16 @@ body {
       font-weight: 500;
       color: #272938; }
   .contact-container .search {
-    width: 100%; }
+    width: 100%;
+    border-bottom: 2px solid rgba(39, 41, 56, 0.2);
+    padding: 1rem 2rem; }
     .contact-container .search-input {
-      font-size: 1.6rem;
+      font-size: 1.3rem;
       line-height: 1.6;
-      padding-left: 2rem;
+      padding-left: 1rem;
       border: none;
-      width: 100%;
-      border-bottom: 2px solid rgba(39, 41, 56, 0.2); }
+      outline: none; }
   .contact-container .contacts__list {
-    flex: 7;
     padding: 1rem;
     display: flex;
     flex-direction: column;
