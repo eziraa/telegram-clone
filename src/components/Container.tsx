@@ -1,11 +1,16 @@
 import Channel from "./Channel";
 import { Search } from "./Search";
+import "./new.css";
 // [calc(100% - 20rem)]
 export const Container = () => {
   return (
-    <div className="channel-container">
+    <div className="body-container">
       <Search />
-      <Channel />
+      <div className="main-container">
+        <div className="chats-container">
+          <Channel />
+        </div>
+      </div>
     </div>
   );
 };
