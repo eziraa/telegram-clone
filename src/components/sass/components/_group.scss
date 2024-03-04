@@ -32,31 +32,49 @@
             transform: translate(-50%, -50%);
         }
     }
-
-    &__name-label{
-        float: left;
-        font-size: 1.6rem;
-    }
-
+    
     &--hidden{
         display: none;
     }
+
+
+
     .input-field{
-        display: flex;
-        flex-direction: column;
-    }
-    &__name-input{
+        height: 4rem;
+        width: 100%;
+        position: relative;
 
-        &:focus{
-            border: none;
+        input{
+            width: 100%;
+            height: 100%;
+            font-size: 1.7rem;
+            border: 2px solid #fff;
+            border-bottom: 2px solid silver;
+
+            &:focus{
+                border: #fff;
+            }
+            
         }
-        padding: .5rem 1rem;
-        border: none;
 
-        border-bottom: 2px solid $color-primary-blue;
-    }
-    &--hidden{
-        display: none;
+        input:focus ~ label, input:valid ~ label{
+            transform: translateY(-20px);
+            outline: 2px white solid;
+            font-size: 1rem;
+            color: $color-primary-blue;
+    
+        }
+
+        label{
+            position: absolute;
+            bottom: 1rem;
+            left: 0;
+            color: $color-primary-dark;
+            pointer-events: none;
+            font-size: 1.6rem;
+            transition: all 0.5s;
+        }
+
     }
 
     .lower{
