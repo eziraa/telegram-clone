@@ -3,12 +3,21 @@
   width: 100%;
   height: 100vh;
 }
-.channel-container {
-  width: 18vw;
+.body-container{
+  width: 25rem;
   height: 100vh;
-  background-color: $color-white;
-  overflow-y: auto;
-  overflow-x: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+
+.channel-container {
+  width: 100%;
+  height: 100vh;
+  background-color: $color-white;/* Required for the absolute positioning of the scrollbar */
+
+}
+
 
 
