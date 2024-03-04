@@ -1,3 +1,4 @@
+import { PiSortAscendingLight } from "react-icons/pi";
 import { Overlay } from "./Overlay";
 import { Fragment } from "react/jsx-runtime";
 interface Props {
@@ -43,6 +44,9 @@ export const Contacts = ({ displayItemIndex, handleDisplayNone }: Props) => {
           displayItemIndex !== 2 && "contact-container--hidden"
         }`}
       >
+        <div className="three-dots">
+          <PiSortAscendingLight size={20} />
+        </div>
         <div className="contacts__header">
           <p className="contacts__header__text">Contacts</p>
         </div>
