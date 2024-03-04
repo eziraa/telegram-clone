@@ -2,7 +2,6 @@ import { PiSortAscendingLight } from "react-icons/pi";
 import { Overlay } from "./Overlay";
 import { Fragment } from "react/jsx-runtime";
 import { IoSearchOutline } from "react-icons/io5";
-
 interface Props {
   displayItemIndex: number;
   handleDisplayNone: () => void;
@@ -65,22 +64,24 @@ export const Contacts = ({ displayItemIndex, handleDisplayNone }: Props) => {
             placeholder="Search Contacts"
           />
         </div>
-        <div className="contacts__list">
-          {list_of_contacts.map((contact, index) => {
-            return (
-              <div className="contact">
-                <div
-                  className="contact__profile"
-                  style={{
-                    backgroundColor: colors[index],
-                  }}
-                >
-                  {contact[index]}
+        <div className="scroll-container">
+          <div className="contacts__list">
+            {list_of_contacts.map((contact, index) => {
+              return (
+                <div className="contact">
+                  <div
+                    className="contact__profile"
+                    style={{
+                      backgroundColor: colors[index],
+                    }}
+                  >
+                    {contact[index]}
+                  </div>
+                  <div className="contact__info">{contact}</div>
                 </div>
-                <div className="contact__info">{contact}</div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
         <div className="contacts__footer">
           <button className="btn btn-add">Add contact</button>
