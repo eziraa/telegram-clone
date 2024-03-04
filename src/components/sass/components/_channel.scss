@@ -1,11 +1,14 @@
 .channel {
-    width: 17vw;
+    width: 100%;
     background-color: $color-white;
     display: flex;
     flex-direction: row;
     gap: .8rem;
     padding: .4rem;
 
+    &:not(&__active):hover{
+        background-color: $color-secondary-white;
+    }
     border-bottom: .1rem solid rgba($color-tertiary-dark, .15);
     &__image {
         flex: 1;
@@ -45,8 +48,12 @@
     }
 
     &__active{
-        background-color: $color-tertiary-dark;
+        background-color: $color-primary-blue;
     }
+    // &:active{
+    //             background-color: $color-primary-blue;
+
+    // }
 
 
     &__last-post{
@@ -54,5 +61,7 @@
     }
 
 }
+
+
 
 
