@@ -141,6 +141,7 @@ body {
     align-items: center;
     gap: 1rem;
     padding: .5rem 2rem;
+    cursor: pointer;
     font-size: 1.4rem;
     font-weight: 500; }
     .menu__item:hover {
@@ -180,6 +181,7 @@ body {
   align-items: center;
   width: 100%;
   justify-content: space-between;
+  cursor: pointer;
   padding-top: .5rem;
   padding-right: .5rem;
   padding-bottom: .5rem;
