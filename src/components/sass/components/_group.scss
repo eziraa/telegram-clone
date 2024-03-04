@@ -50,10 +50,8 @@
             font-size: 1.7rem;
             border: 2px solid #fff;
             border-bottom: 2px solid silver;
-
-            &:focus{
-                border: #fff;
-            }
+            outline: none;
+            
             
         }
 
@@ -73,7 +71,9 @@
             pointer-events: none;
             font-size: 1.6rem;
             transition: all 0.5s;
+            outline: none;
         }
+
 
     }
 
