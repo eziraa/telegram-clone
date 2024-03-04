@@ -1,6 +1,7 @@
 import { FaCamera } from "react-icons/fa";
 import { Overlay } from "./Overlay";
 import { Fragment } from "react/jsx-runtime";
+import { BsThreeDotsVertical } from "react-icons/bs";
 interface Props {
   displayItemIndex: number;
   handleDisplayNone: () => void;
@@ -12,6 +13,9 @@ export const CreateGroup = ({ displayItemIndex, handleDisplayNone }: Props) => {
       <div
         className={`new-group ${displayItemIndex !== 1 && "new-group--hidden"}`}
       >
+        <div className="three-dots">
+          <BsThreeDotsVertical size={20} />
+        </div>
         <div className="upper">
           <div className="new-group__image">
             <FaCamera className="icon" color="white" />
