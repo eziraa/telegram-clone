@@ -22,18 +22,19 @@ export const CreateChannel = ({
             <FaCamera className="icon" color="white" />
           </div>
           <div className="input-field">
+            <input type="text" className="new-channel__name-input" required />
             <label htmlFor="channel-name" className="new-channel__name-label">
               Channel name
             </label>
-            <input type="text" className="new-channel__name-input" />
           </div>
         </div>
-        <div className="new-channel__description">
+        <div className="new-channel__description input-field">
           <input
             type="text"
             className="new-channel__description-input"
-            placeholder="Description Optional"
+            required
           />
+          <label htmlFor="">Description Optional</label>
         </div>
         <div className="lower">
           <button className="btn btn-cancel" onClick={handleDisplayNone}>
