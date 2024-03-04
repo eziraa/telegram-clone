@@ -7,12 +7,8 @@
   width: 18vw;
   height: 100vh;
   background-color: $color-white;
-  scrollbar-color: #d4aa70 #e4e4e4;
-  --webkit-scrollbar-width: 5px;
-  --webkit-scrollbar-track-color: #e4e4e4;
   overflow-y: auto;
-  overflow-x: hidden;
-  
+  overflow-x: auto;
 }
 
 
