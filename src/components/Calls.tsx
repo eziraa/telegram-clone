@@ -1,5 +1,4 @@
 import { BsThreeDotsVertical } from "react-icons/bs";
-import { Overlay } from "./Overlay";
 import { Fragment } from "react/jsx-runtime";
 
 import { MdCall, MdCallMissed, MdCallReceived } from "react-icons/md";
@@ -11,7 +10,6 @@ interface Props {
   handleDisplayNone: () => void;
 }
 
-
 export const Calls = ({ displayItemIndex, handleDisplayNone }: Props) => {
   const getCallType = (type: string) => {
     if (type === "received") return <MdCallReceived color="green" />;
@@ -21,7 +19,6 @@ export const Calls = ({ displayItemIndex, handleDisplayNone }: Props) => {
   };
   return (
     <Fragment>
-      {/* <Overlay display={displayItemIndex == 3} toggleMenu={handleDisplayNone} /> */}
       <div
         className={`calls-container ${
           displayItemIndex !== 3 && "calls-container--hidden"
