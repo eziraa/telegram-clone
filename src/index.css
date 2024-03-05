@@ -357,7 +357,7 @@ body {
     .contact-container .contacts__header__text {
       font-size: 2rem;
       font-weight: 500;
-      color: #272938; }
+      color: #38445b; }
   .contact-container .search {
     width: 100%;
     border-bottom: 1px solid rgba(39, 41, 56, 0.2);
@@ -381,6 +381,7 @@ body {
       justify-content: flex-start;
       align-items: center;
       padding-left: 1rem;
+      padding: .2rem 1rem .2rem;
       gap: .2rem 1rem;
       width: 100%; }
       .contact-container .contacts__list .contact__profile {
@@ -410,6 +411,10 @@ body {
     justify-content: space-between;
     padding: .5rem 1rem;
     border-top: 1px solid rgba(39, 41, 56, 0.2); }
+  .contact-container .lower {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem; }
 
 .calls-container {
   width: 35rem;
@@ -537,6 +542,82 @@ body {
 
 .scrollbar-thumb:hover {
   background: #555; }
+
+.setting-container {
+  width: 350px;
+  height: 600px;
+  border-radius: 1rem;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  z-index: 20; }
+  .setting-container__hidden {
+    display: none; }
+  .setting-container__header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid rgba(39, 41, 56, 0.2);
+    padding: 2rem 2rem; }
+    .setting-container__header .text {
+      font-size: 1.5rem;
+      font-weight: 500; }
+    .setting-container__header .actions {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem; }
+  .setting-container .setting {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: .3rem; }
+    .setting-container .setting .user__profile {
+      padding: 1rem 2rem;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 1rem;
+      border-bottom: 8px solid rgba(39, 41, 56, 0.1); }
+      .setting-container .setting .user__profile .image {
+        width: 7rem;
+        height: 7rem;
+        border-radius: 50%; }
+      .setting-container .setting .user__profile .user__info {
+        display: flex;
+        flex-direction: column;
+        gap: .3rem; }
+        .setting-container .setting .user__profile .user__info .name {
+          font-size: 1.5rem;
+          font-weight: 550;
+          color: #272938; }
+        .setting-container .setting .user__profile .user__info .phone-number, .setting-container .setting .user__profile .user__info .username {
+          font-size: 1.3rem;
+          color: #272938; }
+    .setting-container .setting .setting-body {
+      padding: 1rem 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem; }
+      .setting-container .setting .setting-body .setting-item {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        width: 100%;
+        align-items: center; }
+        .setting-container .setting .setting-body .setting-item .icon {
+          width: 2rem;
+          height: 2rem;
+          color: rgba(39, 41, 56, 0.6); }
+        .setting-container .setting .setting-body .setting-item .text {
+          font-size: 1.25rem;
+          line-height: 1.7; }
 
 .main {
   display: flex;

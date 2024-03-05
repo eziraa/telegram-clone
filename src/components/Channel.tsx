@@ -24,11 +24,7 @@ const Channel = () => {
         index === activeIndex && "channel__active"
       }  channel--${index}`}
     >
-      <img
-        src={images[index < 5 ? index : index < 10 ? index - 5 : index - 10]}
-        alt=""
-        className="channel__image"
-      />
+      <img src={images[index % 5]} alt="" className="channel__image" />
       <div className="channel__info ">
         <div className="channel__header">
           <p className="channel__text"> {channel.title} </p>
