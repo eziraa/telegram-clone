@@ -27,7 +27,7 @@ export const Menu = ({ displayMenu, toggleMenu, animated }: Props) => {
   };
   return (
     <Fragment>
-      <Overlay toggleMenu={handleDisplayNone} display={displayItem} />
+      <Overlay toggleMenu={handleDisplayNone} display_index={displayItem} />
       <CreateGroup
         displayItemIndex={displayItem}
         handleDisplayNone={handleDisplayNone}
