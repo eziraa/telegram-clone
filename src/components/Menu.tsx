@@ -7,6 +7,7 @@ import { CreateGroup } from "./CreateGroup";
 import { CreateChannel } from "./CreateChannel";
 import { Contacts } from "./Contacts";
 import { Calls } from "./Calls";
+import { Setting } from "./Setting";
 interface Props {
   displayItem: number;
   animated: boolean;
@@ -35,6 +36,10 @@ export const Menu = ({
         handleDisplayNone={handleDisplayNone}
       />
       <Calls
+        displayItemIndex={displayItem}
+        handleDisplayNone={handleDisplayNone}
+      />
+      <Setting
         displayItemIndex={displayItem}
         handleDisplayNone={handleDisplayNone}
       />
