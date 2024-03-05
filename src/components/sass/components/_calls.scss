@@ -39,7 +39,6 @@
             flex-direction: row;
             justify-content: flex-start;
             width: 100%;
-            border: 2px red solid;
             align-items: center;
             gap: 1rem;
             border-bottom: 2px solid rgba($color-primary-white, .2);
@@ -68,7 +67,7 @@
                 }
 
                 .call__time{
-                    color: $color-tertiary-blue;
+                    color: $color-tertiary-white;
                 }
                 .call__data{
                     display: flex;
@@ -81,6 +80,7 @@
             &__icon{
                 position: absolute;
                 right: 2%;
+                color: $color-tertiary-white;
             }
 
             &:hover{
