@@ -16,8 +16,9 @@ const list_of_folders = [
 
 interface Props {
   toggleMenu: () => void;
+  handleDisplay: (index: number) => void;
 }
-const LeftSideBar = ({ toggleMenu }: Props) => {
+const LeftSideBar = ({ toggleMenu, handleDisplay }: Props) => {
   const [activeIndex, setActiveIndex] = useState(-8);
 
   const makeActive = (index: number) => {
@@ -31,6 +32,7 @@ const LeftSideBar = ({ toggleMenu }: Props) => {
         }`}
         onClick={() => {
           toggleMenu();
+          handleDisplay(-1);
         }}
       >
         <Hamburger />
