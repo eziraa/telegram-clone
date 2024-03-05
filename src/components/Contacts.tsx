@@ -12,7 +12,7 @@ interface Props {
 export const Contacts = ({ displayItemIndex, handleDisplayNone }: Props) => {
   return (
     <Fragment>
-      <Overlay display={displayItemIndex == 2} toggleMenu={handleDisplayNone} />
+      {/* <Overlay display={displayItemIndex == 2} toggleMenu={handleDisplayNone} /> */}
       <div
         className={`contact-container ${
           displayItemIndex !== 2 && "contact-container--hidden"
