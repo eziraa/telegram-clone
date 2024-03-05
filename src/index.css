@@ -547,7 +547,7 @@ body {
   width: 350px;
   height: 600px;
   border-radius: 1rem;
-  background-color: white;
+  background-color: #e1e1e1;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -564,7 +564,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid rgba(39, 41, 56, 0.2);
+    background-color: white;
     padding: 2rem 2rem; }
     .setting-container__header .text {
       font-size: 1.5rem;
@@ -577,14 +577,14 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: .3rem; }
+    gap: .5rem; }
     .setting-container .setting .user__profile {
+      background-color: #FFFFFF;
       padding: 1rem 2rem;
       display: flex;
       flex-direction: row;
       align-items: center;
-      gap: 1rem;
-      border-bottom: 8px solid rgba(39, 41, 56, 0.1); }
+      gap: 1rem; }
       .setting-container .setting .user__profile .image {
         width: 7rem;
         height: 7rem;
@@ -601,23 +601,38 @@ body {
           font-size: 1.3rem;
           color: #272938; }
     .setting-container .setting .setting-body {
-      padding: 1rem 2rem;
+      background-color: #FFFFFF;
       display: flex;
       flex-direction: column;
-      gap: 2rem; }
+      width: 100%; }
       .setting-container .setting .setting-body .setting-item {
         display: flex;
         flex-direction: row;
         gap: 1rem;
         width: 100%;
-        align-items: center; }
+        align-items: center;
+        padding: 1rem 2rem; }
+        .setting-container .setting .setting-body .setting-item:hover {
+          background-color: #e1e1e1; }
         .setting-container .setting .setting-body .setting-item .icon {
           width: 2rem;
           height: 2rem;
-          color: rgba(39, 41, 56, 0.6); }
+          color: rgba(39, 41, 56, 0.8); }
         .setting-container .setting .setting-body .setting-item .text {
           font-size: 1.25rem;
-          line-height: 1.7; }
+          line-height: 1.4; }
+  .setting-container .setting__scale {
+    background-color: #FFFFFF;
+    padding: 1rem 2rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem; }
+    .setting-container .setting__scale .text {
+      font-size: 1.25rem;
+      line-height: 1.4;
+      justify-self: flex-end; }
 
 .main {
   display: flex;

@@ -1,15 +1,20 @@
-import { BsThreeDotsVertical } from "react-icons/bs";
+import {
+  BsThreeDotsVertical,
+  BsToggle2Off,
+  BsToggle2On,
+  BsToggleOff,
+} from "react-icons/bs";
 import profile from "../assets/images/p17.jpg";
-import { PiBatteryChargingLight } from "react-icons/pi";
+import { PiBatteryChargingLight, PiToggleLeftFill } from "react-icons/pi";
 import { FaFolder, FaRegUserCircle } from "react-icons/fa";
 import { IoIosNotificationsOutline } from "react-icons/io";
 import { RiLockPasswordFill } from "react-icons/ri";
+import { IoChatbubbleOutline } from "react-icons/io5";
 import {
-  IoChatbubbleOutline,
-  IoFolderOpenOutline,
-  IoFolderOutline,
-} from "react-icons/io5";
-import { HiLanguage, HiOutlineSpeakerWave } from "react-icons/hi2";
+  HiLanguage,
+  HiOutlineEye,
+  HiOutlineSpeakerWave,
+} from "react-icons/hi2";
 import { GiSettingsKnobs } from "react-icons/gi";
 interface Props {
   displayItemIndex: number;
@@ -61,7 +66,13 @@ export const Setting = ({ displayItemIndex, handleDisplayNone }: Props) => {
             <p className="text">Chat Setting</p>
           </div>
           <div className="setting-item">
-            <FaFolder size={15} className="icon" />
+            <FaFolder
+              size={15}
+              className="icon"
+              stroke="gray"
+              color="transparent"
+              style={{ strokeWidth: "40" }}
+            />
             <p className="text">Folders</p>
           </div>
           <div className="setting-item">
@@ -81,7 +92,11 @@ export const Setting = ({ displayItemIndex, handleDisplayNone }: Props) => {
             <p className="text">Language</p>
           </div>
         </div>
-        <div className="setting__scale"></div>
+        <div className="setting__scale">
+          <HiOutlineEye size={20} />
+          <p className="text">Default interface scale</p>
+          <BsToggleOff size={20} />
+        </div>
         <div className="telegram-features"></div>
       </div>
     </div>
