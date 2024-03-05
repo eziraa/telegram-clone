@@ -21,7 +21,7 @@ export const Calls = ({ displayItemIndex, handleDisplayNone }: Props) => {
   };
   return (
     <Fragment>
-      <Overlay display={displayItemIndex == 3} toggleMenu={handleDisplayNone} />
+      {/* <Overlay display={displayItemIndex == 3} toggleMenu={handleDisplayNone} /> */}
       <div
         className={`calls-container ${
           displayItemIndex !== 3 && "calls-container--hidden"
