@@ -12,6 +12,7 @@ import p8 from "../assets/images/p8.jpg";
 import p9 from "../assets/images/p9.jpg";
 import p10 from "../assets/images/p10.jpg";
 import { IoCall } from "react-icons/io5";
+import { MdCall, MdCallReceived } from "react-icons/md";
 interface Props {
   displayItemIndex: number;
   handleDisplayNone: () => void;
@@ -234,11 +235,12 @@ export const Calls = ({ displayItemIndex, handleDisplayNone }: Props) => {
                   <div className="call__info">
                     <p className="call__name"> {call.name} </p>
                     <div className="call__data">
+                      <MdCallReceived color="red" />
                       <p className="call__time"> {call.last_seen} </p>
                     </div>
                   </div>
                   <div className="call__icon">
-                    <IoCall size={20} />
+                    <MdCall size={20} />
                   </div>
                 </div>
               );
