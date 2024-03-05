@@ -4,30 +4,28 @@ import { Profile } from "./Profile";
 import { AccountsContainer } from "./AccountsContainer";
 import { MenuItem } from "./MenuItem";
 import { Overlay } from "./Overlay";
-import { useState } from "react";
 import { CreateGroup } from "./CreateGroup";
 import { CreateChannel } from "./CreateChannel";
 import { Contacts } from "./Contacts";
 import { Calls } from "./Calls";
 interface Props {
-  displayMenu: boolean;
+  displayItem: number;
   animated: boolean;
-  toggleMenu: () => void;
+  handleDisplayNone: () => void;
+  handleDisplay: (index: number) => void;
 }
-export const Menu = ({ displayMenu, toggleMenu, animated }: Props) => {
-  const [displayItem, setDisplayItem] = useState(-1);
-
-  const handleDisplay = (index: number) => {
-    setDisplayItem(index);
-    if (index < 10) toggleMenu();
-  };
-
-  const handleDisplayNone = () => {
-    setDisplayItem(-1);
-  };
+export const Menu = ({
+  displayItem,
+  animated,
+  handleDisplay,
+  handleDisplayNone,
+}: Props) => {
   return (
     <Fragment>
-      <Overlay toggleMenu={handleDisplayNone} display_index={displayItem} />
+      <Overlay
+        handleDisplayNone={handleDisplayNone}
+        visible={displayItem >= -1}
+      />
       <CreateGroup
         displayItemIndex={displayItem}
         handleDisplayNone={handleDisplayNone}
@@ -46,7 +44,7 @@ export const Menu = ({ displayMenu, toggleMenu, animated }: Props) => {
         handleDisplayNone={handleDisplayNone}
       />
       <div
-        className={`menu ${!displayMenu && "menu--hidden"} ${
+        className={`menu ${displayItem !== -1 && "menu--hidden"} ${
           animated && "menu--animated"
         }`}
       >
