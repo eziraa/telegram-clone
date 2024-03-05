@@ -13,11 +13,6 @@ import p7 from "../assets/images/p7.jpg";
 import p8 from "../assets/images/p8.jpg";
 import p9 from "../assets/images/p9.jpg";
 import p10 from "../assets/images/p10.jpg";
-import p11 from "../assets/images/p11.jpg";
-import p12 from "../assets/images/p12.jpg";
-import p13 from "../assets/images/p13.jpg";
-import p14 from "../assets/images/p14.jpg";
-import p15 from "../assets/images/p15.jpg";
 interface Props {
   displayItemIndex: number;
   handleDisplayNone: () => void;
@@ -84,23 +79,23 @@ const list_of_contacts = [
   {
     name: "Jack",
     last_seen: "Last seen 3 minutes ago",
-    image: p1,
+    image: p2,
   },
 
   {
     name: "Stephen",
     last_seen: "Last seen 23 minutes ago",
-    image: p2,
+    image: p3,
   },
   {
     name: "Solomon",
     last_seen: "Last seen 10 minutes ago",
-    image: p3,
+    image: p4,
   },
   {
     name: "Ezira",
     last_seen: "Last seen 2 minutes ago",
-    image: p4,
+    image: p1,
   },
 
   {
