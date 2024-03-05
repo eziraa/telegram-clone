@@ -2,14 +2,24 @@ import { FaCamera } from "react-icons/fa";
 import { Overlay } from "./Overlay";
 import { Fragment } from "react/jsx-runtime";
 import { BsThreeDotsVertical } from "react-icons/bs";
+import { AddMembers } from "./AddMembers";
 interface Props {
   displayItemIndex: number;
   handleDisplayNone: () => void;
+  handleDisplay: (index: number) => void;
 }
-export const CreateGroup = ({ displayItemIndex, handleDisplayNone }: Props) => {
+export const CreateGroup = ({
+  displayItemIndex,
+  handleDisplayNone,
+  handleDisplay,
+}: Props) => {
   return (
     <Fragment>
-      <Overlay display={displayItemIndex == 1} toggleMenu={handleDisplayNone} />
+      <AddMembers
+        displayItemIndex={displayItemIndex}
+        handleDisplayNone={handleDisplayNone}
+      />
+      {/* <Overlay display={displayItemIndex == 1} toggleMenu={handleDisplayNone} /> */}
       <div
         className={`new-group ${displayItemIndex !== 1 && "new-group--hidden"}`}
       >
@@ -31,7 +41,14 @@ export const CreateGroup = ({ displayItemIndex, handleDisplayNone }: Props) => {
           <button className="btn btn-cancel" onClick={handleDisplayNone}>
             Cancel
           </button>
-          <button className="btn btn-next">Next</button>
+          <button
+            className="btn btn-next"
+            onClick={() => {
+              handleDisplay(10);
+            }}
+          >
+            Next
+          </button>
         </div>
       </div>
     </Fragment>
