@@ -31,12 +31,7 @@ export const AddMembers = ({ displayItemIndex, handleDisplayNone }: Props) => {
             {list_of_contacts.map((contact, index) => {
               return (
                 <div className="contact" key={index}>
-                  <div
-                    className="contact__profile"
-                    // style={{
-                    //   backgroundColor: colors[index],
-                    // }}
-                  >
+                  <div className="contact__profile">
                     <img src={contact.image} alt="" className="image" />
                   </div>
                   <div className="contact__info">
