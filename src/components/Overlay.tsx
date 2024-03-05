@@ -1,12 +1,12 @@
 interface Props {
-  display_index: number;
-  toggleMenu: () => void;
+  visible: boolean;
+  handleDisplayNone: () => void;
 }
-export const Overlay = ({ display_index, toggleMenu }: Props) => {
+export const Overlay = ({ visible, handleDisplayNone }: Props) => {
   return (
     <div
-      className={`overlay ${display_index < 0 && "overlay--hidden"} `}
-      onClick={toggleMenu}
+      className={`overlay ${!visible && "overlay--hidden"} `}
+      onClick={handleDisplayNone}
     ></div>
   );
 };
