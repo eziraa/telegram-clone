@@ -11,6 +11,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
     &--hidden{
 
         display: none;
@@ -22,7 +23,7 @@
         &__text{
             font-size: 2rem;
             font-weight: 500;
-            color: $color-primary-dark;
+            color: $color-secondary-dark;
         }
     }
 
@@ -52,6 +53,7 @@
             justify-content: flex-start;
             align-items: center;
             padding-left: 1rem;
+            padding: .2rem 1rem .2rem;
             gap: .2rem 1rem;
             width: 100%;
             &__profile{
@@ -96,5 +98,11 @@
         padding: .5rem 1rem;
         border-top: 1px solid rgba($color-primary-dark, .2);
 
+    }
+
+    .lower{
+        display: flex;
+        justify-content: flex-end;
+        padding: 1rem;
     }
 }
