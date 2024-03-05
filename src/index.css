@@ -360,7 +360,7 @@ body {
       color: #272938; }
   .contact-container .search {
     width: 100%;
-    border-bottom: 2px solid rgba(39, 41, 56, 0.2);
+    border-bottom: 1px solid rgba(39, 41, 56, 0.2);
     padding: 1rem 2rem; }
     .contact-container .search-input {
       font-size: 1.3rem;
@@ -369,32 +369,47 @@ body {
       border: none;
       outline: none; }
   .contact-container .contacts__list {
-    padding: 1rem;
+    padding: 1rem 0;
     display: flex;
     flex-direction: column;
-    overflow-y: auto; }
+    overflow-y: auto;
+    width: 100%;
+    gap: .6rem; }
     .contact-container .contacts__list .contact {
       display: flex;
       flex-direction: row;
       justify-content: flex-start;
       align-items: center;
-      gap: 1rem;
-      border-bottom: 2px solid rgba(39, 41, 56, 0.2);
-      padding: .5rem 1rem; }
+      padding-left: 1rem;
+      gap: .2rem 1rem;
+      width: 100%; }
       .contact-container .contacts__list .contact__profile {
-        width: 3rem;
-        height: 3rem;
+        width: 4rem;
+        height: 4rem;
         text-align: center;
-        border-radius: 50%;
         font-size: 2.5rem; }
+        .contact-container .contacts__list .contact__profile .image {
+          border-radius: 50%;
+          width: 100%;
+          height: 100%; }
       .contact-container .contacts__list .contact__info {
-        font-size: 1.3rem; }
+        font-size: 1.3rem;
+        display: flex;
+        flex-direction: column;
+        gap: .3rem; }
+        .contact-container .contacts__list .contact__info .contact__name {
+          font-weight: 700; }
+        .contact-container .contacts__list .contact__info .contact__last-seen {
+          color: #93b7e0; }
+      .contact-container .contacts__list .contact:hover {
+        background-color: rgba(39, 41, 56, 0.2); }
   .contact-container .contacts__footer {
-    flex: 1;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: .5rem 1rem; }
+    padding: .5rem 1rem;
+    border-top: 1px solid rgba(39, 41, 56, 0.2); }
 
 .calls-container {
   width: 35rem;
@@ -414,7 +429,6 @@ body {
   .calls-container--hidden {
     display: none; }
   .calls-container .calls__header {
-    flex: 1;
     display: flex;
     padding: 1rem 2rem; }
     .calls-container .calls__header__text {
@@ -422,8 +436,7 @@ body {
       font-weight: 500;
       color: #272938; }
   .calls-container .calls__list {
-    flex: 7;
-    padding: 1rem;
+    width: 100%;
     display: flex;
     flex-direction: column;
     overflow-y: auto; }
@@ -436,15 +449,26 @@ body {
       border-bottom: 2px solid rgba(39, 41, 56, 0.2);
       padding: .5rem 1rem; }
       .calls-container .calls__list .call__profile {
-        width: 3rem;
-        height: 3rem;
+        width: 4rem;
+        height: 4rem;
         text-align: center;
-        border-radius: 50%;
         font-size: 2.5rem; }
+        .calls-container .calls__list .call__profile .image {
+          border-radius: 50%;
+          width: 100%;
+          height: 100%; }
       .calls-container .calls__list .call__info {
-        font-size: 1.3rem; }
+        font-size: 1.3rem;
+        display: flex;
+        flex-direction: column;
+        gap: .3rem; }
+        .calls-container .calls__list .call__info .contact__name {
+          font-weight: 700; }
+        .calls-container .calls__list .call__info .contact__last-seen {
+          color: #93b7e0; }
+      .calls-container .calls__list .call:hover {
+        background-color: rgba(39, 41, 56, 0.2); }
   .calls-container .calls__footer {
-    flex: 1;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;

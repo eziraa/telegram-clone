@@ -1,21 +1,193 @@
+import { BsThreeDotsVertical } from "react-icons/bs";
 import { Overlay } from "./Overlay";
 import { Fragment } from "react/jsx-runtime";
+import p1 from "../assets/images/p1.jpg";
+import p2 from "../assets/images/p2.jpg";
+import p3 from "../assets/images/p3.jpg";
+import p4 from "../assets/images/p4.jpg";
+import p5 from "../assets/images/p5.jpg";
+import p6 from "../assets/images/p6.jpg";
+import p7 from "../assets/images/p7.jpg";
+import p8 from "../assets/images/p8.jpg";
+import p9 from "../assets/images/p9.jpg";
+import p10 from "../assets/images/p10.jpg";
 interface Props {
   displayItemIndex: number;
   handleDisplayNone: () => void;
 }
 
 const list_of_calls = [
-  "94859892528",
-  "94859892528",
-  "94859892528",
-  "94859892528",
-  "94859892528",
-  "94859892528",
-  "94859892528",
-  "948598925",
-  "948598925",
-  "9485989354",
+  {
+    name: "Jack",
+    last_seen: "Last seen 3 minutes ago",
+    image: p1,
+  },
+
+  {
+    name: "Stephen",
+    last_seen: "Last seen 23 minutes ago",
+    image: p2,
+  },
+  {
+    name: "Solomon",
+    last_seen: "Last seen 10 minutes ago",
+    image: p3,
+  },
+  {
+    name: "Ezira",
+    last_seen: "Last seen 2 minutes ago",
+    image: p4,
+  },
+
+  {
+    name: "Ela Barra",
+    last_seen: "Last seen 3 hour ago",
+    image: p5,
+  },
+  {
+    name: "Ellis",
+    last_seen: "Last seen 1 hour ago",
+    image: p6,
+  },
+  {
+    name: "Ellis Barra",
+    last_seen: "Last seen 3 days ago",
+    image: p7,
+  },
+  {
+    name: "Stok",
+    last_seen: "Last seen with in a week",
+    image: p8,
+  },
+  {
+    name: "Erik",
+    last_seen: "Last seen with in a month",
+    image: p9,
+  },
+  {
+    name: "Gtag",
+    last_seen: "Last seen 3 minutes ago",
+    image: p10,
+  },
+  {
+    name: "Dirk",
+    last_seen: "Last seen 13 minutes ago",
+    image: p1,
+  },
+  {
+    name: "Jack",
+    last_seen: "Last seen 3 minutes ago",
+    image: p2,
+  },
+
+  {
+    name: "Stephen",
+    last_seen: "Last seen 23 minutes ago",
+    image: p3,
+  },
+  {
+    name: "Solomon",
+    last_seen: "Last seen 10 minutes ago",
+    image: p4,
+  },
+  {
+    name: "Ezira",
+    last_seen: "Last seen 2 minutes ago",
+    image: p1,
+  },
+
+  {
+    name: "Ela Barra",
+    last_seen: "Last seen 3 hour ago",
+    image: p5,
+  },
+  {
+    name: "Ellis",
+    last_seen: "Last seen 1 hour ago",
+    image: p6,
+  },
+  {
+    name: "Ellis Barra",
+    last_seen: "Last seen 3 days ago",
+    image: p7,
+  },
+  {
+    name: "Stok",
+    last_seen: "Last seen with in a week",
+    image: p8,
+  },
+  {
+    name: "Erik",
+    last_seen: "Last seen with in a month",
+    image: p9,
+  },
+  {
+    name: "Gtag",
+    last_seen: "Last seen 3 minutes ago",
+    image: p10,
+  },
+  {
+    name: "Dirk",
+    last_seen: "Last seen 13 minutes ago",
+    image: p1,
+  },
+  {
+    name: "Jack",
+    last_seen: "Last seen 3 minutes ago",
+    image: p1,
+  },
+
+  {
+    name: "Stephen",
+    last_seen: "Last seen 23 minutes ago",
+    image: p2,
+  },
+  {
+    name: "Solomon",
+    last_seen: "Last seen 10 minutes ago",
+    image: p3,
+  },
+  {
+    name: "Ezira",
+    last_seen: "Last seen 2 minutes ago",
+    image: p4,
+  },
+
+  {
+    name: "Ela Barra",
+    last_seen: "Last seen 3 hour ago",
+    image: p5,
+  },
+  {
+    name: "Ellis",
+    last_seen: "Last seen 1 hour ago",
+    image: p6,
+  },
+  {
+    name: "Ellis Barra",
+    last_seen: "Last seen 3 days ago",
+    image: p7,
+  },
+  {
+    name: "Stok",
+    last_seen: "Last seen with in a week",
+    image: p8,
+  },
+  {
+    name: "Erik",
+    last_seen: "Last seen with in a month",
+    image: p9,
+  },
+  {
+    name: "Gtag",
+    last_seen: "Last seen 3 minutes ago",
+    image: p10,
+  },
+  {
+    name: "Dirk",
+    last_seen: "Last seen 13 minutes ago",
+    image: p1,
+  },
 ];
 export const Calls = ({ displayItemIndex, handleDisplayNone }: Props) => {
   const colors = [
@@ -43,26 +215,28 @@ export const Calls = ({ displayItemIndex, handleDisplayNone }: Props) => {
           displayItemIndex !== 3 && "calls-container--hidden"
         }`}
       >
+        <div className="three-dots " style={{ top: "2%" }}>
+          <BsThreeDotsVertical size={20} />
+        </div>
         <div className="calls__header">
           <p className="calls__header__text">Calls</p>
         </div>
-
-        <div className="calls__list">
-          {/* {list_of_calls.map((call, index) => {
-            return (
-              <div className="call">
-                <div
-                  className="call__profile"
-                  style={{
-                    backgroundColor: colors[index],
-                  }}
-                >
-                  {call[index]}
+        <div className="scroll-container">
+          <div className="calls__list">
+            {list_of_calls.map((call, index) => {
+              return (
+                <div className="call" key={index}>
+                  <div className="call__profile">
+                    <img src={call.image} alt="" className="image" />
+                  </div>
+                  <div className="call__info">
+                    <p className="call__name"> {call.name} </p>
+                    <p className="call__last-seen"> {call.last_seen} </p>
+                  </div>
                 </div>
-                <div className="call__info">{call}</div>
-              </div>
-            );
-          })} */}
+              );
+            })}
+          </div>
         </div>
         <div className="calls__footer">
           <button className="btn btn-close" onClick={handleDisplayNone}>
