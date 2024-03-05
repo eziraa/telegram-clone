@@ -444,10 +444,12 @@ body {
       display: flex;
       flex-direction: row;
       justify-content: flex-start;
+      width: 100%;
       align-items: center;
       gap: 1rem;
-      border-bottom: 2px solid rgba(39, 41, 56, 0.2);
-      padding: .5rem 1rem; }
+      border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+      padding: .5rem 1rem;
+      position: relative; }
       .calls-container .calls__list .call__profile {
         width: 4rem;
         height: 4rem;
@@ -462,10 +464,17 @@ body {
         display: flex;
         flex-direction: column;
         gap: .3rem; }
-        .calls-container .calls__list .call__info .contact__name {
+        .calls-container .calls__list .call__info .call__name {
           font-weight: 700; }
-        .calls-container .calls__list .call__info .contact__last-seen {
-          color: #93b7e0; }
+        .calls-container .calls__list .call__info .call__time {
+          color: #a9a9a9; }
+        .calls-container .calls__list .call__info .call__data {
+          display: flex;
+          flex-direction: row; }
+      .calls-container .calls__list .call__icon {
+        position: absolute;
+        right: 2%;
+        color: #a9a9a9; }
       .calls-container .calls__list .call:hover {
         background-color: rgba(39, 41, 56, 0.2); }
   .calls-container .calls__footer {

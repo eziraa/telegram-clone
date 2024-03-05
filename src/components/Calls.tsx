@@ -11,8 +11,15 @@ import p7 from "../assets/images/p7.jpg";
 import p8 from "../assets/images/p8.jpg";
 import p9 from "../assets/images/p9.jpg";
 import p10 from "../assets/images/p10.jpg";
-import { IoCall } from "react-icons/io5";
-import { MdCall, MdCallReceived } from "react-icons/md";
+import {
+  MdCall,
+  MdCallMissed,
+  MdCallMissedOutgoing,
+  MdCallReceived,
+} from "react-icons/md";
+import { FcCallTransfer, FcCallback } from "react-icons/fc";
+import { SlCallOut } from "react-icons/sl";
+import { VscCallOutgoing } from "react-icons/vsc";
 interface Props {
   displayItemIndex: number;
   handleDisplayNone: () => void;
@@ -23,193 +30,247 @@ const list_of_calls = [
     name: "Jack",
     last_seen: "February 15, 2016 at 10:23 PM",
     image: p1,
+    type: "called",
   },
 
   {
     name: "Stephen",
     last_seen: "February 25, 2016 at 00:23 PM",
     image: p2,
+    type: "missed",
   },
   {
     name: "Solomon",
     last_seen: "February 1, 2016 at 10:53 AM",
     image: p3,
+    type: "missed",
   },
   {
     name: "Ezira",
     last_seen: "January 15, 2016 at 04:23 PM",
     image: p4,
+    type: "received",
   },
 
   {
     name: "Ela Barra",
     last_seen: "March 05, 2016 at 09:34 AM",
     image: p5,
+    type: "called",
   },
   {
     name: "Ellis",
     last_seen: "February 25, 2016 at 04:23 PM",
     image: p6,
+    type: "missed",
   },
   {
     name: "Ellis Barra",
     last_seen: "February 05, 2015 at 10:23 PM",
     image: p7,
+    type: "called",
   },
   {
     name: "Stok",
     last_seen: "June 23, 2016 at 10:23 AM",
     image: p8,
+    type: "missed",
   },
   {
     name: "Erik",
     last_seen: "July 05, 2016 at 06:23 AM",
     image: p9,
+    type: "received",
   },
   {
     name: "Gtag",
     last_seen: "March 29, 2016 at 10:03 AM",
     image: p10,
+    type: "received",
   },
   {
     name: "Dirk",
     last_seen: "May 15, 2016 at 05:23 AM",
     image: p1,
+    type: "called",
   },
   {
     name: "Jack",
     last_seen: "May 15, 2016 at 05:23 AM",
     image: p1,
+    type: "missed",
   },
 
   {
     name: "Stephen",
     last_seen: "May 15, 2016 at 05:23 AM",
     image: p2,
+    type: "received",
   },
   {
     name: "Solomon",
     last_seen: "May 15, 2016 at 05:23 AM",
     image: p3,
+    type: "called",
   },
   {
     name: "Ezira",
     last_seen: "May 15, 2016 at 05:23 AM",
     image: p4,
+    type: "missed",
   },
 
   {
     name: "Ela Barra",
     last_seen: "May 15, 2016 at 05:23 AM",
     image: p5,
+    type: "received",
   },
   {
     name: "Ellis",
     last_seen: "May 15, 2016 at 05:23 AM",
     image: p6,
+    type: "missed",
   },
   {
     name: "Ellis Barra",
     last_seen: "May 15, 2016 at 05:23 AM",
     image: p7,
+    type: "canceled",
   },
   {
     name: "Stok",
     last_seen: "May 15, 2016 at 05:23 AM",
     image: p8,
+    type: "called",
+  },
+  {
+    name: "Jack",
+    last_seen: "February 15, 2016 at 10:23 PM",
+    image: p1,
+    type: "called",
+  },
+
+  {
+    name: "Stephen",
+    last_seen: "February 25, 2016 at 00:23 PM",
+    image: p2,
+    type: "missed",
+  },
+  {
+    name: "Solomon",
+    last_seen: "February 1, 2016 at 10:53 AM",
+    image: p3,
+    type: "missed",
+  },
+  {
+    name: "Ezira",
+    last_seen: "January 15, 2016 at 04:23 PM",
+    image: p4,
+    type: "received",
+  },
+
+  {
+    name: "Ela Barra",
+    last_seen: "March 05, 2016 at 09:34 AM",
+    image: p5,
+    type: "called",
+  },
+  {
+    name: "Ellis",
+    last_seen: "February 25, 2016 at 04:23 PM",
+    image: p6,
+    type: "missed",
+  },
+  {
+    name: "Ellis Barra",
+    last_seen: "February 05, 2015 at 10:23 PM",
+    image: p7,
+    type: "called",
+  },
+  {
+    name: "Stok",
+    last_seen: "June 23, 2016 at 10:23 AM",
+    image: p8,
+    type: "missed",
   },
   {
     name: "Erik",
-    last_seen: "May 15, 2016 at 05:23 AM",
+    last_seen: "July 05, 2016 at 06:23 AM",
     image: p9,
+    type: "received",
   },
   {
     name: "Gtag",
-    last_seen: "May 15, 2016 at 05:23 AM",
+    last_seen: "March 29, 2016 at 10:03 AM",
     image: p10,
+    type: "received",
   },
   {
     name: "Dirk",
     last_seen: "May 15, 2016 at 05:23 AM",
     image: p1,
+    type: "called",
   },
   {
     name: "Jack",
     last_seen: "May 15, 2016 at 05:23 AM",
     image: p1,
+    type: "missed",
   },
 
   {
     name: "Stephen",
     last_seen: "May 15, 2016 at 05:23 AM",
     image: p2,
+    type: "received",
   },
   {
     name: "Solomon",
     last_seen: "May 15, 2016 at 05:23 AM",
     image: p3,
+    type: "called",
   },
   {
     name: "Ezira",
     last_seen: "May 15, 2016 at 05:23 AM",
     image: p4,
+    type: "missed",
   },
 
   {
     name: "Ela Barra",
     last_seen: "May 15, 2016 at 05:23 AM",
     image: p5,
+    type: "received",
   },
   {
     name: "Ellis",
     last_seen: "May 15, 2016 at 05:23 AM",
     image: p6,
+    type: "missed",
   },
   {
     name: "Ellis Barra",
     last_seen: "May 15, 2016 at 05:23 AM",
     image: p7,
+    type: "canceled",
   },
   {
     name: "Stok",
     last_seen: "May 15, 2016 at 05:23 AM",
     image: p8,
-  },
-  {
-    name: "Erik",
-    last_seen: "May 15, 2016 at 05:23 AM",
-    image: p9,
-  },
-  {
-    name: "Gtag",
-    last_seen: "May 15, 2016 at 05:23 AM",
-    image: p10,
-  },
-  {
-    name: "Dirk",
-    last_seen: "May 15, 2016 at 05:23 AM",
-    image: p1,
+    type: "called",
   },
 ];
 
 export const Calls = ({ displayItemIndex, handleDisplayNone }: Props) => {
-  const colors = [
-    "#0ff000",
-    "#928524",
-    "#98aa45",
-    "#98aaf5",
-    "#f8aa45",
-    "#abb78e",
-    "#ee845a",
-    "#ee4583",
-    "#eeb583",
-    "#ee4583",
-    "#ee45f3",
-    "#fe0f03",
-    "#0040f0",
-    "#febf03",
-    "#f980f0",
-  ];
+  const getCallType = (type: string) => {
+    if (type === "received") return <MdCallReceived color="green" />;
+    else if (type === "called") return <SlCallOut color="green" />;
+    else if (type === "missed") return <MdCallMissed color="red" />;
+    else return <FcCallback color="red" />;
+  };
   return (
     <Fragment>
       <Overlay display={displayItemIndex == 3} toggleMenu={handleDisplayNone} />
@@ -235,7 +296,7 @@ export const Calls = ({ displayItemIndex, handleDisplayNone }: Props) => {
                   <div className="call__info">
                     <p className="call__name"> {call.name} </p>
                     <div className="call__data">
-                      <MdCallReceived color="red" />
+                      {getCallType(call.type)}
                       <p className="call__time"> {call.last_seen} </p>
                     </div>
                   </div>
