@@ -38,10 +38,13 @@
             display: flex;
             flex-direction: row;
             justify-content: flex-start;
+            width: 100%;
+            border: 2px red solid;
             align-items: center;
             gap: 1rem;
-            border-bottom: 2px solid rgba($color-primary-dark, .2);
+            border-bottom: 2px solid rgba($color-primary-white, .2);
             padding: .5rem 1rem;
+            position: relative;
             &__profile{
                 width: 4rem;
                 height: 4rem;
@@ -60,14 +63,24 @@
                 display: flex;
                 flex-direction: column;
                 gap: .3rem;
-                .contact__name{
+                .call__name{
                     font-weight: 700;
                 }
 
-                .contact__last-seen{
+                .call__time{
                     color: $color-tertiary-blue;
                 }
+                .call__data{
+                    display: flex;
+                    flex-direction: row;
+                }
+
                 
+            }
+
+            &__icon{
+                position: absolute;
+                right: 2%;
             }
 
             &:hover{
