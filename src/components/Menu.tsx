@@ -3,7 +3,6 @@ import { Fragment } from "react/jsx-runtime";
 import { Profile } from "./Profile";
 import { AccountsContainer } from "./AccountsContainer";
 import { MenuItem } from "./MenuItem";
-import { Overlay } from "./Overlay";
 import { CreateGroup } from "./CreateGroup";
 import { CreateChannel } from "./CreateChannel";
 import { Contacts } from "./Contacts";
@@ -22,10 +21,6 @@ export const Menu = ({
 }: Props) => {
   return (
     <Fragment>
-      <Overlay
-        handleDisplayNone={handleDisplayNone}
-        visible={displayItem >= -1}
-      />
       <CreateGroup
         displayItemIndex={displayItem}
         handleDisplayNone={handleDisplayNone}
