@@ -547,7 +547,6 @@ body {
   width: 350px;
   height: 600px;
   border-radius: 1rem;
-  background-color: #e1e1e1;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -560,6 +559,7 @@ body {
     display: none; }
   .setting-container__header {
     width: 100%;
+    border-radius: 1rem 1rem 0 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -577,7 +577,9 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: .5rem; }
+    overflow-y: auto;
+    background-color: #e1e1e1;
+    gap: 8px; }
     .setting-container .setting .user__profile {
       background-color: #FFFFFF;
       padding: 1rem 2rem;
@@ -604,8 +606,10 @@ body {
       background-color: #FFFFFF;
       display: flex;
       flex-direction: column;
+      padding-top: .5rem;
       width: 100%; }
       .setting-container .setting .setting-body .setting-item {
+        cursor: pointer;
         display: flex;
         flex-direction: row;
         gap: 1rem;
@@ -621,18 +625,42 @@ body {
         .setting-container .setting .setting-body .setting-item .text {
           font-size: 1.25rem;
           line-height: 1.4; }
-  .setting-container .setting__scale {
-    background-color: #FFFFFF;
-    padding: 1rem 2rem;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 1rem; }
-    .setting-container .setting__scale .text {
-      font-size: 1.25rem;
-      line-height: 1.4;
-      justify-self: flex-end; }
+    .setting-container .setting .setting__scale {
+      background-color: #FFFFFF;
+      padding: 1rem 2rem;
+      cursor: pointer;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 1rem; }
+      .setting-container .setting .setting__scale .text {
+        font-size: 1.25rem;
+        line-height: 1.4;
+        justify-self: flex-end; }
+      .setting-container .setting .setting__scale:hover {
+        background-color: #e1e1e1; }
+    .setting-container .setting .telegram-features {
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+      background-color: #FFFFFF;
+      justify-content: space-around;
+      padding-top: .5rem; }
+      .setting-container .setting .telegram-features .faq, .setting-container .setting .telegram-features .feature, .setting-container .setting .telegram-features .question {
+        cursor: pointer;
+        padding: 1rem 2rem;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 1rem; }
+        .setting-container .setting .telegram-features .faq .text, .setting-container .setting .telegram-features .feature .text, .setting-container .setting .telegram-features .question .text {
+          font-size: 1.25rem;
+          line-height: 1.4;
+          justify-self: flex-end; }
+        .setting-container .setting .telegram-features .faq:hover, .setting-container .setting .telegram-features .feature:hover, .setting-container .setting .telegram-features .question:hover {
+          background-color: #e1e1e1; }
 
 .main {
   display: flex;
