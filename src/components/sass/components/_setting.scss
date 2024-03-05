@@ -2,7 +2,7 @@
     width: 350px;
     height: 600px;
     border-radius: 1rem;
-    background-color: white;
+    background-color: $color-secondary-white;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -11,7 +11,6 @@
     flex-direction: column;
     justify-content: flex-start;
     z-index: 20;
-
 
     &__hidden{
         display: none;
@@ -22,8 +21,7 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        border-bottom: 2px solid rgba($color-primary-dark, .2);
-        
+        background-color: white;
         padding: 2rem 2rem;
         .text{
             font-size: 1.5rem;
@@ -41,15 +39,16 @@
             width: 100%;
             display: flex;
             flex-direction: column;
-            gap: .3rem;
+            gap: .5rem;
 
             .user__profile{
+                background-color: $color-white;
                 padding: 1rem 2rem;
                 display: flex;
                 flex-direction: row;
                 align-items: center;
                 gap: 1rem;
-                border-bottom: 8px solid rgba($color-primary-dark, .1);
+                // border-bottom: 8px solid rgba($color-primary-dark, .1);
 
                 .image{
                     width: 7rem;
@@ -75,28 +74,49 @@
                 }
             }
             .setting-body{
-                padding: 1rem 2rem;
+                background-color: $color-white;
                 display: flex;
                 flex-direction: column;
-                gap: 2rem;
+                width: 100%;
                 .setting-item{
                     display: flex;
                     flex-direction: row;
                     gap: 1rem;
                     width: 100%;
                     align-items: center;
+                    padding: 1rem 2rem;
 
+                    &:hover{
+                        background-color: $color-secondary-white;
+                    }
                     .icon{
                         width: 2rem;
                         height: 2rem;
-                        color: rgba($color-primary-dark, .6);
+                        color: rgba($color-primary-dark, .8);
                     }
                     .text{
                         font-size: 1.25rem;
-                        line-height: 1.7;
+                        line-height: 1.4;
                     }
                 }
             }
         }
+        
+        .setting__scale{
+            background-color: $color-white;
+            padding: 1rem 2rem;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 1rem;
+           .text{
+            font-size: 1.25rem;
+            line-height: 1.4;
+            justify-self: flex-end;
+           }
+        }
+
+
 
 }
