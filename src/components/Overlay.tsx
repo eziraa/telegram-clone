@@ -5,7 +5,7 @@ interface Props {
 export const Overlay = ({ display_index, toggleMenu }: Props) => {
   return (
     <div
-      className={`overlay ${display < 0 && "overlay--hidden"} `}
+      className={`overlay ${display_index < 0 && "overlay--hidden"} `}
       onClick={toggleMenu}
     ></div>
   );
