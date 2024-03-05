@@ -6,6 +6,16 @@ import { useState } from "react";
 const Main = () => {
   const [displayMenu, setDisplayMenu] = useState(false);
   const [animated, setAnimated] = useState(false);
+  const [displayItem, setDisplayItem] = useState(-2);
+
+  const handleDisplay = (index: number) => {
+    setDisplayItem(index);
+    if (index < 10) toggleMenu();
+  };
+
+  const handleDisplayNone = () => {
+    setDisplayItem(-2);
+  };
 
   const toggleMenu = () => {
     setDisplayMenu(!displayMenu);
@@ -21,11 +31,12 @@ const Main = () => {
       }}
     >
       <Menu
-        displayMenu={displayMenu}
-        toggleMenu={toggleMenu}
+        displayItem={displayItem}
+        handleDisplay={handleDisplay}
+        handleDisplayNone={handleDisplayNone}
         animated={animated}
       />
-      <LeftSideBar toggleMenu={toggleMenu} />
+      <LeftSideBar toggleMenu={toggleMenu} handleDisplay={handleDisplay} />
       <Container />
     </div>
   );
