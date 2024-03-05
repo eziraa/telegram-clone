@@ -1,5 +1,4 @@
 import { FaCamera } from "react-icons/fa";
-import { Overlay } from "./Overlay";
 import { Fragment } from "react/jsx-runtime";
 interface Props {
   displayItemIndex: number;
@@ -11,7 +10,6 @@ export const CreateChannel = ({
 }: Props) => {
   return (
     <Fragment>
-      <Overlay display={displayItemIndex == 0} toggleMenu={handleDisplayNone} />
       <div
         className={`new-channel ${
           displayItemIndex !== 0 && "new-channel--hidden"

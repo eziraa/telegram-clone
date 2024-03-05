@@ -1,5 +1,4 @@
 import { FaCamera } from "react-icons/fa";
-import { Overlay } from "./Overlay";
 import { Fragment } from "react/jsx-runtime";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { AddMembers } from "./AddMembers";
@@ -19,7 +18,6 @@ export const CreateGroup = ({
         displayItemIndex={displayItemIndex}
         handleDisplayNone={handleDisplayNone}
       />
-      {/* <Overlay display={displayItemIndex == 1} toggleMenu={handleDisplayNone} /> */}
       <div
         className={`new-group ${displayItemIndex !== 1 && "new-group--hidden"}`}
       >
