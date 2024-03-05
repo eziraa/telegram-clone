@@ -19,7 +19,7 @@ export const Menu = ({ displayMenu, toggleMenu, animated }: Props) => {
 
   const handleDisplay = (index: number) => {
     setDisplayItem(index);
-    toggleMenu();
+    if (index < 10) toggleMenu();
   };
 
   const handleDisplayNone = () => {
@@ -27,10 +27,11 @@ export const Menu = ({ displayMenu, toggleMenu, animated }: Props) => {
   };
   return (
     <Fragment>
-      <Overlay toggleMenu={toggleMenu} display={displayMenu} />
+      <Overlay toggleMenu={handleDisplayNone} display={displayItem} />
       <CreateGroup
         displayItemIndex={displayItem}
         handleDisplayNone={handleDisplayNone}
+        handleDisplay={handleDisplay}
       />
       <CreateChannel
         displayItemIndex={displayItem}
