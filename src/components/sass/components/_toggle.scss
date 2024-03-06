@@ -1,0 +1,31 @@
+.toggle{
+            width: 20px;
+            height: 10px;
+            background-color: rgb(96, 88, 88);
+            position: relative;
+            margin-left: 15%;
+            border-radius: 5px;
+            transition: all .41s;
+        &:hover{
+            background-color: blue;
+        }
+        &:hover &__circle{
+            transform: translate(18px, -50%);
+            background-color: rgb(238, 229, 229);
+        }
+        &__circle{
+            transition: all .41s;
+            width: 60%;
+            height: 120%;
+            border-radius: 50%;
+            top: 50%;
+            left: -5px;
+            transform: translateY(-50%);
+            position: absolute;
+            background-color: rgb(243, 247, 246);
+        }
+}
+
+        
+        
+        
