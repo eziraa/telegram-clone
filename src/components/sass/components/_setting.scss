@@ -76,7 +76,7 @@
                     }
                 }
             }
-            .setting-body{
+            &__body{
                 background-color: $color-white;
                 display: flex;
                 flex-direction: column;
@@ -105,19 +105,22 @@
                     }
                 }
             }
-            .setting__scale{
-                background-color: $color-white;
+            &__scale{
                 padding: 1rem 2rem;
+                background-color: $color-white;
                 cursor: pointer;
                 width: 100%;
                 display: flex;
                 align-items: center;
-                justify-content: flex-start;
                 gap: 1rem;
+
                .text{
                 font-size: 1.25rem;
                 line-height: 1.4;
-                justify-self: flex-end;
+               }
+
+               .toggle{
+                margin-left: auto;
                }
 
                &:hover{
