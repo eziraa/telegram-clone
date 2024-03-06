@@ -4,7 +4,16 @@ import image from "../assets/images/back-1.png";
 import { Menu } from "./Menu";
 import { useState } from "react";
 import { Overlay } from "./Overlay";
-const Main = () => {
+import { DisplayContext } from "../context/context";
+export interface Display {
+  displayMenu: boolean;
+  animated: boolean;
+  handleDisplayNone: () => void;
+  toggleMenu: () => void;
+  handleDisplay: (index: number) => void;
+  displayItem: number;
+}
+const GetDisplay = () => {
   const [displayMenu, setDisplayMenu] = useState(false);
   const [animated, setAnimated] = useState(false);
   const [displayItem, setDisplayItem] = useState(-2);
@@ -22,28 +31,34 @@ const Main = () => {
     setDisplayMenu(!displayMenu);
     setAnimated(true);
   };
+
+  return {
+    displayItem,
+    animated,
+    handleDisplay,
+    handleDisplayNone,
+    displayMenu,
+    toggleMenu,
+  };
+};
+
+const Main = () => {
   return (
-    <div
-      className="main"
-      style={{
-        backgroundImage: `url(${image})`,
-        backgroundPosition: "center",
-        backgroundSize: "cover",
-      }}
-    >
-      <Overlay
-        handleDisplayNone={handleDisplayNone}
-        visible={displayItem >= -1}
-      />
-      <Menu
-        displayItem={displayItem}
-        handleDisplay={handleDisplay}
-        handleDisplayNone={handleDisplayNone}
-        animated={animated}
-      />
-      <LeftSideBar toggleMenu={toggleMenu} handleDisplay={handleDisplay} />
-      <Container />
-    </div>
+    <DisplayContext.Provider value={GetDisplay()}>
+      <div
+        className="main"
+        style={{
+          backgroundImage: `url(${image})`,
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+        }}
+      >
+        <Overlay />
+        <Menu />
+        <LeftSideBar />
+        <Container />
+      </div>
+    </DisplayContext.Provider>
   );
 };
 

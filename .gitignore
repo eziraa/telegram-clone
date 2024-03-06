@@ -41,3 +41,8 @@ public/Screenshot 2024-03-04 010152.png
 .gitignore
 src/components/new.css
 src/components/Schema.drawio
+src/toggle.html
+src/App.tsx
+src/App.tsx
+src/context/DataProvider.tsx
+src/App.tsx
