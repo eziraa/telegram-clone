@@ -1,12 +1,11 @@
-interface Props {
-  visible: boolean;
-  handleDisplayNone: () => void;
-}
-export const Overlay = ({ visible, handleDisplayNone }: Props) => {
+import { useDisplayContext } from "../context/context";
+
+export const Overlay = () => {
+  const display = useDisplayContext();
   return (
     <div
-      className={`overlay ${!visible && "overlay--hidden"} `}
-      onClick={handleDisplayNone}
+      className={`overlay ${display.displayItem < -1 && "overlay--hidden"} `}
+      onClick={display.handleDisplayNone}
     ></div>
   );
 };
