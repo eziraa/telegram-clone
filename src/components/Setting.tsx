@@ -1,21 +1,25 @@
 import { BsThreeDotsVertical } from "react-icons/bs";
 import profile from "../assets/images/p17.jpg";
-import { PiBatteryChargingLight } from "react-icons/pi";
-import { FaFolder, FaRegUserCircle, FaTimes } from "react-icons/fa";
-import { IoIosNotificationsOutline } from "react-icons/io";
-import { RiLockPasswordFill } from "react-icons/ri";
+import {
+  PiBatteryChargingLight,
+  PiFolderSimple,
+  PiLightbulbFilament,
+} from "react-icons/pi";
+import { IoMdNotificationsOutline } from "react-icons/io";
 import { IoChatbubbleOutline } from "react-icons/io5";
 
 import {
   HiLanguage,
   HiOutlineEye,
-  HiOutlineLightBulb,
   HiOutlineQuestionMarkCircle,
   HiOutlineSpeakerWave,
 } from "react-icons/hi2";
 import { GiSettingsKnobs } from "react-icons/gi";
 import { BiMessageRoundedDots } from "react-icons/bi";
 import { Toggle } from "./Toggle";
+import { CiLock } from "react-icons/ci";
+import { MdOutlineAccountCircle } from "react-icons/md";
+import { LiaTimesSolid } from "react-icons/lia";
 interface Props {
   displayItemIndex: number;
   handleDisplayNone: () => void;
@@ -31,7 +35,11 @@ export const Setting = ({ displayItemIndex, handleDisplayNone }: Props) => {
         <p className="text">Settings</p>
         <div className="actions">
           <BsThreeDotsVertical className="icon" />
-          <FaTimes className="icon" onClick={handleDisplayNone} />
+          <LiaTimesSolid
+            size={15}
+            className="icon"
+            onClick={handleDisplayNone}
+          />
         </div>
       </div>
       <div
@@ -49,15 +57,15 @@ export const Setting = ({ displayItemIndex, handleDisplayNone }: Props) => {
           </div>
           <div className="setting__body">
             <div className="setting-item">
-              <FaRegUserCircle size={15} className="icon" />
+              <MdOutlineAccountCircle size={15} className="icon" />
               <p className="text">My Account</p>
             </div>
             <div className="setting-item">
-              <IoIosNotificationsOutline size={15} className="icon" />
+              <IoMdNotificationsOutline size={15} className="icon" />
               <p className="text">Notifications and Sounds</p>
             </div>
             <div className="setting-item">
-              <RiLockPasswordFill size={15} className="icon" />
+              <CiLock size={15} className="icon" />
               <p className="text">Privacy and Security</p>
             </div>
             <div className="setting-item">
@@ -65,13 +73,7 @@ export const Setting = ({ displayItemIndex, handleDisplayNone }: Props) => {
               <p className="text">Chat Setting</p>
             </div>
             <div className="setting-item">
-              <FaFolder
-                size={15}
-                className="icon"
-                stroke="gray"
-                color="transparent"
-                style={{ strokeWidth: "40" }}
-              />
+              <PiFolderSimple size={15} className="icon" />
               <p className="text">Folders</p>
             </div>
             <div className="setting-item">
@@ -102,7 +104,7 @@ export const Setting = ({ displayItemIndex, handleDisplayNone }: Props) => {
               <p className="text">Telegram FAQ</p>
             </div>
             <div className="feature">
-              <HiOutlineLightBulb size={20} className="icon" />
+              <PiLightbulbFilament size={20} className="icon" />
               <p className="text">Telegram features</p>
             </div>
             <div className="question">
