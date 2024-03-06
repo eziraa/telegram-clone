@@ -1,7 +1,7 @@
 import { BsThreeDotsVertical, BsToggleOff } from "react-icons/bs";
 import profile from "../assets/images/p17.jpg";
 import { PiBatteryChargingLight } from "react-icons/pi";
-import { FaFolder, FaRegUserCircle } from "react-icons/fa";
+import { FaFolder, FaRegUserCircle, FaTimes } from "react-icons/fa";
 import { IoIosNotificationsOutline } from "react-icons/io";
 import { RiLockPasswordFill } from "react-icons/ri";
 import { IoChatbubbleOutline } from "react-icons/io5";
@@ -15,6 +15,7 @@ import {
 } from "react-icons/hi2";
 import { GiSettingsKnobs } from "react-icons/gi";
 import { BiMessageRoundedDots } from "react-icons/bi";
+import { Toggle } from "./Toggle";
 interface Props {
   displayItemIndex: number;
   handleDisplayNone: () => void;
@@ -29,18 +30,8 @@ export const Setting = ({ displayItemIndex, handleDisplayNone }: Props) => {
       <div className="setting-container__header">
         <p className="text">Settings</p>
         <div className="actions">
-          <BsThreeDotsVertical size={20} />
-          <span
-            style={{
-              color: "ddd",
-              fontSize: "2rem",
-              lineHeight: "1",
-              cursor: "pointer",
-            }}
-            onClick={handleDisplayNone}
-          >
-            x
-          </span>
+          <BsThreeDotsVertical className="icon" />
+          <FaTimes className="icon" onClick={handleDisplayNone} />
         </div>
       </div>
       <div
@@ -56,7 +47,7 @@ export const Setting = ({ displayItemIndex, handleDisplayNone }: Props) => {
               <p className="username">@ezrawi</p>
             </div>
           </div>
-          <div className="setting-body">
+          <div className="setting__body">
             <div className="setting-item">
               <FaRegUserCircle size={15} className="icon" />
               <p className="text">My Account</p>
@@ -101,21 +92,21 @@ export const Setting = ({ displayItemIndex, handleDisplayNone }: Props) => {
             </div>
           </div>
           <div className="setting__scale">
-            <HiOutlineEye size={20} />
+            <HiOutlineEye size={20} className="icon" />
             <p className="text">Default interface scale</p>
-            <BsToggleOff size={20} />
+            <Toggle  />
           </div>
           <div className="telegram-features">
             <div className="faq">
-              <HiOutlineQuestionMarkCircle size={20} />
+              <HiOutlineQuestionMarkCircle size={20} className="icon" />
               <p className="text">Telegram FAQ</p>
             </div>
             <div className="feature">
-              <HiOutlineLightBulb size={20} />
+              <HiOutlineLightBulb size={20} className="icon" />
               <p className="text">Telegram features</p>
             </div>
             <div className="question">
-              <BiMessageRoundedDots size={20} />
+              <BiMessageRoundedDots size={20} className="icon" />
               <p className="text">Telegram Question</p>
             </div>
           </div>
