@@ -2,6 +2,7 @@ import Hamburger from "./Hamburger";
 import { Folder } from "./Folder";
 import { Edit } from "./Edit";
 import { useState } from "react";
+import { useDisplayContext } from "../context/context";
 const list_of_folders = [
   "All Chats",
   "Channels",
@@ -14,13 +15,13 @@ const list_of_folders = [
   "Web L",
 ];
 
-interface Props {
-  toggleMenu: () => void;
-  handleDisplay: (index: number) => void;
-}
-const LeftSideBar = ({ toggleMenu, handleDisplay }: Props) => {
+// interface Props {
+//   toggleMenu: () => void;
+//   handleDisplay: (index: number) => void;
+// }
+const LeftSideBar = () => {
   const [activeIndex, setActiveIndex] = useState(-8);
-
+  const display = useDisplayContext();
   const makeActive = (index: number) => {
     setActiveIndex(index);
   };
@@ -31,8 +32,8 @@ const LeftSideBar = ({ toggleMenu, handleDisplay }: Props) => {
           activeIndex == -1 && "left-nav__link--active"
         }`}
         onClick={() => {
-          toggleMenu();
-          handleDisplay(-1);
+          display.toggleMenu();
+          display.handleDisplay(-1);
         }}
       >
         <Hamburger />
