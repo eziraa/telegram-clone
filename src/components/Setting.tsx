@@ -1,4 +1,4 @@
-import { BsThreeDotsVertical, BsToggleOff } from "react-icons/bs";
+import { BsThreeDotsVertical } from "react-icons/bs";
 import profile from "../assets/images/p17.jpg";
 import { PiBatteryChargingLight } from "react-icons/pi";
 import { FaFolder, FaRegUserCircle, FaTimes } from "react-icons/fa";
@@ -94,7 +94,7 @@ export const Setting = ({ displayItemIndex, handleDisplayNone }: Props) => {
           <div className="setting__scale">
             <HiOutlineEye size={20} className="icon" />
             <p className="text">Default interface scale</p>
-            <Toggle  />
+            <Toggle />
           </div>
           <div className="telegram-features">
             <div className="faq">
