@@ -1,6 +1,8 @@
 .search{
     padding: .3rem;
-    width: 17vw;
+    width: 100%;
+    background-color: $color-primary-white;
+    padding: .5rem 1rem ;
     &__field{
         width: 100%;
         padding: .2rem 2rem;
@@ -8,6 +10,6 @@
         font-size: 1.4rem;
         height: 3.2rem;
         border: none;
-        background-color: $color-tertiary-white;
+        background-color: $color-secondary-white;
     }
 }

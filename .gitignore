@@ -46,3 +46,7 @@ src/App.tsx
 src/App.tsx
 src/context/DataProvider.tsx
 src/App.tsx
+Components.tsx
+src/context.ts
+src/Dashboard.tsx
+src/index.tsx

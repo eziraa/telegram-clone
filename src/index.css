@@ -65,7 +65,7 @@ body {
   padding: .4rem;
   border-bottom: 0.1rem solid rgba(116, 114, 140, 0.15); }
   .channel:not(.channel__active):hover {
-    background-color: #e1e1e1; }
+    background-color: #f1f1f1; }
   .channel__image {
     flex: 1;
     width: 40px;
@@ -108,7 +108,9 @@ body {
 
 .search {
   padding: .3rem;
-  width: 17vw; }
+  width: 100%;
+  background-color: #FFFFFF;
+  padding: .5rem 1rem; }
   .search__field {
     width: 100%;
     padding: .2rem 2rem;
@@ -116,7 +118,7 @@ body {
     font-size: 1.4rem;
     height: 3.2rem;
     border: none;
-    background-color: #a9a9a9; }
+    background-color: #f1f1f1; }
 
 .hamburger {
   margin-top: 15px; }
@@ -149,7 +151,7 @@ body {
     font-size: 1.4rem;
     font-weight: 500; }
     .menu__item:hover {
-      background-color: #e1e1e1; }
+      background-color: #f1f1f1; }
 
 .overlay {
   position: absolute;
@@ -191,7 +193,7 @@ body {
   padding-bottom: .5rem;
   padding-left: 2rem; }
   .account:hover {
-    background-color: #e1e1e1; }
+    background-color: #f1f1f1; }
   .account__user {
     display: flex;
     flex-direction: row;
@@ -580,7 +582,7 @@ body {
     display: flex;
     flex-direction: column;
     overflow-y: auto;
-    background-color: #e1e1e1;
+    background-color: #f1f1f1;
     gap: 8px; }
     .setting-container .setting .user__profile {
       background-color: #FFFFFF;
@@ -619,7 +621,7 @@ body {
         align-items: center;
         padding: 1rem 2rem; }
         .setting-container .setting__body .setting-item:hover {
-          background-color: #e1e1e1; }
+          background-color: #f1f1f1; }
         .setting-container .setting__body .setting-item .icon {
           width: 2rem;
           height: 2rem;
@@ -641,7 +643,7 @@ body {
       .setting-container .setting__scale .toggle {
         margin-left: auto; }
       .setting-container .setting__scale:hover {
-        background-color: #e1e1e1; }
+        background-color: #f1f1f1; }
     .setting-container .setting .telegram-features {
       display: flex;
       flex-direction: column;
@@ -662,7 +664,7 @@ body {
           line-height: 1.4;
           justify-self: flex-end; }
         .setting-container .setting .telegram-features .faq:hover, .setting-container .setting .telegram-features .feature:hover, .setting-container .setting .telegram-features .question:hover {
-          background-color: #e1e1e1; }
+          background-color: #f1f1f1; }
 
 .toggle {
   width: 20px;
