@@ -1,9 +1,13 @@
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { Fragment } from "react/jsx-runtime";
 
-import { MdCall, MdCallMissed, MdCallReceived } from "react-icons/md";
+import {
+  MdCall,
+  MdCallMade,
+  MdCallMissed,
+  MdCallReceived,
+} from "react-icons/md";
 import { FcCallback } from "react-icons/fc";
-import { SlCallOut } from "react-icons/sl";
 import list_of_calls from "./data/calls";
 interface Props {
   displayItemIndex: number;
@@ -12,8 +16,8 @@ interface Props {
 
 export const Calls = ({ displayItemIndex, handleDisplayNone }: Props) => {
   const getCallType = (type: string) => {
-    if (type === "received") return <MdCallReceived color="green" />;
-    else if (type === "called") return <SlCallOut color="green" />;
+    if (type === "received") return <MdCallReceived color="blue" />;
+    else if (type === "called") return <MdCallMade color="green" />;
     else if (type === "missed") return <MdCallMissed color="red" />;
     else return <FcCallback color="red" />;
   };
