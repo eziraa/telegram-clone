@@ -31,7 +31,8 @@ body {
     padding: .3rem;
     display: flex;
     flex-direction: column;
-    align-items: center; }
+    align-items: center;
+    gap: 1rem; }
     .left-nav__link--active {
       background-color: #272938;
       color: #368ef2; }
@@ -96,10 +97,11 @@ body {
     justify-content: end; }
 
 .icon {
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   display: inline-block;
-  color: #74728c; }
+  color: #74728c;
+  cursor: pointer; }
   .icon--active {
     background-color: #272938;
     color: #368ef2; }
@@ -602,13 +604,13 @@ body {
         .setting-container .setting .user__profile .user__info .phone-number, .setting-container .setting .user__profile .user__info .username {
           font-size: 1.3rem;
           color: #272938; }
-    .setting-container .setting .setting-body {
+    .setting-container .setting__body {
       background-color: #FFFFFF;
       display: flex;
       flex-direction: column;
       padding-top: .5rem;
       width: 100%; }
-      .setting-container .setting .setting-body .setting-item {
+      .setting-container .setting__body .setting-item {
         cursor: pointer;
         display: flex;
         flex-direction: row;
@@ -616,29 +618,29 @@ body {
         width: 100%;
         align-items: center;
         padding: 1rem 2rem; }
-        .setting-container .setting .setting-body .setting-item:hover {
+        .setting-container .setting__body .setting-item:hover {
           background-color: #e1e1e1; }
-        .setting-container .setting .setting-body .setting-item .icon {
+        .setting-container .setting__body .setting-item .icon {
           width: 2rem;
           height: 2rem;
           color: rgba(39, 41, 56, 0.8); }
-        .setting-container .setting .setting-body .setting-item .text {
+        .setting-container .setting__body .setting-item .text {
           font-size: 1.25rem;
           line-height: 1.4; }
-    .setting-container .setting .setting__scale {
-      background-color: #FFFFFF;
+    .setting-container .setting__scale {
       padding: 1rem 2rem;
+      background-color: #FFFFFF;
       cursor: pointer;
       width: 100%;
       display: flex;
       align-items: center;
-      justify-content: flex-start;
       gap: 1rem; }
-      .setting-container .setting .setting__scale .text {
+      .setting-container .setting__scale .text {
         font-size: 1.25rem;
-        line-height: 1.4;
-        justify-self: flex-end; }
-      .setting-container .setting .setting__scale:hover {
+        line-height: 1.4; }
+      .setting-container .setting__scale .toggle {
+        margin-left: auto; }
+      .setting-container .setting__scale:hover {
         background-color: #e1e1e1; }
     .setting-container .setting .telegram-features {
       display: flex;
@@ -661,6 +663,30 @@ body {
           justify-self: flex-end; }
         .setting-container .setting .telegram-features .faq:hover, .setting-container .setting .telegram-features .feature:hover, .setting-container .setting .telegram-features .question:hover {
           background-color: #e1e1e1; }
+
+.toggle {
+  width: 20px;
+  height: 10px;
+  background-color: #605858;
+  position: relative;
+  margin-left: 15%;
+  border-radius: 5px;
+  transition: all .41s; }
+  .toggle:hover {
+    background-color: blue; }
+  .toggle:hover .toggle__circle {
+    transform: translate(18px, -50%);
+    background-color: #eee5e5; }
+  .toggle__circle {
+    transition: all .41s;
+    width: 60%;
+    height: 120%;
+    border-radius: 50%;
+    top: 50%;
+    left: -5px;
+    transform: translateY(-50%);
+    position: absolute;
+    background-color: #f3f7f6; }
 
 .main {
   display: flex;
