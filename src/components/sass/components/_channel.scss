@@ -6,6 +6,9 @@
     gap: .8rem;
     padding: .4rem;
 
+    &:hover{
+        cursor: pointer;
+    }
     &:not(&__active):hover{
         background-color: $color-secondary-white;
     }
@@ -48,7 +51,7 @@
     }
 
     &__active{
-        background-color: $color-primary-blue;
+        background-color: $color-secondary-blue;
     }
     // &:active{
     //             background-color: $color-primary-blue;
