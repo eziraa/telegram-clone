@@ -1,9 +1,9 @@
 .icon {
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     display: inline-block;
     color: $color-tertiary-dark;
-
+    cursor: pointer;
     &--active{
             background-color: $color-primary-dark;
             color: $color-primary-blue;
