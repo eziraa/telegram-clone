@@ -8,49 +8,41 @@ import { CreateChannel } from "./CreateChannel";
 import { Contacts } from "./Contacts";
 import { Calls } from "./Calls";
 import { Setting } from "./Setting";
-interface Props {
-  displayItem: number;
-  animated: boolean;
-  handleDisplayNone: () => void;
-  handleDisplay: (index: number) => void;
-}
-export const Menu = ({
-  displayItem,
-  animated,
-  handleDisplay,
-  handleDisplayNone,
-}: Props) => {
+import {  useDisplayContext } from "../context/context";
+
+export const Menu = () => {
+  const display = useDisplayContext();
   return (
     <Fragment>
       <CreateGroup
-        displayItemIndex={displayItem}
-        handleDisplayNone={handleDisplayNone}
-        handleDisplay={handleDisplay}
+        displayItemIndex={display.displayItem}
+        handleDisplayNone={display.handleDisplayNone}
+        handleDisplay={display.handleDisplay}
       />
       <CreateChannel
-        displayItemIndex={displayItem}
-        handleDisplayNone={handleDisplayNone}
+        displayItemIndex={display.displayItem}
+        handleDisplayNone={display.handleDisplayNone}
       />
       <Contacts
-        displayItemIndex={displayItem}
-        handleDisplayNone={handleDisplayNone}
+        displayItemIndex={display.displayItem}
+        handleDisplayNone={display.handleDisplayNone}
       />
       <Calls
-        displayItemIndex={displayItem}
-        handleDisplayNone={handleDisplayNone}
+        displayItemIndex={display.displayItem}
+        handleDisplayNone={display.handleDisplayNone}
       />
       <Setting
-        displayItemIndex={displayItem}
-        handleDisplayNone={handleDisplayNone}
+        displayItemIndex={display.displayItem}
+        handleDisplayNone={display.handleDisplayNone}
       />
       <div
-        className={`menu ${displayItem !== -1 && "menu--hidden"} ${
-          animated && "menu--animated"
+        className={`menu ${display.displayItem !== -1 && "menu--hidden"} ${
+          display.animated && "menu--animated"
         }`}
       >
         <Profile />
         <AccountsContainer />
-        <MenuItem handleDisplay={handleDisplay} />
+        <MenuItem handleDisplay={display.handleDisplay} />
       </div>
       ;
     </Fragment>
