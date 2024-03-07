@@ -669,23 +669,24 @@ body {
           background-color: #f1f1f1; }
 
 .toggle {
-  width: 20px;
-  height: 10px;
-  background-color: #605858;
+  width: 24px;
+  height: 12px;
+  background-color: #38445b;
   position: relative;
   margin-left: 15%;
   border-radius: 5px;
   transition: all .41s; }
   .toggle:hover {
-    background-color: blue; }
+    background-color: #38ABEB; }
   .toggle:hover .toggle__circle {
     transform: translate(18px, -50%);
     background-color: #eee5e5; }
   .toggle__circle {
     transition: all .41s;
-    width: 60%;
-    height: 120%;
+    width: 65%;
+    height: 130%;
     border-radius: 50%;
+    border: 0.5px solid #38445b;
     top: 50%;
     left: -5px;
     transform: translateY(-50%);
@@ -800,6 +801,134 @@ body {
       .my-account .details .add-account .text {
         font-size: 1.3rem;
         color: #38445b; }
+
+.notification {
+  width: 350px;
+  height: 650px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  z-index: 11;
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column; }
+  .notification--hidden {
+    display: none; }
+  .notification__header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem; }
+    .notification__header .title {
+      font-size: 1.4rem;
+      font-weight: 500; }
+    .notification__header .close {
+      margin-left: auto; }
+  .notification__body {
+    width: 100%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #f1f1f1;
+    gap: 1rem;
+    border-radius: 0 0 10px 10px; }
+  .notification__global-setting, .notification__events, .notification__calls, .notification__badge, .notification__native {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    padding: 1rem 0; }
+    .notification__global-setting .header, .notification__events .header, .notification__calls .header, .notification__badge .header, .notification__native .header {
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: #38ABEB;
+      padding: 1rem 2rem; }
+    .notification__global-setting .setting-item, .notification__global-setting .event, .notification__global-setting .call-setting, .notification__global-setting .badge-item, .notification__global-setting .native-item, .notification__events .setting-item, .notification__events .event, .notification__events .call-setting, .notification__events .badge-item, .notification__events .native-item, .notification__calls .setting-item, .notification__calls .event, .notification__calls .call-setting, .notification__calls .badge-item, .notification__calls .native-item, .notification__badge .setting-item, .notification__badge .event, .notification__badge .call-setting, .notification__badge .badge-item, .notification__badge .native-item, .notification__native .setting-item, .notification__native .event, .notification__native .call-setting, .notification__native .badge-item, .notification__native .native-item {
+      display: flex;
+      flex-direction: row;
+      padding: 1rem 2rem;
+      align-items: center;
+      gap: 1rem;
+      cursor: pointer; }
+      .notification__global-setting .setting-item:hover, .notification__global-setting .event:hover, .notification__global-setting .call-setting:hover, .notification__global-setting .badge-item:hover, .notification__global-setting .native-item:hover, .notification__events .setting-item:hover, .notification__events .event:hover, .notification__events .call-setting:hover, .notification__events .badge-item:hover, .notification__events .native-item:hover, .notification__calls .setting-item:hover, .notification__calls .event:hover, .notification__calls .call-setting:hover, .notification__calls .badge-item:hover, .notification__calls .native-item:hover, .notification__badge .setting-item:hover, .notification__badge .event:hover, .notification__badge .call-setting:hover, .notification__badge .badge-item:hover, .notification__badge .native-item:hover, .notification__native .setting-item:hover, .notification__native .event:hover, .notification__native .call-setting:hover, .notification__native .badge-item:hover, .notification__native .native-item:hover {
+        background-color: #f1f1f1; }
+      .notification__global-setting .setting-item .title, .notification__global-setting .event .title, .notification__global-setting .call-setting .title, .notification__global-setting .badge-item .title, .notification__global-setting .native-item .title, .notification__events .setting-item .title, .notification__events .event .title, .notification__events .call-setting .title, .notification__events .badge-item .title, .notification__events .native-item .title, .notification__calls .setting-item .title, .notification__calls .event .title, .notification__calls .call-setting .title, .notification__calls .badge-item .title, .notification__calls .native-item .title, .notification__badge .setting-item .title, .notification__badge .event .title, .notification__badge .call-setting .title, .notification__badge .badge-item .title, .notification__badge .native-item .title, .notification__native .setting-item .title, .notification__native .event .title, .notification__native .call-setting .title, .notification__native .badge-item .title, .notification__native .native-item .title {
+        font-size: 1.4rem;
+        font-weight: 500; }
+      .notification__global-setting .setting-item .toggle, .notification__global-setting .event .toggle, .notification__global-setting .call-setting .toggle, .notification__global-setting .badge-item .toggle, .notification__global-setting .native-item .toggle, .notification__events .setting-item .toggle, .notification__events .event .toggle, .notification__events .call-setting .toggle, .notification__events .badge-item .toggle, .notification__events .native-item .toggle, .notification__calls .setting-item .toggle, .notification__calls .event .toggle, .notification__calls .call-setting .toggle, .notification__calls .badge-item .toggle, .notification__calls .native-item .toggle, .notification__badge .setting-item .toggle, .notification__badge .event .toggle, .notification__badge .call-setting .toggle, .notification__badge .badge-item .toggle, .notification__badge .native-item .toggle, .notification__native .setting-item .toggle, .notification__native .event .toggle, .notification__native .call-setting .toggle, .notification__native .badge-item .toggle, .notification__native .native-item .toggle {
+        margin-left: auto; }
+  .notification__chat-notification {
+    background-color: #FFFFFF;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0; }
+    .notification__chat-notification .header {
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: #38ABEB;
+      padding: 1rem 2rem; }
+    .notification__chat-notification .chat-item {
+      cursor: pointer;
+      display: flex;
+      flex-direction: row;
+      padding: 1rem 2rem;
+      align-items: center;
+      gap: 1rem; }
+      .notification__chat-notification .chat-item:hover {
+        background-color: #f1f1f1; }
+      .notification__chat-notification .chat-item .chat-type {
+        display: flex;
+        flex-direction: column;
+        font-size: 1.4rem; }
+        .notification__chat-notification .chat-item .chat-type .exception {
+          color: #a9a9a9; }
+      .notification__chat-notification .chat-item .toggle {
+        margin-left: auto; }
+  .notification__screen {
+    background-color: #FFFFFF;
+    width: 100%;
+    display: flex;
+    flex-direction: column; }
+    .notification__screen .header {
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: #38ABEB;
+      padding: 1rem 2rem; }
+    .notification__screen .image {
+      padding: 1rem 2rem;
+      width: 320px;
+      height: 250px;
+      align-self: center;
+      cursor: pointer; }
+  .notification__count {
+    background-color: #FFFFFF;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem; }
+    .notification__count .header {
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: #38ABEB;
+      padding: 1rem 2rem; }
+    .notification__count ul {
+      width: 100%;
+      list-style-type: none; }
+      .notification__count ul li {
+        cursor: pointer;
+        width: 50px;
+        display: inline-block;
+        text-align: center;
+        border-top: 2px solid rgba(56, 68, 91, 0.3);
+        padding: 1rem;
+        font-size: 1.3rem; }
+        .notification__count ul li:not(:last-child) {
+          margin-right: 1rem; }
 
 .main {
   display: flex;
