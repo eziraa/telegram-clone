@@ -1,13 +1,13 @@
 .toggle{
-            width: 20px;
-            height: 10px;
-            background-color: rgb(96, 88, 88);
+            width: 24px;
+            height: 12px;
+            background-color: $color-secondary-dark;
             position: relative;
             margin-left: 15%;
             border-radius: 5px;
             transition: all .41s;
         &:hover{
-            background-color: blue;
+            background-color: $color-secondary-blue;
         }
         &:hover &__circle{
             transform: translate(18px, -50%);
@@ -15,9 +15,10 @@
         }
         &__circle{
             transition: all .41s;
-            width: 60%;
-            height: 120%;
+            width: 65%;
+            height: 130%;
             border-radius: 50%;
+            border: .5px solid $color-secondary-dark;
             top: 50%;
             left: -5px;
             transform: translateY(-50%);
