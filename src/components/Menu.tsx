@@ -14,27 +14,11 @@ export const Menu = () => {
   const display = useDisplayContext();
   return (
     <Fragment>
-      <CreateGroup
-        displayItemIndex={display.displayItem}
-        handleDisplayNone={display.handleDisplayNone}
-        handleDisplay={display.handleDisplay}
-      />
-      <CreateChannel
-        displayItemIndex={display.displayItem}
-        handleDisplayNone={display.handleDisplayNone}
-      />
-      <Contacts
-        displayItemIndex={display.displayItem}
-        handleDisplayNone={display.handleDisplayNone}
-      />
-      <Calls
-        displayItemIndex={display.displayItem}
-        handleDisplayNone={display.handleDisplayNone}
-      />
-      <Setting
-        displayItemIndex={display.displayItem}
-        handleDisplayNone={display.handleDisplayNone}
-      />
+      <CreateGroup />
+      <CreateChannel />
+      <Contacts />
+      <Calls />
+      <Setting />
       <div
         className={`menu ${display.displayItem !== -1 && "menu--hidden"} ${
           display.animated && "menu--animated"
@@ -42,7 +26,7 @@ export const Menu = () => {
       >
         <Profile />
         <AccountsContainer />
-        <MenuItem handleDisplay={display.handleDisplay} />
+        <MenuItem />
       </div>
       ;
     </Fragment>
