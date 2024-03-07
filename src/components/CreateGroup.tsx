@@ -2,24 +2,18 @@ import { FaCamera } from "react-icons/fa";
 import { Fragment } from "react/jsx-runtime";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { AddMembers } from "./AddMembers";
-interface Props {
-  displayItemIndex: number;
-  handleDisplayNone: () => void;
-  handleDisplay: (index: number) => void;
-}
-export const CreateGroup = ({
-  displayItemIndex,
-  handleDisplayNone,
-  handleDisplay,
-}: Props) => {
+import { useDisplayContext } from "../context/context";
+
+export const CreateGroup = () => {
+  const display = useDisplayContext();
   return (
     <Fragment>
       <AddMembers
-        displayItemIndex={displayItemIndex}
-        handleDisplayNone={handleDisplayNone}
+        displayItemIndex={display.displayItem}
+        handleDisplayNone={display.handleDisplayNone}
       />
       <div
-        className={`new-group ${displayItemIndex !== 1 && "new-group--hidden"}`}
+        className={`new-group ${display.displayItem !== 1 && "new-group--hidden"}`}
       >
         <div className="three-dots">
           <BsThreeDotsVertical size={20} />
@@ -36,13 +30,13 @@ export const CreateGroup = ({
           </div>
         </div>
         <div className="lower">
-          <button className="btn btn-cancel" onClick={handleDisplayNone}>
+          <button className="btn btn-cancel" onClick={display.handleDisplayNone}>
             Cancel
           </button>
           <button
             className="btn btn-next"
             onClick={() => {
-              handleDisplay(10);
+              display.handleDisplay(10);
             }}
           >
             Next
