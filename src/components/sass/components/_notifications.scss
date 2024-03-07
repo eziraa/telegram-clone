@@ -1,0 +1,180 @@
+.notification{
+    width: 350px;
+    height: 650px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    z-index: 11;
+    background-color: $color-primary-white;
+
+    display: flex;
+    flex-direction: column;
+
+    &--hidden{
+        display: none;
+    }
+
+    &__header{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 1rem;
+        gap: 1rem;
+
+        .title{
+            font-size: 1.4rem;
+            font-weight: 500;
+        }
+        .close{
+            margin-left: auto;
+        }
+    }
+
+    &__body{
+        width: 100%;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        background-color: $color-secondary-white;
+        gap: 1rem;
+        border-radius: 0 0 10px 10px;
+    }
+
+    &__global-setting, &__events, &__calls, &__badge, &__native{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: $color-primary-white;
+        padding: 1rem 0;
+        .header{
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: $color-secondary-blue;
+            padding: 1rem 2rem;
+        }
+
+        .setting-item, .event, .call-setting, .badge-item, .native-item{
+            display: flex;
+            flex-direction: row;
+            padding: 1rem 2rem;
+            align-items: center;
+            gap: 1rem;
+            cursor: pointer;
+
+            &:hover{
+                background-color: $color-secondary-white;
+            }
+
+            .title{
+                font-size: 1.4rem;
+                font-weight: 500;
+            }
+
+            .toggle{
+                margin-left: auto;
+            }
+        }
+    }
+
+    &__chat-notification{
+        background-color: $color-primary-white;
+         width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 0;
+
+        .header{
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: $color-secondary-blue;
+            padding: 1rem 2rem;
+        }
+
+        .chat-item{
+            cursor: pointer;
+            display: flex;
+            flex-direction: row;
+            padding: 1rem 2rem;
+            align-items: center;
+            gap: 1rem;
+            &:hover{
+                background-color: $color-secondary-white;
+            }
+            .chat-type{
+                display: flex;
+                flex-direction: column;
+                font-size: 1.4rem;
+
+                .exception{
+                    color: $color-tertiary-white;
+                }
+            }
+
+            .toggle{
+                margin-left: auto;
+            }
+        }
+
+    }
+
+    &__screen{
+        background-color: $color-primary-white;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .header{
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: $color-secondary-blue;
+            padding: 1rem 2rem;
+        }
+
+        .image{
+            padding: 1rem 2rem;
+            width: 320px;
+            height: 250px;
+            align-self: center;
+            cursor: pointer;
+        }
+    }
+
+    &__count{
+        background-color: $color-primary-white;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 2rem;
+
+        .header{
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: $color-secondary-blue;
+            padding: 1rem 2rem;
+        }
+
+        ul{
+            width: 100%;
+            list-style-type: none;
+
+            li{
+                cursor: pointer;
+                width: 50px;
+                display: inline-block;
+                text-align: center;  
+                border-top: 2px solid rgba($color-secondary-dark, .3);
+                padding: 1rem;
+                font-size: 1.3rem;
+                &:not(:last-child){
+                    margin-right: 1rem;
+                }
+            }
+        }
+
+
+    }
+
+}
