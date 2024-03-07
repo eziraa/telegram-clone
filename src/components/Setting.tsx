@@ -23,12 +23,14 @@ import { LiaTimesSolid } from "react-icons/lia";
 import { MyAccount } from "./MyAccount";
 import { useDisplayContext } from "../context/context";
 import { Fragment } from "react/jsx-runtime";
+import { Notification } from "./Notification";
 
 export const Setting = () => {
   const display = useDisplayContext();
   return (
     <Fragment>
       <MyAccount />
+      <Notification />
       <div
         className={`setting-container ${
           display.displayItem !== 4 && "setting-container__hidden"
@@ -66,7 +68,10 @@ export const Setting = () => {
                 <MdOutlineAccountCircle size={15} className="icon" />
                 <p className="text">My Account</p>
               </div>
-              <div className="setting-item">
+              <div
+                className="setting-item"
+                onClick={() => display.handleDisplay(41)}
+              >
                 <IoMdNotificationsOutline size={15} className="icon" />
                 <p className="text">Notifications and Sounds</p>
               </div>
