@@ -2,18 +2,17 @@ import { PiSortAscendingLight } from "react-icons/pi";
 import { Fragment } from "react/jsx-runtime";
 import { IoSearchOutline } from "react-icons/io5";
 import list_of_contacts from "./data/contacts";
+import { useDisplayContext } from "../context/context";
 
-interface Props {
-  displayItemIndex: number;
-  handleDisplayNone: () => void;
-}
 
-export const Contacts = ({ displayItemIndex, handleDisplayNone }: Props) => {
+
+export const Contacts = () => {
+  const display = useDisplayContext();
   return (
     <Fragment>
       <div
         className={`contact-container ${
-          displayItemIndex !== 2 && "contact-container--hidden"
+          display.displayItem !== 2 && "contact-container--hidden"
         }`}
       >
         <div
@@ -54,7 +53,7 @@ export const Contacts = ({ displayItemIndex, handleDisplayNone }: Props) => {
         </div>
         <div className="contacts__footer">
           <button className="btn btn-add">Add contact</button>
-          <button className="btn btn-close" onClick={handleDisplayNone}>
+          <button className="btn btn-close" onClick={display.handleDisplayNone}>
             Close
           </button>
         </div>
