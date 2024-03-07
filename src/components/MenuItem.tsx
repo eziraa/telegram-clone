@@ -7,13 +7,13 @@ import {
 } from "react-icons/io5";
 import { MdGroup, MdOutlineNightlight } from "react-icons/md";
 import { Fragment } from "react/jsx-runtime";
-interface Props {
-  handleDisplay: (index: number) => void;
-}
-export const MenuItem = ({ handleDisplay }: Props) => {
+import { useDisplayContext } from "../context/context";
+
+export const MenuItem = () => {
+  const display = useDisplayContext();
   return (
     <Fragment>
-      <div className="menu__item" onClick={() => handleDisplay(0)}>
+      <div className="menu__item" onClick={() => display.handleDisplay(0)}>
         <div className="menu__item__icon">
           <GoTelescope size={20} color={"#74728c"} />
         </div>
@@ -21,7 +21,7 @@ export const MenuItem = ({ handleDisplay }: Props) => {
           <span className="menu__item__title">New channel </span>
         </div>
       </div>
-      <div className="menu__item" onClick={() => handleDisplay(1)}>
+      <div className="menu__item" onClick={() => display.handleDisplay(1)}>
         <div className="menu__item__icon">
           <MdGroup size={20} color={"#74728c"} />
         </div>
@@ -29,7 +29,7 @@ export const MenuItem = ({ handleDisplay }: Props) => {
           <span className="menu__item__title">Groups</span>
         </div>
       </div>
-      <div className="menu__item" onClick={() => handleDisplay(2)}>
+      <div className="menu__item" onClick={() => display.handleDisplay(2)}>
         <div className="menu__item__icon">
           <FaRegUserCircle size={20} color={"#74728c"} />
         </div>
@@ -37,7 +37,7 @@ export const MenuItem = ({ handleDisplay }: Props) => {
           <span className="menu__item__title">Contacts</span>
         </div>
       </div>
-      <div className="menu__item" onClick={() => handleDisplay(3)}>
+      <div className="menu__item" onClick={() => display.handleDisplay(3)}>
         <div className="menu__item__icon">
           <IoCallOutline size={20} color={"#74728c"} />
         </div>
@@ -53,7 +53,7 @@ export const MenuItem = ({ handleDisplay }: Props) => {
           <span className="menu__item__title">Saved Messages</span>
         </div>
       </div>
-      <div className="menu__item" onClick={() => handleDisplay(4)}>
+      <div className="menu__item" onClick={() => display.handleDisplay(4)}>
         <div className="menu__item__icon">
           <IoSettingsOutline size={20} color={"#74728c"} />
         </div>
