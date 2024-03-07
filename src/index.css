@@ -692,6 +692,115 @@ body {
     position: absolute;
     background-color: #f3f7f6; }
 
+.my-account {
+  width: 350px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  gap: .5rem;
+  display: flex;
+  flex-direction: column;
+  color: #368ef2;
+  z-index: 20; }
+  .my-account--hidden {
+    display: none; }
+  .my-account__header {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    width: 100%;
+    align-items: center;
+    padding: 2rem; }
+    .my-account__header .title {
+      font-size: 1.5rem;
+      font-weight: 550;
+      color: #38445b; }
+    .my-account__header .close {
+      margin-left: auto; }
+  .my-account__profile {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .4rem; }
+    .my-account__profile .name {
+      font-size: 1.4rem;
+      font-weight: 550;
+      color: #38445b; }
+    .my-account__profile .login-time {
+      color: #74728c;
+      font-size: 1.2rem; }
+    .my-account__profile .image {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      cursor: pointer;
+      border: 2px solid #368ef2; }
+  .my-account .bio {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.3rem;
+    color: #38445b;
+    padding: 2rem 2rem; }
+  .my-account .details {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    margin: 1rem 0; }
+    .my-account .details__header {
+      font-size: 1.3rem;
+      color: #74728c;
+      padding: 2rem 2rem;
+      background-color: rgba(169, 169, 169, 0.3); }
+    .my-account .details__list {
+      width: 100%;
+      display: flex;
+      flex-direction: column; }
+      .my-account .details__list .detail-item {
+        cursor: pointer;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        padding: 1rem 2rem;
+        gap: 1rem;
+        align-items: center;
+        font-size: 1.3rem; }
+        .my-account .details__list .detail-item:hover {
+          background-color: rgba(169, 169, 169, 0.3); }
+        .my-account .details__list .detail-item .title {
+          color: #272938; }
+        .my-account .details__list .detail-item .value {
+          margin-left: auto; }
+    .my-account .details__footer {
+      width: 100%;
+      background-color: rgba(169, 169, 169, 0.3); }
+      .my-account .details__footer .text {
+        font-size: 1.3rem;
+        color: #74728c;
+        padding: 2rem 2rem; }
+    .my-account .details .add-account {
+      cursor: pointer;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 1rem;
+      gap: 1rem; }
+      .my-account .details .add-account:hover {
+        background-color: rgba(169, 169, 169, 0.3); }
+      .my-account .details .add-account .icon {
+        background-color: #38ABEB;
+        border-radius: 50%; }
+      .my-account .details .add-account .text {
+        font-size: 1.3rem;
+        color: #38445b; }
+
 .main {
   display: flex;
   width: 100%;

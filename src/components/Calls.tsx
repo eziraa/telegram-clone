@@ -9,12 +9,11 @@ import {
 } from "react-icons/md";
 import { FcCallback } from "react-icons/fc";
 import list_of_calls from "./data/calls";
-interface Props {
-  displayItemIndex: number;
-  handleDisplayNone: () => void;
-}
+import { useDisplayContext } from "../context/context";
 
-export const Calls = ({ displayItemIndex, handleDisplayNone }: Props) => {
+
+export const Calls = () => {
+  const display = useDisplayContext();
   const getCallType = (type: string) => {
     if (type === "received") return <MdCallReceived color="blue" />;
     else if (type === "called") return <MdCallMade color="green" />;
@@ -25,7 +24,7 @@ export const Calls = ({ displayItemIndex, handleDisplayNone }: Props) => {
     <Fragment>
       <div
         className={`calls-container ${
-          displayItemIndex !== 3 && "calls-container--hidden"
+          display.displayItem !== 3 && "calls-container--hidden"
         }`}
       >
         <div className="three-dots " style={{ top: "2%" }}>
@@ -58,7 +57,7 @@ export const Calls = ({ displayItemIndex, handleDisplayNone }: Props) => {
           </div>
         </div>
         <div className="calls__footer">
-          <button className="btn btn-close" onClick={handleDisplayNone}>
+          <button className="btn btn-close" onClick={display.handleDisplayNone}>
             Close
           </button>
         </div>
