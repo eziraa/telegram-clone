@@ -1,0 +1,149 @@
+.my-account{
+    width: 350px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $color-primary-white;
+    border-radius: 10px;
+    gap: .5rem;
+    display: flex;
+    flex-direction: column;
+    color: $color-primary-blue;
+    z-index: 20;
+
+    &--hidden{
+        display: none;
+    }
+    &__header{
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        width: 100%;
+        align-items: center;
+        padding: 2rem ;
+        .title{
+            font-size: 1.5rem;
+            font-weight: 550;
+            color: $color-secondary-dark;
+        }
+        .close{
+            margin-left: auto;
+        }
+    }
+
+    &__profile{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: .4rem;
+        
+        .name{
+            font-size: 1.4rem;
+            font-weight: 550;
+            color: $color-secondary-dark;
+        }
+
+        .login-time{
+            color: $color-tertiary-dark;
+            font-size: 1.2rem;
+        }
+        .image{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 2px solid $color-primary-blue;
+        }
+    }
+
+    .bio{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.3rem;
+        color: $color-secondary-dark;
+        padding: 2rem 2rem;
+    }
+
+    .details{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        margin: 1rem 0;
+        &__header{
+            font-size: 1.3rem;
+            color: $color-tertiary-dark;
+            padding: 2rem 2rem;
+            background-color: rgba($color-tertiary-white,.3);
+
+        }
+
+        &__list{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            
+            .detail-item{
+                cursor: pointer;
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                padding: 1rem 2rem;
+                gap: 1rem;
+                align-items: center;
+                font-size: 1.3rem;
+
+                &:hover{
+                    background-color: rgba($color-tertiary-white,.3);
+
+                }
+                .title{
+                    color: $color-primary-dark;
+                }
+
+                .value{
+                    margin-left: auto;
+                }
+            }
+        }
+
+        &__footer{
+            width: 100%;
+            background-color: rgba($color-tertiary-white,.3);
+
+            .text{
+                font-size: 1.3rem;
+                color: $color-tertiary-dark;
+                padding: 2rem 2rem;
+            }
+        }
+
+        .add-account{
+            cursor: pointer;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 1rem;
+            gap: 1rem;
+
+            &:hover{
+                background-color: rgba($color-tertiary-white,.3);
+
+            }
+            .icon{
+                background-color: $color-secondary-blue;
+                border-radius: 50%;
+            }
+
+            .text{
+                font-size: 1.3rem;
+                color: $color-secondary-dark;
+            }
+        }
+    }
+}
