@@ -20,100 +20,107 @@ import { Toggle } from "./Toggle";
 import { CiLock } from "react-icons/ci";
 import { MdOutlineAccountCircle } from "react-icons/md";
 import { LiaTimesSolid } from "react-icons/lia";
-interface Props {
-  displayItemIndex: number;
-  handleDisplayNone: () => void;
-}
-export const Setting = ({ displayItemIndex, handleDisplayNone }: Props) => {
+import { MyAccount } from "./MyAccount";
+import { useDisplayContext } from "../context/context";
+import { Fragment } from "react/jsx-runtime";
+
+export const Setting = () => {
+  const display = useDisplayContext();
   return (
-    <div
-      className={`setting-container ${
-        displayItemIndex !== 4 && "setting-container__hidden"
-      }`}
-    >
-      <div className="setting-container__header">
-        <p className="text">Settings</p>
-        <div className="actions">
-          <BsThreeDotsVertical className="icon" />
-          <LiaTimesSolid
-            size={15}
-            className="icon"
-            onClick={handleDisplayNone}
-          />
-        </div>
-      </div>
+    <Fragment>
+      <MyAccount />
       <div
-        className="scroll-container"
-        style={{ borderRadius: "0 1rem 1rem 1rem" }}
+        className={`setting-container ${
+          display.displayItem !== 4 && "setting-container__hidden"
+        }`}
       >
-        <div className="setting">
-          <div className="user__profile">
-            <img src={profile} alt="" className="image" />
-            <div className="user__info">
-              <p className="name">Ezira</p>
-              <p className="phone-number">+251 958 25...</p>
-              <p className="username">@ezrawi</p>
-            </div>
+        <div className="setting-container__header">
+          <p className="text">Settings</p>
+          <div className="actions">
+            <BsThreeDotsVertical className="icon" />
+            <LiaTimesSolid
+              size={15}
+              className="icon"
+              onClick={display.handleDisplayNone}
+            />
           </div>
-          <div className="setting__body">
-            <div className="setting-item">
-              <MdOutlineAccountCircle size={15} className="icon" />
-              <p className="text">My Account</p>
+        </div>
+        <div
+          className="scroll-container"
+          style={{ borderRadius: "0 1rem 1rem 1rem" }}
+        >
+          <div className="setting">
+            <div className="user__profile">
+              <img src={profile} alt="" className="image" />
+              <div className="user__info">
+                <p className="name">Ezira</p>
+                <p className="phone-number">+251 958 25...</p>
+                <p className="username">@ezrawi</p>
+              </div>
             </div>
-            <div className="setting-item">
-              <IoMdNotificationsOutline size={15} className="icon" />
-              <p className="text">Notifications and Sounds</p>
+            <div className="setting__body">
+              <div
+                className="setting-item"
+                onClick={() => display.handleDisplay(40)}
+              >
+                <MdOutlineAccountCircle size={15} className="icon" />
+                <p className="text">My Account</p>
+              </div>
+              <div className="setting-item">
+                <IoMdNotificationsOutline size={15} className="icon" />
+                <p className="text">Notifications and Sounds</p>
+              </div>
+              <div className="setting-item">
+                <CiLock size={15} className="icon" />
+                <p className="text">Privacy and Security</p>
+              </div>
+              <div className="setting-item">
+                <IoChatbubbleOutline size={15} className="icon" />
+                <p className="text">Chat Setting</p>
+              </div>
+              <div className="setting-item">
+                <PiFolderSimple size={15} className="icon" />
+                <p className="text">Folders</p>
+              </div>
+              <div className="setting-item">
+                <GiSettingsKnobs size={15} className="icon" />
+                <p className="text">Advanced</p>
+              </div>
+              <div className="setting-item">
+                <HiOutlineSpeakerWave size={15} className="icon" />
+                <p className="text">Speakers and Cameras</p>
+              </div>
+              <div className="setting-item">
+                <PiBatteryChargingLight size={15} className="icon" />
+                <p className="text">Battery and Animations</p>
+              </div>
+              <div className="setting-item">
+                <HiLanguage size={15} className="icon" />
+                <p className="text">Language</p>
+              </div>
             </div>
-            <div className="setting-item">
-              <CiLock size={15} className="icon" />
-              <p className="text">Privacy and Security</p>
+            <div className="setting__scale">
+              <HiOutlineEye size={20} className="icon" />
+              <p className="text">Default interface scale</p>
+              <Toggle />
             </div>
-            <div className="setting-item">
-              <IoChatbubbleOutline size={15} className="icon" />
-              <p className="text">Chat Setting</p>
-            </div>
-            <div className="setting-item">
-              <PiFolderSimple size={15} className="icon" />
-              <p className="text">Folders</p>
-            </div>
-            <div className="setting-item">
-              <GiSettingsKnobs size={15} className="icon" />
-              <p className="text">Advanced</p>
-            </div>
-            <div className="setting-item">
-              <HiOutlineSpeakerWave size={15} className="icon" />
-              <p className="text">Speakers and Cameras</p>
-            </div>
-            <div className="setting-item">
-              <PiBatteryChargingLight size={15} className="icon" />
-              <p className="text">Battery and Animations</p>
-            </div>
-            <div className="setting-item">
-              <HiLanguage size={15} className="icon" />
-              <p className="text">Language</p>
-            </div>
-          </div>
-          <div className="setting__scale">
-            <HiOutlineEye size={20} className="icon" />
-            <p className="text">Default interface scale</p>
-            <Toggle />
-          </div>
-          <div className="telegram-features">
-            <div className="faq">
-              <HiOutlineQuestionMarkCircle size={20} className="icon" />
-              <p className="text">Telegram FAQ</p>
-            </div>
-            <div className="feature">
-              <PiLightbulbFilament size={20} className="icon" />
-              <p className="text">Telegram features</p>
-            </div>
-            <div className="question">
-              <BiMessageRoundedDots size={20} className="icon" />
-              <p className="text">Telegram Question</p>
+            <div className="telegram-features">
+              <div className="faq">
+                <HiOutlineQuestionMarkCircle size={20} className="icon" />
+                <p className="text">Telegram FAQ</p>
+              </div>
+              <div className="feature">
+                <PiLightbulbFilament size={20} className="icon" />
+                <p className="text">Telegram features</p>
+              </div>
+              <div className="question">
+                <BiMessageRoundedDots size={20} className="icon" />
+                <p className="text">Telegram Question</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </Fragment>
   );
 };
