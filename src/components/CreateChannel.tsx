@@ -1,18 +1,14 @@
 import { FaCamera } from "react-icons/fa";
 import { Fragment } from "react/jsx-runtime";
-interface Props {
-  displayItemIndex: number;
-  handleDisplayNone: () => void;
-}
-export const CreateChannel = ({
-  displayItemIndex,
-  handleDisplayNone,
-}: Props) => {
+import { useDisplayContext } from "../context/context";
+
+export const CreateChannel = () => {
+  const display = useDisplayContext();
   return (
     <Fragment>
       <div
         className={`new-channel ${
-          displayItemIndex !== 0 && "new-channel--hidden"
+          display.displayItem !== 0 && "new-channel--hidden"
         }`}
       >
         <div className="upper">
@@ -35,7 +31,10 @@ export const CreateChannel = ({
           <label htmlFor="">Description Optional</label>
         </div>
         <div className="lower">
-          <button className="btn btn-cancel" onClick={handleDisplayNone}>
+          <button
+            className="btn btn-cancel"
+            onClick={display.handleDisplayNone}
+          >
             Cancel
           </button>
           <button className="btn btn-next">Create</button>
