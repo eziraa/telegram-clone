@@ -50,3 +50,7 @@ Components.tsx
 src/context.ts
 src/Dashboard.tsx
 src/index.tsx
+src/assets/screen.png
+src/components/check.html
+src/assets/images/folder.png
+src/components/radio.html
