@@ -20,7 +20,7 @@ export const MyAccount = () => {
           className="back icon"
           onClick={() => display.handleDisplay(4)}
         />
-        <div className="title">Info</div>
+        <p className="title">Info</p>
         <LiaTimesSolid
           className="close icon"
           onClick={() => display.handleDisplay(-2)}
