@@ -10,14 +10,19 @@ export interface Display {
   animated: boolean;
   handleDisplayNone: () => void;
   toggleMenu: () => void;
+  overlayBringToFront: () => void;
   handleDisplay: (index: number) => void;
   displayItem: number;
 }
 const GetDisplay = () => {
+  const overlay = document.querySelector(".overlay");
+
   const [displayMenu, setDisplayMenu] = useState(false);
   const [animated, setAnimated] = useState(false);
   const [displayItem, setDisplayItem] = useState(-2);
-
+  const overlayBringToFront = () => {
+    if (overlay) overlay.classList.add("overlay--front");
+  };
   const handleDisplay = (index: number) => {
     setDisplayItem(index);
     if (index < 10) toggleMenu();
@@ -39,8 +44,10 @@ const GetDisplay = () => {
     handleDisplayNone,
     displayMenu,
     toggleMenu,
+    overlayBringToFront,
   };
 };
+
 
 const Main = () => {
   return (
