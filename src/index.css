@@ -163,6 +163,8 @@ body {
   right: 0;
   z-index: 5;
   background-color: rgba(62, 54, 54, 0.74); }
+  .overlay--front {
+    z-index: 100; }
   .overlay--hidden {
     display: none; }
 
