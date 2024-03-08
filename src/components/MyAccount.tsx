@@ -41,17 +41,17 @@ export const MyAccount = () => {
           Example: 23 y.o designer from Bahir Dar
         </p>
         <div className="details__list">
-          <div className="detail-item">
+          <div className="detail-item" onClick={display.overlayBringToFront}>
             <MdOutlineAccountCircle size={15} className="icon" />
             <p className="title">Name</p>
             <p className="value">Ezira</p>
           </div>
-          <div className="detail-item">
+          <div className="detail-item" onClick={display.overlayBringToFront}>
             <HiOutlinePhone className="icon" />
             <p className="title">Phone Number</p>
             <p className="value">+251 93464242</p>
           </div>
-          <div className="detail-item">
+          <div className="detail-item" onClick={display.overlayBringToFront}>
             <FaAt className="icon" />
             <p className="title">User Name</p>
             <p className="value">@ezrawi</p>
