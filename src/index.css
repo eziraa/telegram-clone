@@ -1115,6 +1115,79 @@ body {
     left: 50%;
     transform: translate(-50%, -50%); }
 
+.folders-setting {
+  width: 350px;
+  height: 600px;
+  border-radius: 1rem;
+  position: absolute;
+  background-color: #FFFFFF;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  color: #368ef2;
+  z-index: 20; }
+  .folders-setting--hidden {
+    display: none; }
+  .folders-setting__header {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    width: 100%;
+    align-items: center;
+    padding: 2rem;
+    border-bottom: 1px solid #f1f1f1; }
+    .folders-setting__header .title {
+      font-size: 1.5rem;
+      font-weight: 550;
+      color: #38445b; }
+    .folders-setting__header .close {
+      margin-left: auto; }
+  .folders-setting__body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto; }
+    .folders-setting__body .header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 0;
+      background-color: #f1f1f1;
+      gap: 1rem; }
+      .folders-setting__body .header .fig-caption {
+        font-size: 1.3rem;
+        color: #38445b;
+        padding: 0 4rem;
+        text-align: center; }
+    .folders-setting__body .section {
+      display: flex;
+      flex-direction: column;
+      font-size: 1.2rem;
+      padding: 1rem 0;
+      font-weight: 550;
+      overflow-y: auto; }
+      .folders-setting__body .section__header {
+        padding-left: 2rem;
+        margin-bottom: 1rem; }
+      .folders-setting__body .section .section-item {
+        cursor: pointer;
+        display: flex;
+        padding: 1rem 2rem;
+        align-items: center;
+        gap: 2rem; }
+        .folders-setting__body .section .section-item .folder-data {
+          display: flex;
+          flex-direction: column;
+          gap: 5px; }
+          .folders-setting__body .section .section-item .folder-data .title {
+            color: #74728c; }
+        .folders-setting__body .section .section-item .last {
+          margin-left: auto; }
+        .folders-setting__body .section .section-item:hover {
+          background-color: #f1f1f1; }
+
 .main {
   display: flex;
   width: 100%;
