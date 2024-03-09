@@ -1004,6 +1004,50 @@ body {
         background-color: red;
         text-align: center; }
 
+.active-sessions {
+  width: 350px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  gap: .5rem;
+  display: flex;
+  flex-direction: column;
+  color: #368ef2;
+  z-index: 20; }
+  .active-sessions--hidden {
+    display: none; }
+  .active-sessions__header {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    width: 100%;
+    align-items: center;
+    padding: 2rem; }
+    .active-sessions__header .title {
+      font-size: 1.5rem;
+      font-weight: 550;
+      color: #38445b; }
+    .active-sessions__header .close {
+      margin-left: auto; }
+  .active-sessions__body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; }
+    .active-sessions__body .section-item {
+      padding: 1rem 2rem;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 2rem;
+      width: 100%;
+      height: 30rem;
+      background-color: red;
+      text-align: center; }
+
 .chat-setting {
   width: 350px;
   height: 600px;
