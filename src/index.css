@@ -1259,6 +1259,108 @@ body {
       border-bottom: 1rem solid #f1f1f1;
       border-top: 1rem solid #f1f1f1; }
 
+.battery-usage {
+  width: 350px;
+  height: 600px;
+  border-radius: 1rem;
+  position: absolute;
+  background-color: #FFFFFF;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  color: #368ef2;
+  z-index: 20; }
+  .battery-usage--hidden {
+    display: none; }
+  .battery-usage .header {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    width: 100%;
+    align-items: center;
+    padding: 2rem;
+    border-bottom: 1px solid #f1f1f1; }
+    .battery-usage .header__text {
+      font-size: 1.5rem;
+      font-weight: 550;
+      color: #38445b; }
+  .battery-usage__body .section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto; }
+    .battery-usage__body .section__power-saving-options, .battery-usage__body .section__save-power, .battery-usage__body .section__footer {
+      display: flex;
+      flex-direction: column;
+      font-size: 1.3rem;
+      padding: 1rem 0;
+      font-weight: 500; }
+      .battery-usage__body .section__power-saving-options .header, .battery-usage__body .section__save-power .header, .battery-usage__body .section__footer .header {
+        padding-left: 2rem;
+        margin-bottom: 1rem; }
+      .battery-usage__body .section__power-saving-options .section-item, .battery-usage__body .section__save-power .section-item, .battery-usage__body .section__footer .section-item {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        padding: .5rem 0; }
+        .battery-usage__body .section__power-saving-options .section-item .option, .battery-usage__body .section__save-power .section-item .option, .battery-usage__body .section__footer .section-item .option {
+          flex: 9;
+          display: flex;
+          flex-direction: column;
+          gap: .5rem; }
+          .battery-usage__body .section__power-saving-options .section-item .option .outer, .battery-usage__body .section__save-power .section-item .option .outer, .battery-usage__body .section__footer .section-item .option .outer {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 1rem;
+            padding: .8rem 2rem;
+            cursor: pointer; }
+            .battery-usage__body .section__power-saving-options .section-item .option .outer .title, .battery-usage__body .section__power-saving-options .section-item .option .outer .value, .battery-usage__body .section__power-saving-options .section-item .option .outer .total, .battery-usage__body .section__save-power .section-item .option .outer .title, .battery-usage__body .section__save-power .section-item .option .outer .value, .battery-usage__body .section__save-power .section-item .option .outer .total, .battery-usage__body .section__footer .section-item .option .outer .title, .battery-usage__body .section__footer .section-item .option .outer .value, .battery-usage__body .section__footer .section-item .option .outer .total {
+              color: #38445b;
+              font-size: 1.2rem;
+              font-weight: 530; }
+            .battery-usage__body .section__power-saving-options .section-item .option .outer:hover, .battery-usage__body .section__save-power .section-item .option .outer:hover, .battery-usage__body .section__footer .section-item .option .outer:hover {
+              background-color: #f1f1f1; }
+          .battery-usage__body .section__power-saving-options .section-item .option .inner, .battery-usage__body .section__save-power .section-item .option .inner, .battery-usage__body .section__footer .section-item .option .inner {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1rem;
+            padding-left: 4rem; }
+            .battery-usage__body .section__power-saving-options .section-item .option .inner .item, .battery-usage__body .section__save-power .section-item .option .inner .item, .battery-usage__body .section__footer .section-item .option .inner .item {
+              display: flex;
+              flex-direction: row;
+              align-items: flex-start;
+              gap: 1rem; }
+              .battery-usage__body .section__power-saving-options .section-item .option .inner .item .title, .battery-usage__body .section__save-power .section-item .option .inner .item .title, .battery-usage__body .section__footer .section-item .option .inner .item .title {
+                color: #38445b;
+                font-size: 1.2rem;
+                font-weight: medium; }
+        .battery-usage__body .section__power-saving-options .section-item--last, .battery-usage__body .section__save-power .section-item--last, .battery-usage__body .section__footer .section-item--last {
+          cursor: pointer;
+          padding-left: 2rem;
+          align-items: center; }
+          .battery-usage__body .section__power-saving-options .section-item--last:hover, .battery-usage__body .section__save-power .section-item--last:hover, .battery-usage__body .section__footer .section-item--last:hover {
+            background-color: #f1f1f1; }
+        .battery-usage__body .section__power-saving-options .section-item .last-toggle, .battery-usage__body .section__save-power .section-item .last-toggle, .battery-usage__body .section__footer .section-item .last-toggle {
+          padding: 1rem;
+          margin-left: auto; }
+    .battery-usage__body .section__footer {
+      background-color: #f1f1f1;
+      margin-top: 1rem; }
+      .battery-usage__body .section__footer .footer-text {
+        color: #74728c;
+        font-size: 1.3rem;
+        padding: 1rem 3rem; }
+  .battery-usage .footer .section-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: .5rem 1rem; }
+
 .main {
   display: flex;
   width: 100%;
