@@ -24,6 +24,7 @@ import { MyAccount } from "./MyAccount";
 import { useDisplayContext } from "../context/context";
 import { Fragment } from "react/jsx-runtime";
 import { Notification } from "./Notification";
+import { Privacy } from "./Privacy";
 
 export const Setting = () => {
   const display = useDisplayContext();
@@ -31,6 +32,7 @@ export const Setting = () => {
     <Fragment>
       <MyAccount />
       <Notification />
+      <Privacy />
       <div
         className={`setting-container ${
           display.displayItem !== 4 && "setting-container__hidden"
@@ -75,7 +77,10 @@ export const Setting = () => {
                 <IoMdNotificationsOutline size={15} className="icon" />
                 <p className="text">Notifications and Sounds</p>
               </div>
-              <div className="setting-item">
+              <div
+                className="setting-item"
+                onClick={() => display.handleDisplay(42)}
+              >
                 <CiLock size={15} className="icon" />
                 <p className="text">Privacy and Security</p>
               </div>
