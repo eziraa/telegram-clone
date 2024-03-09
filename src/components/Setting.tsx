@@ -88,7 +88,7 @@ export const Setting = () => {
               </div>
               <div
                 className="setting-item"
-                onClick={() => display.handleDisplay(42)}
+                onClick={() => display.handleDisplay(43)}
               >
                 <IoChatbubbleOutline size={15} className="icon" />
                 <p className="text">Chat Setting</p>
