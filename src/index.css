@@ -155,19 +155,6 @@ body {
     .menu__item:hover {
       background-color: #f1f1f1; }
 
-.overlay {
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  left: 0;
-  right: 0;
-  z-index: 5;
-  background-color: rgba(62, 54, 54, 0.74); }
-  .overlay--front {
-    z-index: 100; }
-  .overlay--hidden {
-    display: none; }
-
 .profile {
   width: 100%;
   background-color: darkcyan;
@@ -215,31 +202,6 @@ body {
     text-align: center;
     line-height: 1.3;
     color: #FFFFFF; }
-
-.input-field, .new-group .input-field {
-  height: 4rem;
-  width: 100%;
-  position: relative; }
-  .input-field input, .new-group .input-field input {
-    width: 100%;
-    height: 100%;
-    font-size: 1.7rem;
-    border: 2px solid #fff;
-    border-bottom: 2px solid silver;
-    outline: none; }
-  .input-field input:focus ~ label, .input-field input:valid ~ label {
-    transform: translateY(-20px);
-    font-size: 1rem;
-    color: #368ef2; }
-  .input-field label, .new-group .input-field label {
-    position: absolute;
-    bottom: 1rem;
-    left: 0;
-    color: #272938;
-    pointer-events: none;
-    font-size: 1.6rem;
-    transition: all 0.5s;
-    outline: none; }
 
 .new-group {
   width: 35rem;
@@ -316,30 +278,6 @@ body {
       transform: translate(-50%, -50%); }
   .new-channel--hidden {
     display: none; }
-  .new-channel .input-field {
-    height: 4rem;
-    width: 100%;
-    position: relative; }
-    .new-channel .input-field input {
-      width: 100%;
-      height: 100%;
-      font-size: 1.7rem;
-      border: 2px solid #fff;
-      border-bottom: 2px solid silver;
-      outline: none; }
-    .new-channel .input-field input:focus ~ label, .new-channel .input-field input:valid ~ label {
-      transform: translateY(-20px);
-      font-size: 1rem;
-      color: #368ef2; }
-    .new-channel .input-field label {
-      position: absolute;
-      bottom: 1rem;
-      left: 0;
-      color: #272938;
-      pointer-events: none;
-      font-size: 1.6rem;
-      transition: all 0.5s;
-      outline: none; }
   .new-channel .lower {
     display: flex;
     justify-content: flex-end; }
@@ -495,6 +433,19 @@ body {
     flex-direction: row;
     justify-content: flex-end;
     padding: 1rem 1rem; }
+
+.overlay {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  background-color: rgba(62, 54, 54, 0.74); }
+  .overlay--front {
+    z-index: 30; }
+  .overlay--hidden {
+    display: none; }
 
 .btn {
   padding: .5rem 1rem;
@@ -1360,6 +1311,54 @@ body {
     flex-direction: row;
     justify-content: flex-end;
     padding: .5rem 1rem; }
+
+.edit-name {
+  width: 35rem;
+  position: absolute;
+  border-radius: 1rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  color: #368ef2;
+  z-index: 40; }
+  .edit-name--hidden {
+    display: none; }
+  .edit-name .header {
+    font-size: 1.7rem;
+    color: #38445b; }
+  .edit-name .actions {
+    display: flex;
+    justify-content: flex-end; }
+
+.input-field {
+  height: 4rem;
+  width: 100%;
+  position: relative; }
+  .input-field input {
+    width: 100%;
+    height: 100%;
+    font-size: 1.7rem;
+    border: 2px solid #fff;
+    border-bottom: 2px solid silver;
+    outline: none; }
+  .input-field input:focus ~ label, .input-field input:valid ~ label {
+    transform: translateY(-20px);
+    font-size: 1rem;
+    color: #368ef2; }
+  .input-field label {
+    position: absolute;
+    bottom: 1rem;
+    left: 0;
+    color: #272938;
+    pointer-events: none;
+    font-size: 1.6rem;
+    transition: all 0.5s;
+    outline: none; }
 
 .main {
   display: flex;
