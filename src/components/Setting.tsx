@@ -27,6 +27,7 @@ import { Notification } from "./Notification";
 import { Privacy } from "./Privacy";
 import { ChatSetting } from "./ChatSetting";
 import { FoldersSetting } from "./FoldersSetting";
+import { AdvancedSetting } from "./AdvancedSetting";
 
 export const Setting = () => {
   const display = useDisplayContext();
@@ -37,6 +38,7 @@ export const Setting = () => {
       <Privacy />
       <ChatSetting />
       <FoldersSetting />
+      <AdvancedSetting />
       <div
         className={`setting-container ${
           display.displayItem !== 4 && "setting-container__hidden"
@@ -102,7 +104,10 @@ export const Setting = () => {
                 <PiFolderSimple size={15} className="icon" />
                 <p className="text">Folders</p>
               </div>
-              <div className="setting-item">
+              <div
+                className="setting-item"
+                onClick={() => display.handleDisplay(45)}
+              >
                 <GiSettingsKnobs size={15} className="icon" />
                 <p className="text">Advanced</p>
               </div>
