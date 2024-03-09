@@ -21,7 +21,7 @@ const GetDisplay = () => {
   const [animated, setAnimated] = useState(false);
   const [displayItem, setDisplayItem] = useState(-2);
   const overlayBringToFront = () => {
-    if (overlay) overlay.classList.add("overlay--front");
+    if (overlay) overlay.classList.toggle("overlay--front");
   };
   const handleDisplay = (index: number) => {
     setDisplayItem(index);
