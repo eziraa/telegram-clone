@@ -25,6 +25,7 @@ import { useDisplayContext } from "../context/context";
 import { Fragment } from "react/jsx-runtime";
 import { Notification } from "./Notification";
 import { Privacy } from "./Privacy";
+import { ChatSetting } from "./ChatSetting";
 
 export const Setting = () => {
   const display = useDisplayContext();
@@ -33,6 +34,7 @@ export const Setting = () => {
       <MyAccount />
       <Notification />
       <Privacy />
+      <ChatSetting />
       <div
         className={`setting-container ${
           display.displayItem !== 4 && "setting-container__hidden"
@@ -84,7 +86,10 @@ export const Setting = () => {
                 <CiLock size={15} className="icon" />
                 <p className="text">Privacy and Security</p>
               </div>
-              <div className="setting-item">
+              <div
+                className="setting-item"
+                onClick={() => display.handleDisplay(42)}
+              >
                 <IoChatbubbleOutline size={15} className="icon" />
                 <p className="text">Chat Setting</p>
               </div>
