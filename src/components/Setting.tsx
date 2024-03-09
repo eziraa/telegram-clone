@@ -28,6 +28,7 @@ import { Privacy } from "./Privacy";
 import { ChatSetting } from "./ChatSetting";
 import { FoldersSetting } from "./FoldersSetting";
 import { AdvancedSetting } from "./AdvancedSetting";
+import { BatteryUsage } from "./BatteryUsage";
 
 export const Setting = () => {
   const display = useDisplayContext();
@@ -39,6 +40,7 @@ export const Setting = () => {
       <ChatSetting />
       <FoldersSetting />
       <AdvancedSetting />
+      <BatteryUsage />
       <div
         className={`setting-container ${
           display.displayItem !== 4 && "setting-container__hidden"
@@ -111,11 +113,17 @@ export const Setting = () => {
                 <GiSettingsKnobs size={15} className="icon" />
                 <p className="text">Advanced</p>
               </div>
-              <div className="setting-item">
+              <div
+                className="setting-item"
+                onClick={() => display.handleDisplay(45)}
+              >
                 <HiOutlineSpeakerWave size={15} className="icon" />
                 <p className="text">Speakers and Cameras</p>
               </div>
-              <div className="setting-item">
+              <div
+                className="setting-item"
+                onClick={() => display.handleDisplay(46)}
+              >
                 <PiBatteryChargingLight size={15} className="icon" />
                 <p className="text">Battery and Animations</p>
               </div>
