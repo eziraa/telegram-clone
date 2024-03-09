@@ -1,7 +1,3 @@
 export const Checkbox = () => {
-  return (
-    <div className="check">
-      <div className="checked"></div>
-    </div>
-  );
+  return <input type="checkbox" name="" id="" className="check" />;
 };
