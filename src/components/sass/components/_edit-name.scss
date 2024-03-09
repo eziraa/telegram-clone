@@ -1,0 +1,30 @@
+.edit-name{
+    width: 35rem;
+    position: absolute;
+    border-radius: 1rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $color-primary-white;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    color: $color-primary-blue;
+    z-index: 40;
+
+    &--hidden{
+        display: none;
+    }
+    .header{
+        font-size: 1.7rem;
+        color: $color-secondary-dark;
+    }
+
+    .actions{
+        display: flex;
+        justify-content: flex-end;
+    }
+
+
+}
