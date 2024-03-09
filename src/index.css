@@ -976,6 +976,7 @@ body {
         padding-left: 2rem;
         margin-bottom: 1rem; }
       .privacy .body .security .content-item, .privacy .body .privacy-section .content-item, .privacy .body .sensitive-content .content-item, .privacy .body .bot-and-websites .content-item, .privacy .body .delete-my-account .content-item {
+        cursor: pointer;
         display: flex;
         padding: 1rem 2rem;
         align-items: center;

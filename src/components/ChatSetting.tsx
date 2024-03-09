@@ -4,14 +4,16 @@ import { LiaTimesSolid } from "react-icons/lia";
 import { IoBrushOutline } from "react-icons/io5";
 import { MdDryCleaning, MdNightlight } from "react-icons/md";
 import img from "../assets/images/back-1.png";
-import { Checkbox } from "./Checkbox";
 import { BiArchiveIn, BiSticker } from "react-icons/bi";
-import { RadioBtn } from "./RadioBtn";
 import { FaThumbsUp } from "react-icons/fa";
 export const ChatSetting = () => {
   const display = useDisplayContext();
   return (
-    <div className="chat-setting">
+    <div
+      className={`chat-setting ${
+        display.displayItem !== 43 && "chat-setting--hidden"
+      }`}
+    >
       <div className="chat-setting__header">
         <BsArrowLeft
           size={15}
