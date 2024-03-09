@@ -63,6 +63,12 @@
                     margin-left: auto;
                 }
 
+                .property{
+                    background-color: rgb(233, 204, 192);
+                    color: rgb(149, 4, 4);
+                    border-radius: 5px;
+                    padding: 2px 5px;
+                }
                 &:hover{
                     background-color: $color-secondary-white;
                     

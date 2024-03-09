@@ -1051,6 +1051,11 @@ body {
           color: #74728c; }
         .chat-setting .section__theme-setting .section-item .value, .chat-setting .section__custom-theme .section-item .value, .chat-setting .section__wallpaper .section-item .value, .chat-setting .section__sticker .section-item .value, .chat-setting .section__message .section-item .value, .chat-setting .section__archive .section-item .value {
           margin-left: auto; }
+        .chat-setting .section__theme-setting .section-item .property, .chat-setting .section__custom-theme .section-item .property, .chat-setting .section__wallpaper .section-item .property, .chat-setting .section__sticker .section-item .property, .chat-setting .section__message .section-item .property, .chat-setting .section__archive .section-item .property {
+          background-color: #e9ccc0;
+          color: #950404;
+          border-radius: 5px;
+          padding: 2px 5px; }
         .chat-setting .section__theme-setting .section-item:hover, .chat-setting .section__custom-theme .section-item:hover, .chat-setting .section__wallpaper .section-item:hover, .chat-setting .section__sticker .section-item:hover, .chat-setting .section__message .section-item:hover, .chat-setting .section__archive .section-item:hover {
           background-color: #f1f1f1; }
       .chat-setting .section__theme-setting .footer, .chat-setting .section__custom-theme .footer, .chat-setting .section__wallpaper .footer, .chat-setting .section__sticker .footer, .chat-setting .section__message .footer, .chat-setting .section__archive .footer {
