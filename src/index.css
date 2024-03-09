@@ -932,6 +932,104 @@ body {
         .notification__count ul li:not(:last-child) {
           margin-right: 1rem; }
 
+.privacy {
+  width: 350px;
+  height: 600px;
+  border-radius: 1rem;
+  position: absolute;
+  background-color: #FFFFFF;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  color: #368ef2;
+  z-index: 20; }
+  .privacy--hidden {
+    display: none; }
+  .privacy__header {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    width: 100%;
+    align-items: center;
+    padding: 2rem;
+    border-bottom: 1px solid #f1f1f1; }
+    .privacy__header .title {
+      font-size: 1.5rem;
+      font-weight: 550;
+      color: #38445b; }
+    .privacy__header .close {
+      margin-left: auto; }
+  .privacy .body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto; }
+    .privacy .body .security, .privacy .body .privacy-section, .privacy .body .sensitive-content, .privacy .body .bot-and-websites, .privacy .body .delete-my-account {
+      display: flex;
+      flex-direction: column;
+      font-size: 1.2rem;
+      padding: 1rem 0;
+      font-weight: 550; }
+      .privacy .body .security .header, .privacy .body .privacy-section .header, .privacy .body .sensitive-content .header, .privacy .body .bot-and-websites .header, .privacy .body .delete-my-account .header {
+        padding-left: 2rem;
+        margin-bottom: 1rem; }
+      .privacy .body .security .content-item, .privacy .body .privacy-section .content-item, .privacy .body .sensitive-content .content-item, .privacy .body .bot-and-websites .content-item, .privacy .body .delete-my-account .content-item {
+        display: flex;
+        padding: 1rem 2rem;
+        align-items: center;
+        gap: 2rem; }
+        .privacy .body .security .content-item .text, .privacy .body .security .content-item .type, .privacy .body .security .content-item .title, .privacy .body .security .content-item .clear-payment, .privacy .body .privacy-section .content-item .text, .privacy .body .privacy-section .content-item .type, .privacy .body .privacy-section .content-item .title, .privacy .body .privacy-section .content-item .clear-payment, .privacy .body .sensitive-content .content-item .text, .privacy .body .sensitive-content .content-item .type, .privacy .body .sensitive-content .content-item .title, .privacy .body .sensitive-content .content-item .clear-payment, .privacy .body .bot-and-websites .content-item .text, .privacy .body .bot-and-websites .content-item .type, .privacy .body .bot-and-websites .content-item .title, .privacy .body .bot-and-websites .content-item .clear-payment, .privacy .body .delete-my-account .content-item .text, .privacy .body .delete-my-account .content-item .type, .privacy .body .delete-my-account .content-item .title, .privacy .body .delete-my-account .content-item .clear-payment {
+          color: #74728c; }
+        .privacy .body .security .content-item .switch, .privacy .body .security .content-item .value, .privacy .body .security .content-item .toggle, .privacy .body .privacy-section .content-item .switch, .privacy .body .privacy-section .content-item .value, .privacy .body .privacy-section .content-item .toggle, .privacy .body .sensitive-content .content-item .switch, .privacy .body .sensitive-content .content-item .value, .privacy .body .sensitive-content .content-item .toggle, .privacy .body .bot-and-websites .content-item .switch, .privacy .body .bot-and-websites .content-item .value, .privacy .body .bot-and-websites .content-item .toggle, .privacy .body .delete-my-account .content-item .switch, .privacy .body .delete-my-account .content-item .value, .privacy .body .delete-my-account .content-item .toggle {
+          margin-left: auto; }
+        .privacy .body .security .content-item:hover, .privacy .body .privacy-section .content-item:hover, .privacy .body .sensitive-content .content-item:hover, .privacy .body .bot-and-websites .content-item:hover, .privacy .body .delete-my-account .content-item:hover {
+          background-color: #f1f1f1; }
+      .privacy .body .security .footer, .privacy .body .privacy-section .footer, .privacy .body .sensitive-content .footer, .privacy .body .bot-and-websites .footer, .privacy .body .delete-my-account .footer {
+        background-color: #f1f1f1;
+        margin-top: 1rem; }
+        .privacy .body .security .footer .text, .privacy .body .privacy-section .footer .text, .privacy .body .sensitive-content .footer .text, .privacy .body .bot-and-websites .footer .text, .privacy .body .delete-my-account .footer .text {
+          color: #74728c;
+          font-size: 1.3rem;
+          padding: 2rem 3rem; }
+    .privacy .body .bot-and-websites {
+      border-bottom: 1rem solid #f1f1f1;
+      border-top: 1rem solid #f1f1f1; }
+
+.check {
+  width: 20px;
+  height: 20px;
+  border: 1px solid gray;
+  position: relative; }
+  .check--checked::after {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 12.5px;
+    top: 5%;
+    left: 40%;
+    transform: rotate(50deg);
+    border-right: 2px solid #faf7f7;
+    border-bottom: 2px solid #faf5f5; }
+
+.radio-btn {
+  width: 20px;
+  height: 20px;
+  border: 1px solid gray;
+  border-radius: 50%;
+  position: relative; }
+  .radio-btn--checked::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    width: 70%;
+    height: 70%;
+    background-color: #3a8be7;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+
 .main {
   display: flex;
   width: 100%;
