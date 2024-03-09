@@ -6,122 +6,130 @@ import { CiTimer } from "react-icons/ci";
 import { MdLockOutline, MdOutlineDevices } from "react-icons/md";
 import { TbHandStop } from "react-icons/tb";
 import { Toggle } from "./Toggle";
+import { Fragment } from "react/jsx-runtime";
+import { BlockedUsers } from "./BlockedUsers";
 
 export const Privacy = () => {
   const display = useDisplayContext();
   return (
-    <div
-      className={`privacy ${display.displayItem !== 42 && "privacy--hidden"}`}
-    >
-      <div className="privacy__header">
-        <BsArrowLeft
-          size={15}
-          className="back icon"
-          onClick={() => display.handleDisplay(4)}
-        />
-        <p className="title">Privacy and Security</p>
-        <LiaTimesSolid
-          className="close icon"
-          onClick={() => display.handleDisplay(-2)}
-        />
-      </div>
-      <div className="scroll-container">
-        <div className="body">
-          <div className="security">
-            <h3 className="header">Security</h3>
-            <div className="content-item">
-              <GoKey className="icon " />
-              <p className="text">Two-Step Verification</p>
-              <p className="switch">Off</p>
+    <Fragment>
+      <BlockedUsers />
+      <div
+        className={`privacy ${display.displayItem !== 42 && "privacy--hidden"}`}
+      >
+        <div className="privacy__header">
+          <BsArrowLeft
+            size={15}
+            className="back icon"
+            onClick={() => display.handleDisplay(4)}
+          />
+          <p className="title">Privacy and Security</p>
+          <LiaTimesSolid
+            className="close icon"
+            onClick={() => display.handleDisplay(-2)}
+          />
+        </div>
+        <div className="scroll-container">
+          <div className="body">
+            <div className="security">
+              <h3 className="header">Security</h3>
+              <div className="content-item">
+                <GoKey className="icon " />
+                <p className="text">Two-Step Verification</p>
+                <p className="switch">Off</p>
+              </div>
+              <div className="content-item">
+                <CiTimer className="icon" />
+                <p className="text">Auto-Delete Messages</p>
+                <p className="switch">Off</p>
+              </div>
+              <div className="content-item">
+                <MdLockOutline className="icon" />
+                <p className="text">Local pass code</p>
+                <p className="switch">Off</p>
+              </div>
+              <div
+                className="content-item"
+                onClick={() => display.handleDisplay(420)}
+              >
+                <TbHandStop className="icon" />
+                <p className="text">Blocked users</p>
+              </div>
+              <div className="content-item">
+                <MdOutlineDevices className="icon" />
+                <p className="text">Active Sessions</p>
+              </div>
+              <div className="footer">
+                <p className="text">Manage your sessions on all your devices</p>
+              </div>
             </div>
-            <div className="content-item">
-              <CiTimer className="icon" />
-              <p className="text">Auto-Delete Messages</p>
-              <p className="switch">Off</p>
+            <div className="privacy-section">
+              <h3 className="header">Privacy</h3>
+              <div className="content-item">
+                <p className="type">Phone number</p>
+                <p className="value">Nobody (+14)</p>
+              </div>
+              <div className="content-item">
+                <p className="type">Last seen & online</p>
+                <p className="value">Everybody</p>
+              </div>
+              <div className="content-item">
+                <p className="type">Profile photos</p>
+                <p className="value">My contacts</p>
+              </div>
+              <div className="content-item">
+                <p className="type">Bio </p>
+                <p className="value">Everybody</p>
+              </div>
+              <div className="content-item">
+                <p className="type">Forwarded messages</p>
+                <p className="value">Everybody</p>
+              </div>
+              <div className="content-item">
+                <p className="type">Calls</p>
+                <p className="value">Everybody</p>
+              </div>
+              <div className="content-item">
+                <p className="type">Groups and Channels</p>
+                <p className="value">Everybody</p>
+              </div>
+              <div className="content-item">
+                <p className="type">Voice messages</p>
+                <p className="value">Everybody</p>
+              </div>
+              <div className="content-item">
+                <p className="type">Messages</p>
+                <p className="value">Everybody</p>
+              </div>
             </div>
-            <div className="content-item">
-              <MdLockOutline className="icon" />
-              <p className="text">Local pass code</p>
-              <p className="switch">Off</p>
+            <div className="sensitive-content">
+              <h3 className="header">Sensitive content</h3>
+              <div className="content-item">
+                <p className="title">Disable filtering</p>
+                <Toggle />
+              </div>
+              <div className="footer">
+                <p className="text">
+                  Display sensitive media in public channels on all your
+                  Telegram devices
+                </p>
+              </div>
             </div>
-            <div className="content-item">
-              <TbHandStop className="icon" />
-              <p className="text">Blocked users</p>
+            <div className="bot-and-websites">
+              <h3 className="header">Bots and websites</h3>
+              <div className="content-item">
+                <p className="clear-payment">Clear Payment and Shipping info</p>
+              </div>
             </div>
-            <div className="content-item">
-              <MdOutlineDevices className="icon" />
-              <p className="text">Active Sessions</p>
-            </div>
-            <div className="footer">
-              <p className="text">Manage your sessions on all your devices</p>
-            </div>
-          </div>
-          <div className="privacy-section">
-            <h3 className="header">Privacy</h3>
-            <div className="content-item">
-              <p className="type">Phone number</p>
-              <p className="value">Nobody (+14)</p>
-            </div>
-            <div className="content-item">
-              <p className="type">Last seen & online</p>
-              <p className="value">Everybody</p>
-            </div>
-            <div className="content-item">
-              <p className="type">Profile photos</p>
-              <p className="value">My contacts</p>
-            </div>
-            <div className="content-item">
-              <p className="type">Bio </p>
-              <p className="value">Everybody</p>
-            </div>
-            <div className="content-item">
-              <p className="type">Forwarded messages</p>
-              <p className="value">Everybody</p>
-            </div>
-            <div className="content-item">
-              <p className="type">Calls</p>
-              <p className="value">Everybody</p>
-            </div>
-            <div className="content-item">
-              <p className="type">Groups and Channels</p>
-              <p className="value">Everybody</p>
-            </div>
-            <div className="content-item">
-              <p className="type">Voice messages</p>
-              <p className="value">Everybody</p>
-            </div>
-            <div className="content-item">
-              <p className="type">Messages</p>
-              <p className="value">Everybody</p>
-            </div>
-          </div>
-          <div className="sensitive-content">
-            <h3 className="header">Sensitive content</h3>
-            <div className="content-item">
-              <p className="title">Disable filtering</p>
-              <Toggle />
-            </div>
-            <div className="footer">
-              <p className="text">
-                Display sensitive media in public channels on all your Telegram
-                devices
-              </p>
-            </div>
-          </div>
-          <div className="bot-and-websites">
-            <h3 className="header">Bots and websites</h3>
-            <div className="content-item">
-              <p className="clear-payment">Clear Payment and Shipping info</p>
-            </div>
-          </div>
-          <div className="delete-my-account">
-            <div className="content-item">
-              <p className="type">If away for...</p>
-              <p className="value">1 year</p>
+            <div className="delete-my-account">
+              <div className="content-item">
+                <p className="type">If away for...</p>
+                <p className="value">1 year</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </Fragment>
   );
 };
