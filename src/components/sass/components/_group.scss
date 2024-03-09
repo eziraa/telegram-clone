@@ -1,4 +1,3 @@
-@import './input-field';
 .new-group{
     width: 35rem;
     position: absolute;
@@ -14,9 +13,6 @@
     color: $color-primary-blue;
     z-index: 20;
 
-    .input-field{
-        @extend .input-field;
-    }
     .upper{
         display: flex;
         gap: 2rem;
