@@ -8,12 +8,14 @@ import { TbHandStop } from "react-icons/tb";
 import { Toggle } from "./Toggle";
 import { Fragment } from "react/jsx-runtime";
 import { BlockedUsers } from "./BlockedUsers";
+import { ActiveSessions } from "./ActiveSessions";
 
 export const Privacy = () => {
   const display = useDisplayContext();
   return (
     <Fragment>
       <BlockedUsers />
+      <ActiveSessions />
       <div
         className={`privacy ${display.displayItem !== 42 && "privacy--hidden"}`}
       >
@@ -55,7 +57,10 @@ export const Privacy = () => {
                 <TbHandStop className="icon" />
                 <p className="text">Blocked users</p>
               </div>
-              <div className="content-item">
+              <div
+                className="content-item"
+                onClick={() => display.handleDisplay(421)}
+              >
                 <MdOutlineDevices className="icon" />
                 <p className="text">Active Sessions</p>
               </div>
