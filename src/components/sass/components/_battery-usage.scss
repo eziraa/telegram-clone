@@ -1,0 +1,138 @@
+.battery-usage{
+    width: 350px;
+    height: 600px;
+    border-radius: 1rem;
+    position: absolute;
+    background-color: $color-primary-white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    color: $color-primary-blue;
+    z-index: 20;
+
+    &--hidden{
+        display: none;
+    }
+    .header{
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        width: 100%;
+        align-items: center;
+        padding: 2rem ;
+        border-bottom: 1px solid $color-secondary-white;
+        &__text{
+            font-size: 1.5rem;
+            font-weight: 550;
+            color: $color-secondary-dark;
+        }
+    }
+    &__body{
+        .section{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+
+            &__power-saving-options, &__save-power, &__footer{
+                display: flex;
+                flex-direction: column;
+                font-size: 1.3rem;
+                padding: 1rem 0;
+                font-weight: 500;
+                .header{
+                    padding-left: 2rem;
+                    margin-bottom: 1rem;
+                }
+
+                .section-item{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    gap: 1rem;
+                    padding: .5rem 0;
+                    .option{
+                        flex: 9;
+                        display: flex;
+                        flex-direction: column;
+                        gap: .5rem;
+                        .outer{
+                            display: flex;
+                            flex-direction: row;
+                            align-items:center;
+                            gap: 1rem;
+                            padding: .8rem 2rem;
+                            cursor: pointer;
+                            .title, .value, .total{
+                                color: $color-secondary-dark;
+                                font-size: 1.2rem;
+                                font-weight: 530;
+                            }
+
+                             &:hover{
+                                background-color: $color-secondary-white;
+                            }
+                        }
+
+                        .inner{
+                            display: flex;
+                            flex-direction: column;
+                            align-items:flex-start;
+                            gap: 1rem;
+                            padding-left: 4rem;
+
+                            .item{
+                                display: flex;
+                                flex-direction: row;
+                                align-items:flex-start;
+                                gap: 1rem;
+
+                                .title{
+                                    color: $color-secondary-dark;
+                                    font-size: 1.2rem;
+                                    font-weight: medium;
+                                }
+                            }
+                        }
+
+                    }
+
+                    &--last{
+                        cursor: pointer;
+                        padding-left: 2rem;
+                        align-items: center;
+                         &:hover{
+                                background-color: $color-secondary-white;
+                            }
+                    }
+                    .last-toggle{
+                        padding: 1rem;
+                        margin-left: auto;
+                    }
+                    
+                   
+                }
+            }
+            &__footer{
+                background-color: $color-secondary-white;
+                margin-top: 1rem;
+                .footer-text{
+                    color: $color-tertiary-dark;
+                    font-size: 1.3rem;
+                    padding: 1rem 3rem;
+                }
+            }
+
+        }
+
+    }
+    .footer .section-item{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        padding: .5rem 1rem;
+        
+    }
+}
