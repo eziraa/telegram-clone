@@ -4,7 +4,7 @@ interface Props {
 }
 export const AnimatedInput = ({ name, label_text }: Props) => {
   return (
-    <div className="last-name input-field">
+    <div className="input-field">
       <input name={name} type="text" className="last-name-input" required />
       <label htmlFor={name}> {label_text} </label>
     </div>

@@ -1335,6 +1335,42 @@ body {
     display: flex;
     justify-content: flex-end; }
 
+.edit-username {
+  width: 35rem;
+  position: absolute;
+  border-radius: 1rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  color: #368ef2;
+  z-index: 40; }
+  .edit-username--hidden {
+    display: none; }
+  .edit-username .header {
+    font-size: 1.7rem;
+    color: #38445b; }
+  .edit-username .info {
+    background-color: #f1f1f1;
+    color: #38445b;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 1.4rem;
+    margin: 0 -2rem; }
+    .edit-username .info .lower {
+      display: flex;
+      flex-direction: column;
+      gap: 0; }
+  .edit-username .actions {
+    display: flex;
+    justify-content: flex-end; }
+
 .input-field {
   height: 4rem;
   width: 100%;
