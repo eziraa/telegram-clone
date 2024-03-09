@@ -1,0 +1,98 @@
+.advanced-setting{
+    width: 350px;
+    height: 600px;
+    border-radius: 1rem;
+    position: absolute;
+    background-color: $color-primary-white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    color: $color-primary-blue;
+    z-index: 20;
+
+    &--hidden{
+        display: none;
+    }
+    &__header{
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        width: 100%;
+        align-items: center;
+        padding: 2rem ;
+        border-bottom: 1px solid $color-secondary-white;
+        .title{
+            font-size: 1.5rem;
+            font-weight: 550;
+            color: $color-secondary-dark;
+        }
+        .close{
+            margin-left: auto;
+        }
+    }
+    &__body{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+
+
+        .section{
+            width: 100%;
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+        
+        &__data-and-storage, &__automatic-media-download, &__window-title-bar, &__system-integration, &__spell-checker{
+            display: flex;
+            flex-direction: column;
+            font-size: 1.2rem;
+            padding: 1rem 0;
+            font-weight: 550;
+            .header{
+                padding-left: 2rem;
+                margin-bottom: 1rem;
+            }
+
+            .section-item{
+                cursor: pointer;
+                display: flex;
+                padding: 1rem 2rem;
+                align-items: center;
+                gap: 2rem;
+                .text, .type, .title,  .clear-payment{
+                    color: $color-tertiary-dark;
+                }
+                .switch, .value, .toggle{
+                    margin-left: auto;
+                }
+
+                &:hover{
+                    background-color: $color-secondary-white;
+                }
+            }
+
+            .footer{
+                background-color: $color-secondary-white;
+                margin-top: 1rem;
+                .text{
+                    color: $color-tertiary-dark;
+                    font-size: 1.3rem;
+                    padding: 2rem 3rem;
+                }
+            }
+        }
+        }
+
+        .bot-and-websites{
+            border-bottom: 1rem solid $color-secondary-white;
+            border-top: 1rem solid $color-secondary-white;
+        }
+
+        
+
+    }
+
+}
