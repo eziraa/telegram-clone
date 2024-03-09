@@ -1,0 +1,47 @@
+.edit-username{
+    width: 35rem;
+    position: absolute;
+    border-radius: 1rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $color-primary-white;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    color: $color-primary-blue;
+    z-index: 40;
+
+    &--hidden{
+        display: none;
+    }
+    .header{
+        font-size: 1.7rem;
+        color: $color-secondary-dark;
+    }
+
+    .info{
+        background-color: $color-secondary-white;
+        color: $color-secondary-dark;
+        padding: 1rem 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        font-size: 1.4rem;
+        margin: 0 -2rem;
+
+        .lower{
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+    }
+
+    .actions{
+        display: flex;
+        justify-content: flex-end;
+    }
+
+
+}
