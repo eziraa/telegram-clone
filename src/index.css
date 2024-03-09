@@ -1188,6 +1188,77 @@ body {
         .folders-setting__body .section .section-item:hover {
           background-color: #f1f1f1; }
 
+.advanced-setting {
+  width: 350px;
+  height: 600px;
+  border-radius: 1rem;
+  position: absolute;
+  background-color: #FFFFFF;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  color: #368ef2;
+  z-index: 20; }
+  .advanced-setting--hidden {
+    display: none; }
+  .advanced-setting__header {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    width: 100%;
+    align-items: center;
+    padding: 2rem;
+    border-bottom: 1px solid #f1f1f1; }
+    .advanced-setting__header .title {
+      font-size: 1.5rem;
+      font-weight: 550;
+      color: #38445b; }
+    .advanced-setting__header .close {
+      margin-left: auto; }
+  .advanced-setting__body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto; }
+    .advanced-setting__body .section {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto; }
+      .advanced-setting__body .section__data-and-storage, .advanced-setting__body .section__automatic-media-download, .advanced-setting__body .section__window-title-bar, .advanced-setting__body .section__system-integration, .advanced-setting__body .section__spell-checker {
+        display: flex;
+        flex-direction: column;
+        font-size: 1.2rem;
+        padding: 1rem 0;
+        font-weight: 550; }
+        .advanced-setting__body .section__data-and-storage .header, .advanced-setting__body .section__automatic-media-download .header, .advanced-setting__body .section__window-title-bar .header, .advanced-setting__body .section__system-integration .header, .advanced-setting__body .section__spell-checker .header {
+          padding-left: 2rem;
+          margin-bottom: 1rem; }
+        .advanced-setting__body .section__data-and-storage .section-item, .advanced-setting__body .section__automatic-media-download .section-item, .advanced-setting__body .section__window-title-bar .section-item, .advanced-setting__body .section__system-integration .section-item, .advanced-setting__body .section__spell-checker .section-item {
+          cursor: pointer;
+          display: flex;
+          padding: 1rem 2rem;
+          align-items: center;
+          gap: 2rem; }
+          .advanced-setting__body .section__data-and-storage .section-item .text, .advanced-setting__body .section__data-and-storage .section-item .type, .advanced-setting__body .section__data-and-storage .section-item .title, .advanced-setting__body .section__data-and-storage .section-item .clear-payment, .advanced-setting__body .section__automatic-media-download .section-item .text, .advanced-setting__body .section__automatic-media-download .section-item .type, .advanced-setting__body .section__automatic-media-download .section-item .title, .advanced-setting__body .section__automatic-media-download .section-item .clear-payment, .advanced-setting__body .section__window-title-bar .section-item .text, .advanced-setting__body .section__window-title-bar .section-item .type, .advanced-setting__body .section__window-title-bar .section-item .title, .advanced-setting__body .section__window-title-bar .section-item .clear-payment, .advanced-setting__body .section__system-integration .section-item .text, .advanced-setting__body .section__system-integration .section-item .type, .advanced-setting__body .section__system-integration .section-item .title, .advanced-setting__body .section__system-integration .section-item .clear-payment, .advanced-setting__body .section__spell-checker .section-item .text, .advanced-setting__body .section__spell-checker .section-item .type, .advanced-setting__body .section__spell-checker .section-item .title, .advanced-setting__body .section__spell-checker .section-item .clear-payment {
+            color: #74728c; }
+          .advanced-setting__body .section__data-and-storage .section-item .switch, .advanced-setting__body .section__data-and-storage .section-item .value, .advanced-setting__body .section__data-and-storage .section-item .toggle, .advanced-setting__body .section__automatic-media-download .section-item .switch, .advanced-setting__body .section__automatic-media-download .section-item .value, .advanced-setting__body .section__automatic-media-download .section-item .toggle, .advanced-setting__body .section__window-title-bar .section-item .switch, .advanced-setting__body .section__window-title-bar .section-item .value, .advanced-setting__body .section__window-title-bar .section-item .toggle, .advanced-setting__body .section__system-integration .section-item .switch, .advanced-setting__body .section__system-integration .section-item .value, .advanced-setting__body .section__system-integration .section-item .toggle, .advanced-setting__body .section__spell-checker .section-item .switch, .advanced-setting__body .section__spell-checker .section-item .value, .advanced-setting__body .section__spell-checker .section-item .toggle {
+            margin-left: auto; }
+          .advanced-setting__body .section__data-and-storage .section-item:hover, .advanced-setting__body .section__automatic-media-download .section-item:hover, .advanced-setting__body .section__window-title-bar .section-item:hover, .advanced-setting__body .section__system-integration .section-item:hover, .advanced-setting__body .section__spell-checker .section-item:hover {
+            background-color: #f1f1f1; }
+        .advanced-setting__body .section__data-and-storage .footer, .advanced-setting__body .section__automatic-media-download .footer, .advanced-setting__body .section__window-title-bar .footer, .advanced-setting__body .section__system-integration .footer, .advanced-setting__body .section__spell-checker .footer {
+          background-color: #f1f1f1;
+          margin-top: 1rem; }
+          .advanced-setting__body .section__data-and-storage .footer .text, .advanced-setting__body .section__automatic-media-download .footer .text, .advanced-setting__body .section__window-title-bar .footer .text, .advanced-setting__body .section__system-integration .footer .text, .advanced-setting__body .section__spell-checker .footer .text {
+            color: #74728c;
+            font-size: 1.3rem;
+            padding: 2rem 3rem; }
+    .advanced-setting__body .bot-and-websites {
+      border-bottom: 1rem solid #f1f1f1;
+      border-top: 1rem solid #f1f1f1; }
+
 .main {
   display: flex;
   width: 100%;
