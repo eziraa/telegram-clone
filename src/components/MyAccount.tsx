@@ -8,11 +8,13 @@ import { IoIosAdd } from "react-icons/io";
 import { useDisplayContext } from "../context/context";
 import { EditName } from "./EditName";
 import { Fragment } from "react/jsx-runtime";
+import { EditUsername } from "./EditUsername";
 export const MyAccount = () => {
   const display = useDisplayContext();
   return (
     <Fragment>
       <EditName />
+      <EditUsername />
       <div
         className={`my-account ${
           !display.displayItem.toString().startsWith("40") &&
@@ -62,7 +64,13 @@ export const MyAccount = () => {
               <p className="title">Phone Number</p>
               <p className="value">+251 93464242</p>
             </div>
-            <div className="detail-item" onClick={display.overlayBringToFront}>
+            <div
+              className="detail-item"
+              onClick={() => {
+                display.overlayBringToFront();
+                display.handleDisplay(401);
+              }}
+            >
               <FaAt className="icon" />
               <p className="title">User Name</p>
               <p className="value">@ezrawi</p>
