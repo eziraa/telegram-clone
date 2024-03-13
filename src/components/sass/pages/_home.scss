@@ -4,20 +4,22 @@
   height: 100vh;
 }
 .body-container{
-  width: 25rem;
   height: 100vh;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
+  
+  .left-aside{
+    width: 25rem;
+    height: 95vh;
+    margin-top: -5rem;
+  }
+
+
+
+
+
 }
-
-.channel-container {
-  width: 100%;
-  height: 100vh;
-  background-color: $color-white;/* Required for the absolute positioning of the scrollbar */
-
-}
-
 
 

@@ -35,6 +35,7 @@ src/Country.tsx
 Re.md
 index.html
 public/calls.png
+public/Data
 public/conta.png
 public/Screenshot 2024-03-04 010152.png
 .gitignore
@@ -54,3 +55,4 @@ src/assets/screen.png
 src/components/check.html
 src/assets/images/folder.png
 src/components/radio.html
+src/components/compiler.c
