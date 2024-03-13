@@ -112,13 +112,14 @@ body {
   padding: .3rem;
   width: 100%;
   background-color: #FFFFFF;
-  padding: .5rem 1rem; }
+  padding: .5rem 1rem;
+  margin-top: .5rem; }
   .search__field {
     width: 100%;
-    padding: .2rem 2rem;
+    padding: .5rem 2rem;
     border-radius: 2rem;
     font-size: 1.4rem;
-    height: 3.2rem;
+    height: 2.7rem;
     border: none;
     background-color: #f1f1f1; }
 
@@ -1412,7 +1413,7 @@ body {
     padding: .5rem 1rem; }
 
 .edit-name {
-  width: 35rem;
+  width: 30rem;
   position: absolute;
   border-radius: 1rem;
   top: 50%;
@@ -1435,7 +1436,7 @@ body {
     justify-content: flex-end; }
 
 .edit-username {
-  width: 35rem;
+  width: 30rem;
   position: absolute;
   border-radius: 1rem;
   top: 50%;
@@ -1495,21 +1496,95 @@ body {
     transition: all 0.5s;
     outline: none; }
 
+.msg-board {
+  width: 55vw;
+  height: 100%;
+  font-size: 4rem;
+  gap: 1rem; }
+  .msg-board__header {
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #a9a9a9; }
+    .msg-board__header .channel-name {
+      font-size: 1.5rem; }
+    .msg-board__header .last {
+      display: flex;
+      gap: 1rem; }
+  .msg-board__body {
+    width: 100%;
+    background-color: transparent;
+    height: 600px; }
+    .msg-board__body .messages {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding: 1rem; }
+      .msg-board__body .messages .message {
+        position: relative;
+        width: 60%;
+        border-radius: 10px;
+        background-color: #FFFFFF;
+        margin-top: auto;
+        padding: 1rem; }
+        .msg-board__body .messages .message .header {
+          padding: 1rem; }
+          .msg-board__body .messages .message .header__text {
+            font-size: 1.4rem;
+            font-weight: 600; }
+        .msg-board__body .messages .message::after {
+          content: "";
+          position: absolute;
+          left: -5px;
+          bottom: 0;
+          width: 10px;
+          height: 1px;
+          border-bottom: 10px solid #FFFFFF;
+          border-left: 10px solid transparent; }
+        .msg-board__body .messages .message .text {
+          font-size: 1.5rem;
+          padding: 1rem; }
+        .msg-board__body .messages .message .footer {
+          font-size: 1rem;
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-end;
+          gap: 1rem; }
+  .msg-board__footer {
+    background-color: #FFFFFF;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem; }
+    .msg-board__footer input {
+      width: 80%;
+      line-height: 1.8;
+      outline: none;
+      border: none;
+      font-size: 1.4rem;
+      padding: .5rem 1rem; }
+    .msg-board__footer .last {
+      display: flex;
+      gap: 1rem; }
+
 .main {
   display: flex;
   width: 100%;
   height: 100vh; }
 
 .body-container {
-  width: 25rem;
   height: 100vh;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center; }
-
-.channel-container {
-  width: 100%;
-  height: 100vh;
-  background-color: #FFFFFF;
-  /* Required for the absolute positioning of the scrollbar */ }
+  .body-container .left-aside {
+    width: 25rem;
+    height: 95vh;
+    margin-top: -5rem; }
