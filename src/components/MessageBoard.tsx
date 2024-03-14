@@ -52,7 +52,10 @@ const MessageBoard = ({ chat }: Props) => {
   return (
     <div className="msg-board">
       <div className="msg-board__header">
-        <p className="channel-name">{chat && chat.name}</p>
+        <div className="channel-info">
+          <p className="channel-name">{chat && chat.name}</p>
+          <p className="channel-subscribers">{chat && "2,456"} subscribers</p>
+        </div>
         <div className="last">
           <IoSearchOutline className="icon" />
           <TbChartHistogram className="icon" />
