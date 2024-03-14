@@ -1,4 +1,5 @@
-import { BsArrowsExpand, BsEmojiWink } from "react-icons/bs";
+import { MdExpandLess } from "react-icons/md";
+import { BsEmojiWink } from "react-icons/bs";
 import { Toggle } from "./Toggle";
 import { Checkbox } from "./Checkbox";
 import { IoCall } from "react-icons/io5";
@@ -30,7 +31,7 @@ export const BatteryUsage = () => {
                       Animated stickers <span className="value">2</span>/{" "}
                       <span className="total">2</span>
                     </p>
-                    <BsArrowsExpand className="icon" />
+                    <MdExpandLess className="icon" />
                   </div>
                   <div className="inner">
                     <div className="item">
@@ -57,7 +58,7 @@ export const BatteryUsage = () => {
                       Animated Emoji <span className="value">4</span>/{" "}
                       <span className="total">4</span>
                     </p>
-                    <BsArrowsExpand className="icon" />
+                    <MdExpandLess className="icon" />
                   </div>
                   <div className="inner">
                     <div className="item">
@@ -92,7 +93,7 @@ export const BatteryUsage = () => {
                       Animation in Chats <span className="value">2</span>/{" "}
                       <span className="total">2</span>
                     </p>
-                    <BsArrowsExpand className="icon" />
+                    <MdExpandLess className="icon" />
                   </div>
                   <div className="inner">
                     <div className="item">

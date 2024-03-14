@@ -1509,8 +1509,15 @@ body {
     align-items: center;
     padding: 1rem;
     border-bottom: 1px solid #a9a9a9; }
-    .msg-board__header .channel-name {
-      font-size: 1.5rem; }
+    .msg-board__header .channel-info {
+      display: flex;
+      flex-direction: column;
+      gap: .3rem; }
+      .msg-board__header .channel-info .channel-name {
+        font-size: 1.5rem; }
+      .msg-board__header .channel-info .channel-subscribers {
+        font-size: 1.3rem;
+        color: #a9a9a9; }
     .msg-board__header .last {
       display: flex;
       gap: 1rem; }
