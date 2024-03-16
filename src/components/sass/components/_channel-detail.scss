@@ -6,6 +6,9 @@
     align-self: first baseline;
     gap: 2rem;
     background-color: $color-primary-white;
+    &--hidden{
+        display: none
+    }
     .channel-header{
         padding: 1rem 2rem;
         display: flex;
