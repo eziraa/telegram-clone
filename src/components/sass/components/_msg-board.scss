@@ -1,8 +1,7 @@
 .msg-board{
   width: 55vw;
-  height: 100%;
   font-size: 4rem;
-  gap: 1rem;
+gap: 1rem;
   &__header{
       background-color: $color-primary-white;
 
@@ -35,7 +34,7 @@
     width: 100%;
     background-color: transparent;
     
-    height: 600px;
+    height: 583px;
     .messages{
       width: 100%;
       display: flex;
