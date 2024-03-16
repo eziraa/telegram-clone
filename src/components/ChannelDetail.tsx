@@ -8,7 +8,11 @@ import image from "../assets/images/p13.jpg";
 export const ChannelDetail = () => {
   const display = useDisplayContext();
   return (
-    <div className="channel-detail">
+    <div
+      className={`channel-detail ${
+        display.displayItem !== 9 && "channel-detail--hidden"
+      }`}
+    >
       <div className="channel-header">
         <p className="title">Channel Info</p>
         <LiaTimesSolid
