@@ -6,7 +6,7 @@ import {
   IoNotificationsOutline,
   IoSearchOutline,
 } from "react-icons/io5";
-import { TbBoxModel2, TbChartHistogram } from "react-icons/tb";
+import { TbLayoutSidebarLeftExpand } from "react-icons/tb";
 import img from "../assets/images/p10.jpg";
 
 interface TextEntity {
@@ -58,8 +58,7 @@ const MessageBoard = ({ chat }: Props) => {
         </div>
         <div className="last">
           <IoSearchOutline className="icon" />
-          <TbChartHistogram className="icon" />
-          <TbBoxModel2 className="icon" />
+          <TbLayoutSidebarLeftExpand className="icon" />
           <BsThreeDotsVertical className="icon" />
         </div>
       </div>
