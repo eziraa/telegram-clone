@@ -1,6 +1,5 @@
 import LeftSideBar from "./LeftSideBar";
 import { Container } from "./Container";
-import image from "../assets/images/back-1.png";
 import { Menu } from "./Menu";
 import { useState } from "react";
 import { Overlay } from "./Overlay";
@@ -25,7 +24,7 @@ const GetDisplay = () => {
   };
   const handleDisplay = (index: number) => {
     setDisplayItem(index);
-    if (index < 10) toggleMenu();
+    if (index < 9) toggleMenu();
   };
 
   const handleDisplayNone = () => {
@@ -48,18 +47,10 @@ const GetDisplay = () => {
   };
 };
 
-
 const Main = () => {
   return (
     <DisplayContext.Provider value={GetDisplay()}>
-      <div
-        className="main"
-        style={{
-          backgroundImage: `url(${image})`,
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-        }}
-      >
+      <div className="main">
         <Overlay />
         <Menu />
         <LeftSideBar />

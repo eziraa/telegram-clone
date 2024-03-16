@@ -1,6 +1,8 @@
 import { AiOutlineSound } from "react-icons/ai";
 import { BsEmojiExpressionless, BsThreeDotsVertical } from "react-icons/bs";
 import { FaFileUpload } from "react-icons/fa";
+import image from "../assets/images/back-1.png";
+
 import {
   IoEyeOutline,
   IoNotificationsOutline,
@@ -8,6 +10,7 @@ import {
 } from "react-icons/io5";
 import { TbLayoutSidebarLeftExpand } from "react-icons/tb";
 import img from "../assets/images/p10.jpg";
+import { useDisplayContext } from "../context/context";
 
 interface TextEntity {
   type?: string;
@@ -49,8 +52,16 @@ interface Props {
   chat: Chat | undefined;
 }
 const MessageBoard = ({ chat }: Props) => {
+  const display = useDisplayContext();
   return (
-    <div className="msg-board">
+    <div
+      className="msg-board"
+      style={{
+        backgroundImage: `url(${image})`,
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+      }}
+    >
       <div className="msg-board__header">
         <div className="channel-info">
           <p className="channel-name">{chat && chat.name}</p>
@@ -58,7 +69,12 @@ const MessageBoard = ({ chat }: Props) => {
         </div>
         <div className="last">
           <IoSearchOutline className="icon" />
-          <TbLayoutSidebarLeftExpand className="icon" />
+          <TbLayoutSidebarLeftExpand
+            className="icon"
+            onClick={() => {
+              display.handleDisplay(9);
+            }}
+          />
           <BsThreeDotsVertical className="icon" />
         </div>
       </div>
