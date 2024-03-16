@@ -2,6 +2,7 @@ import Channel from "./Channel";
 import MessageBoard from "./MessageBoard";
 import { Search } from "./Search";
 import chat from "../../public/Data/chat";
+import { ChannelDetail } from "./ChannelDetail";
 
 export const Container = () => {
   return (
@@ -15,6 +16,7 @@ export const Container = () => {
         </div>
       </div>
       <MessageBoard chat={chat} />
+      <ChannelDetail />
     </div>
   );
 };
