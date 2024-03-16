@@ -98,6 +98,66 @@ body {
   .channel__last-post {
     justify-content: end; }
 
+.channel-detail {
+  display: flex;
+  flex-direction: column;
+  width: 25vw;
+  height: 100vh;
+  align-self: first baseline;
+  gap: 2rem;
+  background-color: #FFFFFF; }
+  .channel-detail .channel-header {
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+    .channel-detail .channel-header .title {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #272938; }
+  .channel-detail .channel-info {
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem; }
+    .channel-detail .channel-info .image {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%; }
+    .channel-detail .channel-info .description {
+      display: flex;
+      flex-direction: column;
+      gap: .4rem;
+      font-size: 1.3rem; }
+  .channel-detail .channel-setting, .channel-detail .channel-footer {
+    border-top: 1rem solid #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    padding-top: .5rem; }
+    .channel-detail .channel-setting .section-item, .channel-detail .channel-footer .section-item {
+      padding: 1rem 2rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 1rem;
+      font-size: 1.2rem; }
+      .channel-detail .channel-setting .section-item .links, .channel-detail .channel-footer .section-item .links {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid #f1f1f1; }
+        .channel-detail .channel-setting .section-item .links span, .channel-detail .channel-footer .section-item .links span {
+          color: #a9a9a9; }
+      .channel-detail .channel-setting .section-item .toggle, .channel-detail .channel-footer .section-item .toggle {
+        margin-left: auto; }
+    .channel-detail .channel-setting .hoverable, .channel-detail .channel-footer .hoverable {
+      cursor: pointer; }
+      .channel-detail .channel-setting .hoverable:hover, .channel-detail .channel-footer .hoverable:hover {
+        background-color: #f1f1f1; }
+    .channel-detail .channel-setting .warning, .channel-detail .channel-footer .warning {
+      color: red; }
+
 .icon {
   width: 20px;
   height: 20px;

@@ -4,7 +4,7 @@ import { CiCircleInfo } from "react-icons/ci";
 import { IoNotificationsOutline } from "react-icons/io5";
 import { Toggle } from "./Toggle";
 import { RiLogoutBoxRLine } from "react-icons/ri";
-
+import image from "../assets/images/p13.jpg";
 export const ChannelDetail = () => {
   const display = useDisplayContext();
   return (
@@ -17,7 +17,7 @@ export const ChannelDetail = () => {
         />
       </div>
       <div className="channel-info">
-        <img src="" alt="" className="image" />
+        <img src={image} alt="" className="image" />
         <div className="description">
           <p className="name">Python Free courses</p>
           <p className="subscribers">16,435 subscribers</p>
@@ -31,19 +31,19 @@ export const ChannelDetail = () => {
             <span>Link</span>
           </div>
         </div>
-        <div className="section-item">
+        <div className="section-item hoverable">
           <IoNotificationsOutline className="icon" />
           <p className="title">Notification</p>
           <Toggle />
         </div>
       </div>
-      <div className="channel__footer">
-        <div className="section-item">
+      <div className="channel-footer">
+        <div className="section-item hoverable">
           <RiLogoutBoxRLine className="icon" />
           <p className="title">Leave Channel</p>
         </div>
-        <div className="section-item">
-          <CiCircleInfo className="icon" />
+        <div className="section-item hoverable warning">
+          <CiCircleInfo className="icon" color="red" />
           <p className="text">Report</p>
         </div>
       </div>
