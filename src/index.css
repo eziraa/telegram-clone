@@ -1498,7 +1498,6 @@ body {
 
 .msg-board {
   width: 55vw;
-  height: 100%;
   font-size: 4rem;
   gap: 1rem; }
   .msg-board__header {
@@ -1524,7 +1523,7 @@ body {
   .msg-board__body {
     width: 100%;
     background-color: transparent;
-    height: 600px; }
+    height: 583px; }
     .msg-board__body .messages {
       width: 100%;
       display: flex;
