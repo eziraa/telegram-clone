@@ -28,9 +28,16 @@ class Channel(models.Model):
     username = models.CharField(max_length=20)
 
 
-class Contacts(models.Model):
+class Contact(models.Model):
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
     phone_number = models.CharField(max_length=100)
     date = models.DateTimeField(auto_now_add=True)
     date_unixtime = models.DateField(auto_now=True)
+
+
+class FrequentContacts(models.Model):
+    category = models.CharField(max_length=100)
+    type = models.CharField(max_length=100)
+    name = models.CharField(max_length=100)
+    rating = models.DecimalField(max_digits=8, decimal_places=6)
