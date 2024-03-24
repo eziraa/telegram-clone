@@ -19,8 +19,9 @@ class Message(models.Model):
     from_m = models.CharField(max_length=100)
     from_id = models.CharField(max_length=100)
     forwarded_from = models.CharField(max_length=100, blank=True, null=True)
-    text_entities = models.ManyToOneRel(
-        to=TextEntity, field='id', field_name='id', on_delete=models.CASCADE)
+    reply_to_message_id = models.IntegerField(blank=True, null=True, default=0)
+    text_entities = models.ForeignKey(
+        TextEntity,  on_delete=models.CASCADE)
 
 class Channel(models.Model):
     name = models.CharField(max_length=200)
@@ -41,3 +42,15 @@ class FrequentContacts(models.Model):
     type = models.CharField(max_length=100)
     name = models.CharField(max_length=100)
     rating = models.DecimalField(max_digits=8, decimal_places=6)
+
+
+class Chat(models.Model):
+    """
+    This model is used to  represent chats like private group, private channel , public channel and  also public group
+    type: attribute used to specify the type of chat
+    """
+    name = models.CharField(max_length=100)
+    type = models.CharField(max_length=100)
+    username = models.CharField(max_length=100)
+    messages = models.ForeignKey(
+        Message, on_delete=models.CASCADE)
