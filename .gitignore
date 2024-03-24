@@ -1,0 +1,3 @@
+backend/chat/chat.ts
+backend/chat/__pycache__/models.cpython-312.pyc
+*.pyc
