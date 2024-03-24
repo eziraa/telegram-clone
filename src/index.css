@@ -106,6 +106,8 @@ body {
   align-self: first baseline;
   gap: 2rem;
   background-color: #FFFFFF; }
+  .channel-detail--hidden {
+    display: none; }
   .channel-detail .channel-header {
     padding: 1rem 2rem;
     display: flex;
