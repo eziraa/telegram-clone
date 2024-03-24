@@ -26,3 +26,11 @@ class Channel(models.Model):
     name = models.CharField(max_length=200)
     description = models.TextField(max_length=400)
     username = models.CharField(max_length=20)
+
+
+class Contacts(models.Model):
+    first_name = models.CharField(max_length=100)
+    last_name = models.CharField(max_length=100)
+    phone_number = models.CharField(max_length=100)
+    date = models.DateTimeField(auto_now_add=True)
+    date_unixtime = models.DateField(auto_now=True)
