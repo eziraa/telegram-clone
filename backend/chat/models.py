@@ -28,6 +28,9 @@ class Channel(models.Model):
     description = models.TextField(max_length=400)
     username = models.CharField(max_length=20)
 
+    def __str__(self):
+        return f'Channel {self.name} {self.description}'
+
 
 class Contact(models.Model):
     first_name = models.CharField(max_length=100)
