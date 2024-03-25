@@ -1,7 +1,8 @@
 from rest_framework import serializers
+from .models import Channel
 
 
-class ChannelSerializer(serializers.Serializer):
-    id = serializers.IntegerField()
-    name = serializers.CharField(max_length=200)
-    description = serializers.CharField(max_length=200)
+class ChannelSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Channel
+        fields = ('id', 'name', 'description', 'username')
